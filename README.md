@@ -1,5 +1,8 @@
 # Welcome to WDI HAKUNA_MATATA
 
+![Timon&Pumbaa](Timon&Pumbaa.jpeg)
+
+
 November 22nd - February 28th
 
 ### Instructors
