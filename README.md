@@ -6,7 +6,7 @@
 November 22nd - February 28th
 
 ### Instructors
-##### Instructional Leads
+#### Instructional Leads
 - Patric Andre
 	- patrick.andre@generalassemb.ly
 - Joe Keohan
@@ -14,22 +14,29 @@ November 22nd - February 28th
 - Vincent Abruzzo
   - ...place email here ..
 
-##### Instructional Associates
+#### Instructional Associates
 - Kate Shishkina
 	- katherine.shishkina@generalassemb.ly
 - Arana Dziedzic
   - ariana.dziedzic@generalassemb.ly
 
-##### Teaching Assistants
+#### Teaching Assistants
 - Erik Jönsson (Monday - Thursday 4pm-9pm)
 - ... Another evening TA info here
   - Please reach out to TAs via Slack.
 
 ### Holidays
 - Thanksgiving weekend:
-   - No class on Thursday November 24th & Friday November 25th
-- Christmas/New Years celebration:
-   - TBD
+	- Campus closed *11/24 - 11/27*.
+- Christmas/New Year's celebration:
+  - Campus closed *12/23 - 1/2*.
+- Martin Luther King Day observance:
+ 	- No classes on Monday, *January 16th*.
+- President's Day:
+	- No classes on Monday, *February 20th*.
+
+
+
 
 ### Campus Hours
 - Monday - Friday: 8:15am - 10pm
