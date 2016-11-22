@@ -12,6 +12,8 @@ November 22nd - February 28th
 	- joe.keohan@generalassemb.ly
 - Vincent Abruzzo
   - vincent.abruzzo@generalassemb.ly
+- Paris Yee
+	- paris.yee@generalassemb.ly
 
 #### Instructional Associates
 - Kate Shishkina
