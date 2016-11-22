@@ -2,7 +2,6 @@
 
 ![Timon&Pumbaa](Timon&Pumbaa.jpeg)
 
-
 November 22nd - February 28th
 
 ### Instructors
@@ -12,7 +11,7 @@ November 22nd - February 28th
 - Joe Keohan
 	- joe.keohan@generalassemb.ly
 - Vincent Abruzzo
-  - ...place email here ..
+  - vincent.abruzzo@generalassemb.ly
 
 #### Instructional Associates
 - Kate Shishkina
@@ -22,7 +21,7 @@ November 22nd - February 28th
 
 #### Teaching Assistants
 - Erik Jönsson (Monday - Thursday 4pm-9pm)
-- ... Another evening TA info here
+- Stefan Hartmann (Monday - Thursday 4pm-9pm)
   - Please reach out to TAs via Slack.
 
 ### Holidays
@@ -34,9 +33,6 @@ November 22nd - February 28th
  	- No classes on Monday, *January 16th*.
 - President's Day:
 	- No classes on Monday, *February 20th*.
-
-
-
 
 ### Campus Hours
 - Monday - Friday: 8:15am - 10pm
