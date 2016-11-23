@@ -6,6 +6,9 @@
 
 This week you're going to build an original About Me website that tells visitors, through content and design, more about your skills and personality. This will be the start of your portfolio, which you will use to showcase your projects throughout your time at GA. Think about your personal brand.  Its important to be authentic and utilize all technologies that are required. Also, recognize that it is an evolving thing that will be essential for a successful outcomes process.
 
+You should create a new folder called "About me" under homework directory for week 0 day 02 and work there (create all necessary files of index.html, style.css, etc.).
+
+
 	Tip:  Plan ahead!  Take a few minutes to sketch or whiteboard a design. Challenge yourself!  
 
 ### Portfolio Examples
@@ -19,11 +22,10 @@ This week you're going to build an original About Me website that tells visitors
 #### Tech Requirements
 -  HTML
 -  CSS
--  Deployed to GH Pages // read about setting up gh-pages
 -  README listing the technologies you've used.
 
 Finally:
-Submit an issue(just like yesterday) that would contain a link to your about me page deployed on gh-pages.
+Submit an issue(just like yesterday) that would contain a link to your about me page file.
 
 HMMMMMM.... you think you are done?
 
