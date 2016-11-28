@@ -26,6 +26,20 @@ November 22nd - February 28th
 - Stefan Hartmann (Monday - Thursday 4pm-9pm)
   - Please reach out to TAs via Slack.
 
+#### Daily class schedule:
+9:00 - 10:00 - Attendance/Morning Exercise
+
+10:00 - 12:30 - Morning Lecture
+
+12:30 - 1:30 - Lunch Break
+
+1:30 - 4:00 - Afternoon Lecture
+
+4:00 - 4:45 - End Of The Day Lab
+
+4:45 - 5:00 - Attendance/Homework Intro.
+
+
 ### Holidays
 - Thanksgiving weekend:
 	- Campus closed *11/24 - 11/27*.
