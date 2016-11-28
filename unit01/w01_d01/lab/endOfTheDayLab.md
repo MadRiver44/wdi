@@ -12,7 +12,7 @@ Just like that ?!
 Look at the bright side! You've learned soooo much! Did you know yesterday about eslint? Chrome dev tools? Wow! Now you do :)
 
 
-You, guys, are soooo great on doing independent work and research! I would like to provide some links for you to read during this this 45 min lab. Do your best to read and understand gitHub.io and how to host your portfolio project there. Don't worry, if you don't understand it at first (ask a classmate that succeeded? maybe?) Finally, host your aboutMe project there and share a link over Slack. If you get stuck, ask for after hours assistance from your amazing TAs..
+You, guys, are soooo great on doing independent work and research! I would like to provide some links for you to read during this this 45 min lab. Do your best to read and understand gitHub.io and how to host your portfolio project there. Don't worry, if you don't understand it at first (ask a classmate that succeeded? maybe?) Finally, host your aboutMe project there and share the link over Slack by the end of the day today. If you get stuck, ask for after hours assistance from your amazing TAs..
 
 Links:
 
@@ -24,7 +24,10 @@ Links:
 
 [Link three](http://www.nickbumbarger.com/2015/05/31/hosting_using_gh-pages.html)
 
-....hmmm .... maybe Google it again?
+[Aaaaand one more](http://learntocodewith.me/tutorials/github-pages/)
 
+....hmmm .... maybe Google knows?
 
 Cheers!
+
+P.S. People who did succeed to host their about me on gh-pages... Great job!!!! Now share your knowledge and maybe help your classmates ;)
