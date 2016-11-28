@@ -27,17 +27,17 @@ November 22nd - February 28th
   - Please reach out to TAs via Slack.
 
 #### Daily class schedule:
-9:00 - 10:00 - Attendance/Morning Exercise
+9:00am - 10:00pm - Attendance/Morning Exercise
 
-10:00 - 12:30 - Morning Lecture
+10:00am - 12:30pm - Morning Lecture
 
-12:30 - 1:30 - Lunch Break
+12:30pm - 1:30pm - Lunch Break
 
-1:30 - 4:00 - Afternoon Lecture
+1:30pm - 4:00pm - Afternoon Lecture
 
-4:00 - 4:45 - End Of The Day Lab
+4:00pm - 4:45pm - End Of The Day Lab
 
-4:45 - 5:00 - Attendance/Homework Intro.
+4:45pm - 5:00pm - Attendance/Homework Intro.
 
 
 ### Holidays
@@ -58,7 +58,7 @@ November 22nd - February 28th
 - Attendance is taken at 9AM
 - No more than 4 unexcused absences
 - 3 tardies (more than 30 minutes late) = 1 absence
-- You MUST inform your both IAs if you are anticipating any absences or need to leave early.
+- You MUST inform your both IAs if you are anticipating any absences or need to leave early or running late.
 
 ---
 
