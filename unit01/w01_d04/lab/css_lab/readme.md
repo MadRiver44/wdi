@@ -13,8 +13,7 @@ You are going to use your knowledge of CSS and CSS precedence to take a basic HT
 * general sibling..ex li > p ~ p 
 * classes...ex p.red
 * id's....ex p#blue
-* pseudo classes...ex p:hover \ p:active \ p:first-child \ p:last-child
-* p:first-letter \ p:first-of-type \ p:nth-of-type(n) \ p:first-line
+* pseudo classes...ex p:hover \ p:active \ p:first-child \ p:last-child \ p:first-letter \ p:first-of-type \ p:nth-of-type(n) \ p:first-line
 * pseudo elements...ex p::after \ p::before \ p::first-letter \ p::first-line
 * combining all the above..ex div p:hover + p
 * !important
