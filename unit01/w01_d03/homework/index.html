@@ -1,0 +1,184 @@
+<DOCTYPE! HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link type="text/javascript" src="script.js"></link>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <h1>GUARANTEED Free Pony From Santa Claus!</h1>
+      <article>Hey kids! Submit your Xmas wish list to Santa Claus using this handy-dandy webform, and you are <em class="red">GUARANTEED</em> to receive a <em class="red">REAL LIVE PONY</em> on Xmas morning!
+      <br>
+      <br>
+      *****  This form uses <em>all</em> of the HTML5 form field types!  *****
+      </article>
+      <br>
+      <form action="http://google.com/search" target="_blank">
+      <label for="search">Search here for pony care instructions on Google:</label>
+      <input type="search" name="googlesearch">
+      <label for="srch_button"></label>
+      <input id="srch_button" type="submit" value="Search">
+      </form>
+      <form action="/surveys" method="POST">
+      <h1>Santa's Wish List</h1>
+      <legend>Personal Information</legend>
+      <label for="first_name">First name: </label>
+      <input id="first_name" type="text" name="first_name"/>
+      <label for="last_name">Last name: </label>
+      <input id="last_name" type="text" name="last_name"/>
+      <br>
+      <label for="bday">Date of birth: </label>
+      <input type="date" name="bday">
+      <br>
+      <label for="usrtel">Telephone:</label>
+      <input type="tel" name="usrtel">
+      <label for="mail">E-mail:</label>
+      <input type="email" id="mail" name="user_mail" />
+      <br>
+      <label for="psw">Your Xmas Password:</label>
+      <input type="password" name="psw">
+      <br>
+      <label for="homepage">Your Xmas Gift Registry URL:</label>
+      <input type="url" name="homepage">
+      <br>
+      <div>
+      <label for="fileupload">Select a Profile photo to upload</label>
+      <input type="file" name="fileupload" value="fileupload" id="fileupload">
+      </div>
+      <br>
+      <h2>Naughty Or Nice?</h2>
+      <div>
+      <legend>How good were you this year?</legend>
+      <label for="very_nice">Very Nice!</label>
+      <input id="very-nice" type="radio" name="naughty_or_nice" />
+      <br>
+      <label for="mostly_nice">Mostly Nice</label>
+      <input id="mostly_nice" type="radio" name="naughty_or_nice" />
+      <br>
+      <label for="somewhat_naughty">Maybe I Was Naughty Once Or Twice?</label>
+      <input id="somewhat_naughty" type="radio" name="naughty_or_nice" />
+      <br>
+      <label for="very_naughty">I didn't do it! It wasn't me! I plead the Fifth!</label>
+      <input id="very_naughty" type="radio" name="naughty_or_nice" />
+      </div>
+      <br>
+      <label for="week_year">When did you start being good this year?</label>
+      <input type="week" name="week_year">
+      <br>
+      <label for="start_month">When do you plan to start being good next year?</label>
+      <input type="month" name="start_month">
+      <br>
+      <legend>Why were you good?</legend>
+      <label for="cbox1">Mommy made me promise</label>
+      <input type="checkbox" id="cbox1" value="first_checkbox">
+      <br>
+      <label for="cbox2">Daddy was watching</label>
+      <input type="checkbox" id="cbox2" value="second_checkbox">
+      <br>
+      <label for="cbox3">I just AM good!  Always!  For reals!!!</label>
+      <input type="checkbox" id="cbox3" value="third_checkbox">
+      <br>
+      <br>
+      <label for="points">How nice would you rate your niceness this year?</label>
+      <br>
+      <p class="for_slider">NAUGHTY!</p>
+      <input type="range" id="slider" name="points" min="0" max="10">
+      <p class="for_slider">NICE!</p>
+      <br>
+      <br>
+      <legend>Tell Santa all the things you want him to bring you <em class="red">here!</em></legend>
+      <textarea rows="4" cols="50">
+      </textarea>
+      <br>
+      <label for="quantity">How many times were you naughty this year?</label>
+      <input type="number" name="quantity" min="0" max="365" value="1">
+      <br>
+      <br>
+      <label for="colorPicker">What color do you want your pony to be?</label>
+      <input type="color" id="colorPicker" name="color_picker" onchange="document.getElementById("pony").backgroundColor = '#'+this.color">
+      <br>
+      <div id="pony">
+      <img src="pony.gif" alt="pony">
+      </div>
+      <br>
+      <br>
+      <legend>What type of saddle should your pony have?</legend>
+      <select>
+        <option value="pink">Pink satin saddle with sequins</option>
+        <option value="purple">Purple Grinch-leather saddle</option>
+        <option value="gold">Solid gold side-saddle</option>
+      </select>
+      <br>
+      <br>
+      <legend>Pony Delivery Time</legend>
+      <label for="bed_time">What time will you go to bed on Xmas Eve?</label>
+      <input type="time" name="bed_time">
+      <br>
+      <label for="bed_time">When would you like your pony delivered?</label>
+      <input type="datetime-local" name="ponytime">
+      <br>
+      <br>
+      <label for="reset">Click here if you made mistakes and need to reset your form:</label>
+      <input type="reset">
+      <br>
+      <legend class="red"><i>Almost done!</i></legend>
+      <label for="mwah_ha_ha">That pony is almost yours! Guaranteed!!!</label>
+      <input type="hidden" name="mwah_ha_ha" value="Here it comes! Tears in 3,2,1...">
+      <br>
+      <br>
+      <label for="submit_btn">Now you just have to click <em class="red">SUBMIT!</em></label>
+      <br>
+      <br>
+      <span>
+      <input type="image" id="submit_btn" src="http://img-aws.ehowcdn.com/615x200/cme/cme_public_images/www_ehow_com/i.ehow.com/images/a06/8s/kb/create-flashing-icon-800x800.jpg" height=20px width=40px alt="Submit">
+      </span>
+      <br>
+      <br>
+      <br>
+      <label for="help">( If you experience technical issues with your submit button, click here )  </label>
+      <br>
+      <input type="button" onclick="alert('HAHAHA! HOHOHO! Happy Holidays anyway, kid!')" value="Help">
+      <br>
+      </form>
+      <hr />
+    </div>
+<script>
+// repurposed from http://jsfiddle.net/XZ6Sg/
+var picker = document.getElementById('colorPicker');
+var box = document.getElementById('pony');
+picker.addEventListener('change', function(){
+   box.style.backgroundColor = this.value;
+})
+</script>
+  </body>
+</html>
+
+<!--//Text input
+//Radio buttons with at least 2 options
+//A group of at least 3 checkboxes
+//Select with at least 3 options
+//Textarea
+//Number input
+
+//week  Defines a week and year control (no time zone)
+//time  Defines a control for entering a time (no time zone)
+//search  Defines a text field for entering a search string
+//password  Defines a password field (characters are masked)
+//range Defines a control for entering a number
+//month Defines a month and year control (no time zone)
+//tel Defines a field for entering a telephone number
+//reset Defines a reset button (resets all form values to default values)
+//url Defines a field for entering a URL
+//email Defines a field for an e-mail address
+//file  Defines a file-select field and a "Browse..." button (for file uploads)
+//color Defines a color picker
+//date  Defines a date control (year, month and day (no time))
+//button  Defines a clickable button (mostly used with a JavaScript to activate a script)
+//datetime-local  Defines a date and time control (year, month, day, hour, minute, second, and fraction of a second (no time zone)
+//hidden  Defines a hidden input field
+//image Defines an image as the submit button
+//button -->

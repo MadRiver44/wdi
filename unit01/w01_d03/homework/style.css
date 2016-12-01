@@ -1,0 +1,78 @@
+body {
+  background-image: url("https://media.giphy.com/media/izCrPHHduwpcQ/giphy.gif");
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: #ff0000;
+  text-shadow: 2px 2px black;
+}
+
+.container {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 75%;
+  box-shadow: 30px 30px 15px black;
+  background-image: url("http://www.loriswebs.com/textures/images/whitepapertexture.gif");
+}
+
+.container h1 {
+  font-size: 4em;
+}
+
+article, label {
+  font-size: 125%;
+  color: black;
+  text-shadow: none;
+}
+
+form {
+
+}
+legend {
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#fileupload {
+  margin: 0 auto;
+}
+
+#slider {
+  display: inline;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.for_slider {
+  display: inline;
+  text-shadow: none;
+}
+
+.red {
+  color: red;
+}
+
+#pony {
+  border: 2px solid red;
+  display: inline-block
+}
+
+span {
+  position:relative;
+  padding: 5px;
+}
+
+#submit_btn {
+  width: 200px;
+  height: 80px;
+}
+
+span:hover {
+  visibility: hidden;
+}
+
+
