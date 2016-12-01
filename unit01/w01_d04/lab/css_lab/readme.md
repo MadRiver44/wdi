@@ -19,4 +19,4 @@ You are going to use your knowledge of CSS and CSS precedence to take a basic HT
 * combining all the above..ex div p:hover + p
 * !important
 
-*NOTE:* Also be sure to add a comment for each css selectors that calculates the specificity for each element.
+**NOTE:** Also be sure to add a comment for each css selectors that calculates the specificity for each element.
