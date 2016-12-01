@@ -18,27 +18,29 @@ November 22nd - February 28th
 #### Instructional Associates
 - Kate Shishkina
 	- katherine.shishkina@generalassemb.ly
-- Arana Dziedzic
+- Ariana Dziedzic
   - ariana.dziedzic@generalassemb.ly
 
 #### Teaching Assistants
-- Erik Jönsson (Monday - Thursday 4pm-9pm)
-- Stefan Hartmann (Monday - Thursday 4pm-9pm)
-  - Please reach out to TAs via Slack.
+Please reach out to TAs via Slack, and queue up for TA help using the [Ask Rafiki Scheduler](https://ga-students.slack.com/messages/askrafiki_scheduler).
+- Erik Jönsson
+    - Monday, Tuesday, Thursday: 4pm–9pm
+    - Wednesday: 2pm–6pm
+- Stefan Hartmann
+    - Monday - Thursday: 4pm-9pm
 
-#### Daily class schedule:
+#### Daily class schedule (Mon, Tues, Thurs, Fri):
 9:00am - 10:00pm - Attendance/Morning Exercise
 
 10:00am - 12:30pm - Morning Lecture
 
-12:30pm - 1:30pm - Lunch Break
+12:30pm - 2:00pm - Lunch Break
 
-1:30pm - 4:00pm - Afternoon Lecture
+2:00pm - 4:30pm - Afternoon Lecture
 
-4:00pm - 4:45pm - End Of The Day Lab
+4:30pm - 4:50pm - Lab Work
 
-4:45pm - 5:00pm - Attendance/Homework Intro.
-
+4:50pm - 5:00pm - Attendance/Homework Intro.
 
 ### Holidays
 - Thanksgiving weekend:
