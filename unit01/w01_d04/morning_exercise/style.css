@@ -1,0 +1,104 @@
+body {
+  margin: 0 auto;
+  font-family:
+  font-size: 100%;
+}
+
+header {
+  background-color: black;
+  border-bottom: 4px solid yellow;
+}
+
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+header h1 {
+  margin-top: 4%;
+  margin-left: 4%;
+  padding: 2%;
+  font-size: 4em;
+  color: #ffff00;
+}
+
+header nav ul li {
+  font-family: sans-serif;
+  padding: 3%;
+  font-size: 1.5em;
+  color: white;
+  display: inline-block;
+  float: right;
+}
+
+.banner {
+  margin-top: 0;
+  padding: 0;
+  color: black;
+  background-color: gray;
+  font-size: 1.5em;
+}
+
+.banner h2 {
+  padding: 2%;
+  text-align: center;
+}
+
+#strikethrough {
+  text-decoration: line-through;
+}
+
+#underline {
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-image: url("http://fewd49.nevan.org/projects/startup_matchmaker/images/coworking.jpg");
+  background-size: cover;
+}
+
+#transparency {
+  width: 30%;
+  margin: 10%
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  background-color: white;
+  opacity: .7;
+}
+
+#transparency p {
+  line-height: 2em;
+  margin: 15%;
+ /* padding: 15%; */
+  font-family: sans-serif;
+  font-size: 1.5em;
+  width: 80%;
+  color: black;
+  font-size: 1.25em;
+  text-align: left;
+}
+
+.bold {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+#button {
+  padding: 2%;
+  text-align: center;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-weight: 900;
+  position: relative;
+  top: 90%;
+  width: 70%;
+  color: black;
+  background-color: yellow;
+  font-size: 1.5em;
+}

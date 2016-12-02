@@ -1,0 +1,80 @@
+body {
+  font-family: 'News Cycle', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  background-color: black;
+}
+
+nav img {
+  float: left;
+  margin-left: 0;
+  height: 25px;
+  padding: 2%;
+}
+
+.clearfix:after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+h1 {
+  padding: 3%;
+  margin: 0;
+  font-size: 3.25em;
+  background-color: red;
+  color: white;
+}
+
+h2 {
+  padding: 1%;
+  margin: 0;
+  font-size: 2em;
+  color: white;
+  background-color: black;
+}
+
+section {
+  background-image: url("https://a.fastcompany.net/multisite_files/fastcompany/imagecache/inline-large/inline/2013/12/3023456-inline-general-assembly-students.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+article {
+  font-weight: 900;
+  padding: 3%;
+  font-size: 1.25em;
+  background-color: white;
+  opacity: .8;
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: red;
+}
+
+footer {
+  margin: 0;
+  padding: 2%;
+  font-size: 1.25em;
+  color: white;
+  background-color: black;
+}
