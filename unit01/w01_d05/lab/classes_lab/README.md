@@ -30,7 +30,7 @@ and set them as as properties:
 - Change your `missClass` function to look like this
 ```javascript
 missClass() {
-    super();
+    super.missClass();
     console.log("Sorry, not allowed to have favorites :(");
 }
 ```
