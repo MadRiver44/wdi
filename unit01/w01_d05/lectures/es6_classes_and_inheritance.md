@@ -1,9 +1,9 @@
 # ES6 Classes
 
 ### Objectives
-- Understand the what a constuctor function is and what its purpose is.
+- Understand the what a class is and what its purpose is.
 - Create a ES6 class and use it to create different objects.
-- Learn how to access the constructor from and instance
+- Understand how classes and instances are related.
 - Understand inheritence in the context of JS classes.
 - Greate a basic class and then extend it to create two more classes.
 
