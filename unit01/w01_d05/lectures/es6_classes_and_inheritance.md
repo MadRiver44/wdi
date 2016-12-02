@@ -8,6 +8,9 @@
 - Greate a basic class and then extend it to create two more classes.
 
 #### [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Hoisting)
+#### [ES6 Classes Video Overview](https://www.youtube.com/watch?v=XHYvWYbqgJE)
+#### [ES6 Class Inheritance Video Overview](https://www.youtube.com/watch?v=S_8WrECd0PU)
+
 
 ### Define through session
 - Class:
