@@ -1,0 +1,20 @@
+main {
+  border: 1px solid teal;
+  font-size: 20px;
+  margin: 36px auto 0;
+  max-width: 720px;
+  overflow: auto;
+  padding: 0 36px 36px;
+}
+
+div.wrapper {
+  clear: both;
+  padding: 24px;
+}
+
+div div {
+  background-color: pink;
+  float: left;
+  height: 100px;
+  width: 100px;
+}

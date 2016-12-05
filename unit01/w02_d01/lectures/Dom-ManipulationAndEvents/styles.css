@@ -1,0 +1,15 @@
+main {
+  border: 1px solid teal;
+  font-size: 20px;
+  margin: 36px auto 0;
+  max-width: 720px;
+  padding: 0 36px 36px;
+}
+
+.pink-div {
+  background-color: pink;
+}
+
+.styled-list {
+  color: green;
+}
