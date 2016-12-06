@@ -12,12 +12,12 @@ Here are your Squad Leaders! If you need help or have specific questions to be a
 - Alison Stuart
 
 ##Patrick
-- Jonathan Zachary
+- Jon Zachary
 - Jason Humphreys
-- Alexander Diaz
+- Alex Diaz
 - Roberto Sanchez
 - Mimi Klein
-- Christopher Wilkening
+- Chris Wilkening
 - Calvin Bowen
 - Cresta White
 
@@ -36,9 +36,9 @@ Here are your Squad Leaders! If you need help or have specific questions to be a
 - Mohammed Islam
 - Dominic Farquharson
 - Andrew Dallas
-- Rachel (Val) Rigodon
+- Val Rigodon
 - Daquon Simpson
-- Michael Abele
+- Mike Abele
 - Tenzin Chhosphel
 
 ##Ariana
@@ -47,6 +47,6 @@ Here are your Squad Leaders! If you need help or have specific questions to be a
 - Shantel Moore
 - Darc Boykin
 - Jennifer Kaplan
-- Jermaine (Jay) Webbe
+- Jay Webbe
 - Jason John
 - Steven Gallo
