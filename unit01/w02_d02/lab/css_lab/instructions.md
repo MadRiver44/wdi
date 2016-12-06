@@ -6,8 +6,8 @@
 2. Create a grid of 3 rows with 3 right floated divs
 
 ### Sample Student Projects
-[Student Example - Connect Four](http://www.drakefour.com/)
-[Student Example - Battleship](http://author-calendar-54475.bitballoon.com/)
+* [Student Example - Connect Four](http://www.drakefour.com/)
+* [Student Example - Battleship](http://author-calendar-54475.bitballoon.com/)
 
 **Copy\Paste link for CodePen here**
 
@@ -18,7 +18,7 @@ Based on the gridpattern.png picture extend the grid layout to include default i
 **Copy\Paste link for CodePen here**
 
 ### Sample Student Projects
-[Student Example - MusicSlot](http://yuliahenderson.com/Slot-Machine-Game/)
+* [Student Example - MusicSlot](http://yuliahenderson.com/Slot-Machine-Game/)
 
 ## Lab 3 - Working with transitions
 
@@ -27,8 +27,8 @@ Create a nav bar that has been tested against two classes: large & small.  These
 **Copy\Paste link for CodePen here**
 
 ### Resources
-[Placehold.it](http://placehold.it/)
-[W3Schools AddEventListener](https://appendto.com/2016/02/addremove-css-classes-using-javascript/)
-[Add\Remove Classes in Javascript](https://appendto.com/2016/02/addremove-css-classes-using-javascript/)
+* [Placehold.it](http://placehold.it/)
+* [W3Schools AddEventListener](https://appendto.com/2016/02/addremove-css-classes-using-javascript/)
+* [Add\Remove Classes in Javascript](https://appendto.com/2016/02/addremove-css-classes-using-javascript/)
 
 
