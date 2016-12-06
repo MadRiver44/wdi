@@ -3,9 +3,9 @@
 ## Lab 1 - Working with floats
 
 1. Create a grid of 3 columns floated left containing 3 nonfloated divs
-2. Create a grid of 3 rows with 3 right floated divs
+2. Create a grid of 3 rows with 3 left floated divs
 
-Copy\Paste link for CodePen here
+**Copy\Paste link for CodePen here**
 
 [Student Example - Connect Four](http://www.drakefour.com/)
 [Student Example - Battleship](http://author-calendar-54475.bitballoon.com/)
