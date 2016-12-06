@@ -31,7 +31,7 @@ Which of these tools you are going to need to build this game? </br>
 What are the pros/cons of each of these tools? </br>
 
 **Submission**</br>
-This homework is DUE on THURSDAY at 10PM. Please, use the time we are so generously giving you to complete all the previous assignments you fall behind on!
+This homework is DUE on THURSDAY at 10PM. Please, use the time we are so generously giving you to complete all the previous assignments you fell behind on!
 
 Again, you can choose to work alone or with a partner (no more than one)!
 
