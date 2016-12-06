@@ -35,6 +35,6 @@ console.log( fn1() );
 
 Navigate to [ES6 kata](http://es6katas.org/). Click on "Default Parameter" exercise. Attempt to fix the bugs.
 
-Try the same thinh with "Block Scope and Arrow Functions"
+Try the same thing with "Block Scope and Arrow Functions"
 
 
