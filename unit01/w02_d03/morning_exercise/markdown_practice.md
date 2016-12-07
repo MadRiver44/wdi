@@ -13,7 +13,7 @@ Read about Github gists [on GitHub](https://help.github.com/articles/about-gists
 Watch [this TED Talk about grit](http://www.ted.com/talks/angela_lee_duckworth_the_key_to_success_grit?language=en).
 
 ## Part 4
-Make another Markdown file called `bash_cheatsheet.md` in the `notes` directory and make yourself a cheatsheet about Bash commands. At a minimum, include the commands to:
+Make a Markdown file called `bash_cheatsheet.md` in the `notes` directory and make yourself a cheatsheet about Bash commands. At a minimum, include the commands to:
 
   - create a directory
   - create a file
