@@ -25,7 +25,7 @@ Based on the initial desing layout created in class do the following:
 * Add a trigger event (hover,active) to the button and have it transition the div back into the section and center it under the button
 
 ### Resources (add any additional resources you find)
-* []()
+* [CSS Transitions](http://css3.bradshawenterprises.com/transitions/)
 
 ## Lab 3 - Working with Keyframes
 
@@ -35,7 +35,7 @@ Using @keyframes and the "animation" property apply the following animations:
 **Copy\Paste link for CodePen here**
 
 ### Resources (add any additional resources you find)
-* []()
+* [CSS Animations](http://css3.bradshawenterprises.com/animations/)
 
 ###BONUS
 * Create a new codepen and animate a div to all 4 corners of the screen
