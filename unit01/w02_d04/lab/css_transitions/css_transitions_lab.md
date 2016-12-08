@@ -44,6 +44,6 @@ Using @keyframes and the "animation" property apply the following animations:
 **Copy\Paste link for CodePen here**
 
 ### Third Party Animiation Resources
-* [Hover Trans](http://ianlunn.github.io/Hover/)
+* [Hover.css](http://ianlunn.github.io/Hover/)
 * [Wow.js](http://mynameismatthieu.com/WOW/docs.html)
 * [Animate.css](https://daneden.github.io/animate.css/)
