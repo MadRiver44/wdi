@@ -7,7 +7,7 @@ Recreate the design displayed in the absolute_positioning.png
 **Copy\Paste link for CodePen here**
 
 ### Resources (add any additional resources you find)
-* []()
+* [Absolute vs. Relative](http://webdesign.about.com/od/advancedcss/a/aa061307.htm)
 
 ## Lab 2 - Working with Transistions
 
