@@ -9,12 +9,11 @@
   <body>
     <h1>High Fives!</h1>
 
-    <p>I am attempting to make an in-browser version of this console exercise.
-    So far, this is the extent of my progress.
-    I was able to get all of the required JS to work in the console,
-    with the exception of two points:</p>
-    <br>
-   <ul>
+      <p>I am attempting to make an in-browser version of this console exercise.
+      So far, this is the extent of my progress.
+      I was able to get all of the required JS to work in the console,
+      with the exception of two points:</p>
+      <ul>
       <li>
         If doubleTap is a miss, the creature is removed from the game.
         <br>
@@ -31,34 +30,50 @@
         I could just call friends.acceptMember() a number of times, but that is not the way I
         want to go.
       </li>
-    </ul>
+      <br>
+      <li>These are the things the fronside still needs:<br>
+      1. playerSelect value adds player to playerArray<br>
+      2. number of classmates adds that qty random names to playerArray<br>
+      3. status alerts and enthusiasm report no longer console.log, but now innerHTML<br>
+      4. doubleTap failure removes player from game<br>
 
+    </ul>
 
     <form>
       <label for="playerName">Select player name: </label>
       <select id="playerName"></select>
       <button id="setPlayer" onclick="setPlayer1()">Select your name: </button>
       <br>
+      <label for="playerName">How many classmates will play? </label>
+      <input type="number" name="playerQuantity" min="1" max=hakunaMatata.length value="7">
     </form>
 
     <div id="players"></div>
 
     <br>
-
     <button id="play" onclick="friends.anotherDay()">Attempt a High Five!</button>
-
     <button id="double" onclick="friends.doubleTap()">Go for a Double Tap!</button>
 
-<div id="status"></div>
-<div id="attendance"></div>
+    <div id="status"></div>
+    <div id="attendance"></div>
 
 
 <script>
+
+var sel = document.getElementById('playerName');
+for(var i = 0; i < hakunaMatata.length; i++) {
+    var opt = document.createElement('option');
+    opt.innerHTML = hakunaMatata[i];
+    opt.value = hakunaMatata[i];
+    sel.appendChild(opt);
+}
 
 let setPlayer1 = function() {
   let sel = document.getElementById('playerName');
   let player1 = sel.value;
   playerArray = playerArray + player1;
+  console.log(playerArray);
+
 };
 
 let displayPlayers = function () {

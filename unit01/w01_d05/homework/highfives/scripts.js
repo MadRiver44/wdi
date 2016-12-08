@@ -36,6 +36,10 @@ class SocialGroup {
   acceptMember ( member ) {
     this.members.push( member );
   }
+  removeMember ( member ) {
+    let var q = friends.member;
+    this.members.splice( q, 1 );
+  }
   randomMember () {
     return this.members[ Math.floor(Math.random() * this.members.length) ];
   }
@@ -43,7 +47,6 @@ class SocialGroup {
     const highFiveInitiator = this.randomMember();
     const highFiveReceiver = this.randomMember();
     if (highFiveInitiator === highFiveReceiver) {
-      var status = `Whoa, ${ highFiveInitiator.name }, no fair high-fiving yourself!`;
       alert(`Whoa, ${ highFiveInitiator.name }, no fair high-fiving yourself!`);
       this.mingleRandomMembers();
     }
@@ -153,7 +156,6 @@ const friends = new SocialGroup('bffs');
 for (i=0; i<hakunaMatata.length; i++) {
   friends.acceptMember(new Person({name: (hakunaMatata[i])}))
 }
-
 
 
 //friends.acceptMember( new Person({name: 'Lichard DeGray'}) );

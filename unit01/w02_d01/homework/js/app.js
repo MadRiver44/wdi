@@ -63,33 +63,62 @@ function makeMiddleEarth() {
 
 function makeHobbits() {
   console.log('Make hobbits');
-  // display an unordered list of hobbits in the shire
-  // give each hobbit a class of "hobbit"
-  // list the hobbits alphabetically.  Maybe use the .sort() method.
+  //GOAL:  display an unordered list of hobbits in the shire
+  //Step 1. create a ul tag with an id of hobbitList
+  let list = document.createElement('ul');
+  list.setAttribute('id', 'hobbitList');
+  const ulPosition = document.querySelectorAll('h1');
+  ulPosition[1].appendChild(list);
+
+  // Step 2. give each hobbit a class of "hobbit"
+  // Step 3.list the hobbits alphabetically.  Maybe use the .sort() method.
 };
 
 function keepItSecretKeepItSafe() {
   // create an empty div with an id of 'the-ring' and innerHTML of "The ring"
+  let theRing = document.createElement('div');
+    theRing.setAttribute('id', 'the-ring');
+    theRing.innerHTML = "The ring";
   // add the ring as a child of Frodo
+
+    Frodo.appendChild(theRing);
 };
 
 function makeBaddies() {
   // display an unordered list of baddies in Mordor
+  let badGuys = document.createElement('ul');
+  badGuys.setAttribute('id', 'bad-guys');
+  document.body.appendChild(badGuys);
+  for(let badGuy of badGuys){
+    let villain = document.createElement('li');
+    villain.setAttribute('id', badGuy);
+    // inside each li tag include innerHTML with the name of the villain
+
+    middleEarth.appendChild(place);
+    let nameOfLand = document.createElement('h1');
+    nameOfLand.innerHTML = land;
+    place.appendChild(nameOfLand);
   // give each of the baddies a class of "baddy"
+  }
 };
 
 function makeBuddies() {
   // create an aside tag and append it below mordor
+  let buddyList = document.createElement('aside');
   // display an unordered list of buddies in the aside
+
   // give each of the buddies a class of "buddy"
+
 };
 
 function leaveTheShire() {
   // grab the hobbits and move them to Rivendell
+
 };
 
 function beautifulStranger() {
   // change the buddy 'Strider' node to "Aragorn"
+
 };
 
 function forgeTheFellowShip() {
@@ -151,5 +180,4 @@ window.onload = function() {
   document.querySelector('#b11').addEventListener('click', itsDangerousToGoAlone);
   document.querySelector('#b12').addEventListener('click', weWantsIt);
   document.querySelector('#b13').addEventListener('click', thereAndBackAgain);
-
 };

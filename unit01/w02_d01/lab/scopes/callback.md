@@ -1,4 +1,4 @@
-# Callbacks
+<!-- # Callbacks
 
 ## What are callbacks?
 As we now know, functions are like any other data type, and can be passed as arguments.
@@ -16,7 +16,7 @@ You will see good amount of callback examples used in jQuery, Native JS code (Fo
 
 ```javascript
 
-// a simple example
+// a simple example -->
 
 const add = (a, b, cb) => {
   console.log(a + b);
@@ -27,10 +27,10 @@ const add = (a, b, cb) => {
 add(1, 2, () => {
   console.log('I am done with my math homework')
 });
-```
+<!-- ```
 
 	Output is: 
 	3
 	I am done with my math homework
-	
+	 -->
 
