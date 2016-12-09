@@ -4,7 +4,7 @@
 
 Recreate the design displayed in the absolute_positioning.png 
 
-**Copy\Paste link for CodePen here**
+http://codepen.io/franklinbrooks/pen/GNGYgy
 
 ### Resources (add any additional resources you find)
 * [Absolute vs. Relative](http://webdesign.about.com/od/advancedcss/a/aa061307.htm)
@@ -17,7 +17,7 @@ Based on the initial desing layout created in class do the following:
 * Use the "transition" property to transition between the two classes
 * Add a 1s transition for background-color to the li:hover state
 
-**Copy\Paste link for CodePen here**
+http://codepen.io/franklinbrooks/pen/JbZaXQ
 
 ###BONUS
 * Add a button to the <section>...style it as you wish...

@@ -214,7 +214,7 @@ function forgeTheFellowShip() {
   for (hobbit of hobbits) {
     fellowshipUL.appendChild(hobbit);
 
-    alert(`${hobbit.innerHTML} has arrived!`)
+    alert(`${hobbit.innerHTML} has arrived!`) // this gives html tags for ring div also
   };
   // loop through and add the buddies to the new ul
   // alert that they've arrived
@@ -252,8 +252,8 @@ function hornOfGondor() {
   const buddies = document.querySelectorAll('.buddy');
   // loop through the buddies and add strikethrough to boromir
   for (buddy of buddies) {
-    if(buddy.innerHTML === 'Boromir') {
-      buddy.innerHTML = '<strike>Boromir</strike>';
+    if(buddy.innerHTML === 'Boromir') { // careful of adding html; can open a site to malicious code
+      buddy.innerHTML = '<strike>Boromir</strike>'; // can do style='strikethrough' also
     };
   };
   alert('the horn of gondor has been blown');
@@ -273,7 +273,7 @@ function itsDangerousToGoAlone(){
   mordor.appendChild(mountDoom);
   mountDoom.appendChild(mountDoomUL);
 
-  for (hobbit of hobbits) {
+  for (hobbit of hobbits) {  // Vince explained this methodology in detail re: JS string methods
     if ((hobbit.innerHTML === 'Samwise "Sam" Gamgee') || (hobbit.innerHTML.indexOf('Frodo') !== -1)) {
       mountDoomUL.appendChild(hobbit);
     };
@@ -282,10 +282,16 @@ function itsDangerousToGoAlone(){
 
 function weWantsIt() {
   // Create a div with an id of 'gollum' and add it to Mordor
+  const gollum = document.createElement('div');
+  gollum.setAttribute('id', 'gollum');
+  mordor.appendChild(gollum);
   // Remove the ring from Frodo and give it to Gollum
-  // Create a condition (Maybe an IF statement) that changes the font-color of the ring div to Red if
-  // it is a child of the div with the id 'gollum'
+
+  // Create a condition (Maybe an IF statement) that changes the font-color of the ring div
+  // to Red if it is a child of the div with the id 'gollum'
+
   // Move Gollum into Mount Doom
+
 };
 
 function thereAndBackAgain() {

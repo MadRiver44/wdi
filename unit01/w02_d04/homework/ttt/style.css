@@ -76,6 +76,14 @@ footer {
 .heart {
   color: #ff0000;
   text-decoration: none;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+.heart:hover {
+
 }
 
  a {
