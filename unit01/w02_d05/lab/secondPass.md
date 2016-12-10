@@ -1,10 +1,7 @@
 ## links for todays secondPass
 
-### Repl
-* [w02_d05 - secondPass](https://repl.it/EmKF/1)
-* 
-### CodePen
-* [w02_d05 - secondPass](http://codepen.io/jkeohan/pen/xRJdyq?editors=0110)
+* [repl - w02_d05 - secondPass](https://repl.it/EmKF/1)
+* [codepen - w02_d05 - secondPass](http://codepen.io/jkeohan/pen/xRJdyq?editors=0110)
 
 ##Key Points of Review
  
