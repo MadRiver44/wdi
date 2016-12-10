@@ -1,4 +1,4 @@
-## Here are the links from todays AM\PM session
+## links for todays secondPass
 
 ### Repl
 * [w02_d05 - secondPass](https://repl.it/EmKF/1)
