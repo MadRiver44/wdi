@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Follow Mouse</title>
+    <style>
+    img#cat {
+        width: 20%;
+        height: 20%;
+        position: absolute;
+        border: 1px solid red;
+    }
+    </style>
+</head>
+
+<body>
+<script src="jquery.js"></script>
+    <script>
+    $(window).on('mousemove', function(e) {
+        $("#cat").stop().animate({
+            left: e.pageX - 8,
+            top: e.pageY - 50
+        });
+    });
+    </script>
+    <img src="cat.png" id="cat" alt="A little crazy cat">
+</body>
+
+</html>

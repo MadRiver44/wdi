@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Let's add a plugin</title>
+    <!-- Make sure jQuery first before any plugins -->
+    <script src="jquery.js"></script>
+    <!-- Include the chosen plug-in below this comment -->
+    <script src="makeItRain.js"></script>
+    <!-- then run the plugin below this comment-->
+    <script>
+    $(function() {
+        $("#rain").makeItRain();
+
+        $('#rain').on("click", function() {
+          $(this).parent().append('<img id="rappers" src="https://media.giphy.com/media/l41lMIft2aEtgpRLO/giphy.gif">');
+        })
+    });
+    </script>
+    <link rel="stylesheet" type="text/css" href="makeItRain.css">
+</head>
+
+<body>
+    <button id="rain">
+        Make it Rain...
+    </button>
+</body>
+
+</html>
