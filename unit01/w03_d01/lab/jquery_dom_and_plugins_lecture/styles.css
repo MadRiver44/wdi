@@ -1,0 +1,64 @@
+ul,
+li {
+    border: 1px solid black;
+}
+
+ul {
+    width: 100px;
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.squares {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: none;
+    float: left;
+    margin: 4px;
+}
+
+.squares:hover {
+    background: darkred;
+    cursor: pointer;
+}
+
+.squares.like {
+  background: rgba(3, 169, 244, 0.72) url("heart.png") no-repeat center center;
+}
+
+#square_container {
+  width: 864px;
+  border: 1px solid black;
+  min-height: 400px;
+}
+
+.clearfix:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+#howto {
+  border-radius: 15px;
+  width: 500px;
+  height: 230px;
+  padding: 10px;
+  color: #FFF;
+  background-color: black;
+  opacity: 1.0;
+  position: absolute;
+  top: 20px;
+  left: 30%;
+  display: none;
+}
+
+#howto h1 {
+  border-bottom: 1px solid black;
+}
+
