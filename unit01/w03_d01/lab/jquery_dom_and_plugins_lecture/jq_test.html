@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testing a slide plugin</title>
+    <!-- Make sure jQuery first before any plugins -->
+  <script src="jquery.js"></script>
+
+ <!-- Include the chosen plug-in below this comment -->
+ <script src="jquery.slides.js"></script>
+ <script>
+   $(function() {
+    $("#slides").slidesjs({
+        width: 940,
+        height: 528
+      });
+   });
+ </script>
+</head>
+<body>
+  <!-- add script call -->
+  <div id="slides">
+    <img src="http://placehold.it/940x528">
+    <img src="http://placehold.it/940x528">
+    <img src="http://placehold.it/940x528">
+    <img src="http://placehold.it/940x528">
+    <img src="http://placehold.it/940x528">
+  </div>
+</body>
+</html>
