@@ -61,18 +61,37 @@ function makeMiddleEarth() {
   // append the section to the body of the DOM with: document.body.appendChild( // variable name )
 };
 
+
+
+
+
+
+
+
 function makeHobbits() {
   console.log('Make hobbits');
   //GOAL:  display an unordered list of hobbits in the shire
   //Step 1. create a ul tag with an id of hobbitList
   let list = document.createElement('ul');
   list.setAttribute('id', 'hobbitList');
-  const ulPosition = document.querySelectorAll('h1');
-  ulPosition[1].appendChild(list);
-
+  const findTheShire = document.querySelector('The Shire');
+  findTheShire.appendChild(list);
   // Step 2. give each hobbit a class of "hobbit"
   // Step 3.list the hobbits alphabetically.  Maybe use the .sort() method.
+  hobbits = hobbits.sort();
+  for (hobbit in hobbits) {
+    hobbit.setAttribute('class', 'hobbit');
+    hobbitlist.appendChild(hobbits);
+  }
 };
+
+
+
+
+
+
+
+
 
 function keepItSecretKeepItSafe() {
   // create an empty div with an id of 'the-ring' and innerHTML of "The ring"
@@ -83,6 +102,14 @@ function keepItSecretKeepItSafe() {
 
     Frodo.appendChild(theRing);
 };
+
+
+
+
+
+
+
+
 
 function makeBaddies() {
   // display an unordered list of baddies in Mordor
@@ -102,6 +129,13 @@ function makeBaddies() {
   }
 };
 
+
+
+
+
+
+
+
 function makeBuddies() {
   // create an aside tag and append it below mordor
   let buddyList = document.createElement('aside');
@@ -111,15 +145,28 @@ function makeBuddies() {
 
 };
 
+
+
+
+
 function leaveTheShire() {
   // grab the hobbits and move them to Rivendell
 
 };
 
+
+
+
+
+
+
 function beautifulStranger() {
   // change the buddy 'Strider' node to "Aragorn"
 
 };
+
+
+
 
 function forgeTheFellowShip() {
   // move the hobbits and the buddies to Rivendell
@@ -129,12 +176,18 @@ function forgeTheFellowShip() {
   // after each character is added make an alert that they have joined your party
 };
 
+
+
+
 function theBalrog() {
   // change the inner HTML of the 'Gandalf' node to 'Gandalf the White'
   // add a class "the-white" to this element
   // in the style.css file, add a css rule for the class "the-white"
   // have a white background and a grey border
 };
+
+
+
 
 function hornOfGondor() {
   // pop up an alert that the horn of gondor has been blown
@@ -143,10 +196,17 @@ function hornOfGondor() {
   // Remove the Uruk-Hai from the Baddies on the page
 };
 
+
+
+
 function itsDangerousToGoAlone(){
   // take Frodo and Sam out of the fellowship and move them to Mordor
   // add a div with an id of 'mount-doom' to Mordor
 };
+
+
+
+
 
 function weWantsIt() {
   // Create a div with an id of 'gollum' and add it to Mordor
@@ -156,11 +216,17 @@ function weWantsIt() {
   // Move Gollum into Mount Doom
 };
 
+
+
+
 function thereAndBackAgain() {
   // remove Gollum and the Ring from the DOM
   // remove all the baddies from the DOM
   // Move all the hobbits back to the shire
 };
+
+
+
 
 // =================================
 // What to do when the page is ready

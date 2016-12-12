@@ -6,12 +6,12 @@ let box = null;
 
 console.log('JS is working!');
 
-let outputMessage = function(message) {
+let outputMessage = function(text) {
   let newHTML = document.getElementById('message');
-  newHTML.innerHTML = message;
+  newHTML.innerHTML = text;
 };
 
-let play = function() {
+let play = function(text) {
   console.log('playing!');
   outputMessage(`player ${currentPlayer} select a square: `);
 };
@@ -19,32 +19,39 @@ let play = function() {
 let move = function(event) {
   console.log('Now in move!');
   console.log(event.target)
-  event.target.innerHTML  = `${currentPlayer}`;
   let box = event.target;
   console.log(box.getAttribute('data-position'));
   let index = (box.getAttribute('data-position'));
   console.log('Board going to validateMove is ' + board);
-
-  let validation = validMove(box);
-  console.log("THIS IS VALIDATION: ", validation);
+  let validation = validMove(index);
   if (validation === true) {
     console.log("THIS IS CURRENTPLAYER:", currentPlayer);
     console.log("THIS IS BOARD[INDEX]: ", board[index])
+    event.target.innerHTML  = `${currentPlayer}`;
     board[index] = currentPlayer;
     console.log('Board after move method updates index is ' + board);
     console.log('Leaving move, heading for evaluateBoard!');
     evaluateBoard(board);
-  } else {
-    console.log('Back in move, heading for play!');
-    play();
+  } else if (validation === false) {
+    console.log('Back in move from validMove');
+    console.log('This is current board[index]: ' + board[index]);
+    board[index] = board[index];
+    console.log('This is updated board[index]: ' + board[index]);
+    console.log('Leaving move, heading for play!');
+    outputMessage(`square is taken. ${currentPlayer} select another square:`);
   }
 };
 
-let validMove = function(box) {
-  console.log('Validating move!');
+let validMove = function(index) {
+  console.log('Now in validMove...');
   console.log('Board being validated is ' + board);
-  if (board[box] === "X" || board[box] ===  "O") {
-     outputMessage(`square is taken. select another square:`);
+  console.log('This is board[index]: ' + board[index]);
+  if (board[index] === "X") {
+     // outputMessage(`square is taken. select another square:`);
+     console.log('Leaving validMove with return false!');
+     return false;
+  } else if (board[index] ===  "O") {
+     //outputMessage(`square is taken. select another square:`);
      console.log('Leaving validMove with return false!');
      return false;
   } else {
@@ -121,6 +128,8 @@ let playAgain = function() {
     clearBoard[k].innerHTML = '';
   }
   resetButton.className = 'invisible';
+  currentPlayer = "X";
+  turns = 0;
   play()
 };
 

@@ -1,14 +1,22 @@
 console.log('letter.js is connected');
 
 class Letter {
-  constructor() {
-    //Put attributes here!
+  constructor(value) {
+    this.value = value;
+    this.hidden = true;
   }
   show() {
-    //What abilites go in the show method?
+    this.hidden = false;
   }
   render() {
-    //How do you return '_' if the letter is hidden
-    //And the letter if it's showing?
+    if (this.hidden === true) {
+        return '_';
+    } else if (this.hidden === false) {
+        return this.value;
+    }
   }
 }
+
+
+
+

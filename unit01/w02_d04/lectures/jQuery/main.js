@@ -107,3 +107,44 @@ $('#toggle-main').click(() => { $('main').toggle() });
 // old-style
 $()
 //
+
+
+
+
+const button = document.querySelector("#button"); // This assigns the variable 'button' to an HTML element with the id of 'button'.
+firstButton.addEventListener('click', function() { // This assigns an event listener to a click event on a different button, 'firstButton'.
+  const divs = document.querySelectorAll('.wrapper-container div'); //  This assigns variable 'divs' to an array of divs with the class ".wrapper-container div".
+  for (let div of divs) { div.style.backgroundColor = 'purple'; }}); //  This sets up a for each loop that will iterate through each element in the divs array and assign each the background color 'purple'.
+
+
+Write a Snowman class with attributes being:
+name, features: "carrot nose", "stick arms".
+The showman should have the following methods: meltWhenWarm, likeHugs.
+HINT: (maybe you need a constructor here? pass name to it? maybe ....?).
+Create a new instance of Snowman object named "Olaf". *
+
+class Snowman {
+  constructor(nose, arms) {
+    this.nose = 'carrot nose';
+    this.arms = 'cstick arms';
+    meltWhenarm() {
+    }
+    likeHugs() {
+    }
+  }
+}
+
+let Olaf = new Snowman(nose,arms,meltWhenWarm,likesHugs);
+
+
+
+
+
+
+
+
+
+
+
+
+
