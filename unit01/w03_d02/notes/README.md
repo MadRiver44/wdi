@@ -1,4 +1,4 @@
-# HANGMAN - Project Title 
+# HANGMAN 
 
 ### Screen Shot of Game  
   ![Hangman game](http://www.bigfuntown.com/Games/456.jpg)
