@@ -34,16 +34,20 @@ const lands = [
 //           Chapters
 // ====================================
 
+/*jQuery('<section/>', {
+    id: 'middle-earth',
+}).appendTo('#mySelector');*/
+
 function makeMiddleEarth() {
   console.log('Trying to make middle earth.');
   // create a section tag with an id of middle-earth
-  const middleEarth = $('section');
-  // console.log(middleEarth);
-  middleEarth.setAttribute('id', 'middle-earth');
+  const body = $('body')[0];
+  //const middleEarth = $('<section id='middle-earth'></section>');
   // add each land to the section as article tags-- try using a loop
-  document.body.appendChild(middleEarth);
+  $( "<section id='middle-earth'></section>" ).appendTo( "body" );
+  //body.appendTo(middleEarth);
 
-  for(let land of lands){
+  /*for(let land of lands){
     // console.log(land);
     const place = $('article');
     // console.log(place);
@@ -57,7 +61,7 @@ function makeMiddleEarth() {
     nameOfLand.innerHTML = land;
     // console.log(nameOfLand);
     place.appendChild(nameOfLand);
-  }
+  }*/
   // append the section to the body of the DOM with: document.body.appendChild( // variable name )
 };
 
