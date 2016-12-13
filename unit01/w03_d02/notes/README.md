@@ -10,7 +10,7 @@
 - Coffee
 
 ### Code Example quote
-  ```` ``` ````
+```javascript
 class Letter {
   constructor(value) {
     this.value = value;
@@ -27,7 +27,7 @@ class Letter {
     }
   }
 }
-```` ``` ````
+````
 ### Build Strategy
 This game uses three class constructors to build properties into letter objects, and then organizes those objects with an additional word object constructor.  Finally. game logic is handled in the game object constructor.
 
