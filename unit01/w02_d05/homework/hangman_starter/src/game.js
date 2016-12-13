@@ -13,57 +13,62 @@ class Game {
   }
 
   guess(letter) {
-    console.log(`Now in first loop; currently comparing ${letter} to ${this.guessedLetters}`);
-    if (this.guessedLetters.includes(letter) === true) {
-      console.log(`Sorry, ${this.letter} has been guessed already. Try again...`);
-      this.render();
-    } else {
-      // 4 lines below came from above here
-      console.log(`Now sending ${letter} to try function.`);
+    console.log(`Now in first loop; currently comparing ${letter} to guessedLetters`);
+    if (this.guessedLetters.includes(letter) === false) {
+      console.log(`guess sees ${letter} has not yet been guessed. Sending ${letter} to try function.`);
       if (this.try(letter) === false) {
+        this.guessedLetters.push(letter);
+        console.log(`guess has pushed ${letter} into guessed.Letters array.`);
+        console.log(`guessedLetters array now = ${this.guessedLetters}`);
         this.guesses = this.guesses - 1;
         console.log(`Guesses now equals ${this.guesses}`);
-    }
-    console.log(`guess determines that ${letter} has not yet been guessed.`);
-    this.guessedLetters.push(letter);
-    console.log(`guess has pushed ${letter} into guessed.Letters array.`);
-    console.log(`guessedLetters array now = ${this.guessedLetters}`);
+      } else {
+      // if (tryValue === true)
+        console.log(`guess sees ${letter} has not yet been guessed. Sending ${letter} to try function.`);
+        this.guessedLetters.push(letter);
+        console.log(`guess has pushed ${letter} into guessed.Letters array.`);
+        console.log(`guessedLetters array now = ${this.guessedLetters}`);
+        console.log(`Guesses now equals ${this.guesses}`);
+      }
+    } else {
+      console.log(`Sorry, ${letter} has been guessed already. Try again...`);
     }
   }
 
   isOver() {
     console.log(`The current function is isOver`);  // think i need a loop to check visible on each
-    if (this.currentWord === this.string) {
+/*      let lettersFound = 0;
+      for (let i=0; i < this.letters.length; i++) {
+        if (this.letters[i].hidden === false) {
+        lettersFound++;
+        }
+      }*/
+    if (this.guesses === 0) {
       return true;
-    } else if (this.guesses === 0) {
-      return true;
+/*    } else if (lettersFound === this.letters.length) {
+      return true;*/
     } else {
       return false;
     }
   }
 
-
   overMessage() {
     console.log(`The current function is overMessage`);
-    let lettersFound = 0;
     if (this.guesses === 0) {
-        return 'Sorry, you lost!';
-        // loop to check hidden status goes here
-/*    } else if
-      for (letter in this.letters.length) {
+        return "Sorry, you lost!";
+/*   } else if {
+      let lettersFound = 0;
+      for (let i=0; i < this.letters.length; i++) {
         if (this.letters[i].hidden === false) {
-          lettersFound++;
-          if (lettersFound === this.letters.length) {
-            return 'YAY!! You won!!';
-          }
-        }*/
-
-
+        lettersFound++;
+        }
+      }
+      if (lettersFound === this.letters.length) {
+        return "YAY!! You won!!";*/
     } else {
       return undefined;
     }
   }
-
 
   render() {
     console.log(`The current function is render`);

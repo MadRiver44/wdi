@@ -6,7 +6,7 @@ const friends = ['Ada', 'Grace', 'Margaret'];
  * Finding things in the DOM
  */
 
-// use jQuery to find an element by it's ID
+// use jQuery to find an element by its ID
 // and assign it to the variable 'myParagraph'
 const myParagraph = $('#myParagraph'); // *** returns ARRAY, not HTML object!!!!!
 console.log(myParagraph); //
@@ -60,18 +60,6 @@ $('li').each ((index,item) => {  // jq each requires you to pass index???
   item.innerHTML = `${friends[index]} is and awesome programmer`;
 })
 
-/*let takeArrowAway function = $('li').each ((index,item) {
-  item.innerHTML = `${friends[index]} is and awesome programmer`;
-})
-*/
-
-/*let oldWayFunction = function() {
-  const myDivs = $('div');
-  for (let i=0; i<myDivs.length; i++) {
-    item.innerHTML = `${friends[index]} is and awesome programmer`;
-  }
-}*/
-
 // Add a new <li> to the <ul>
 // 1. Find the <ul>
 // ex: const myUl = $('ul');
@@ -117,24 +105,6 @@ firstButton.addEventListener('click', function() { // This assigns an event list
   for (let div of divs) { div.style.backgroundColor = 'purple'; }}); //  This sets up a for each loop that will iterate through each element in the divs array and assign each the background color 'purple'.
 
 
-Write a Snowman class with attributes being:
-name, features: "carrot nose", "stick arms".
-The showman should have the following methods: meltWhenWarm, likeHugs.
-HINT: (maybe you need a constructor here? pass name to it? maybe ....?).
-Create a new instance of Snowman object named "Olaf". *
-
-class Snowman {
-  constructor(nose, arms) {
-    this.nose = 'carrot nose';
-    this.arms = 'cstick arms';
-    meltWhenarm() {
-    }
-    likeHugs() {
-    }
-  }
-}
-
-let Olaf = new Snowman(nose,arms,meltWhenWarm,likesHugs);
 
 
 

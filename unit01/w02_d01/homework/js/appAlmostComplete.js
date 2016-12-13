@@ -38,24 +38,18 @@ function makeMiddleEarth() {
   console.log('Trying to make middle earth.');
   // create a section tag with an id of middle-earth
   const middleEarth = document.createElement('section');
-  // console.log(middleEarth);
   middleEarth.setAttribute('id', 'middle-earth');
   // add each land to the section as article tags-- try using a loop
   document.body.appendChild(middleEarth);
 
   for(let land of lands){
-    // console.log(land);
     const place = document.createElement('article');
-    // console.log(place);
     // assign the id of the corresponding article tag as the name of the land
     place.setAttribute('id', land);
-    // console.log(place);
     // inside each article tag include an h1 with the name of the land
     middleEarth.appendChild(place);
     const nameOfLand = document.createElement('h1');
-    // console.log(nameOfLand);
     nameOfLand.innerHTML = land;
-    // console.log(nameOfLand);
     place.appendChild(nameOfLand);
   }
   // append the section to the body of the DOM with: document.body.appendChild( // variable name )
@@ -71,18 +65,14 @@ function makeHobbits() {
   const theShire = document.querySelector('#theShire');
   // create the hobbit unordered list
   const ulHobbits = document.createElement('ul');
-
   // add the hobbits list to theShire article
   theShire.appendChild(ulHobbits);
-
   // sort the hobbits array
   hobbits.sort();
-
   // loop through the hobbits, create a new list item for each
   // and add the new list item to the hobbits list
   for (let hobbit of hobbits) {
     const liHobbit = document.createElement('li');
-
     liHobbit.innerHTML = hobbit;
     liHobbit.setAttribute('class', 'hobbit');
     ulHobbits.appendChild(liHobbit);
@@ -131,7 +121,6 @@ function makeBuddies() {
   // create an aside tag and append it below mordor
   // display an unordered list of buddies in the aside
   // give each of the buddies a class of "buddy"
-  //
   // create buddy aside
   const buddyAside = document.createElement('aside');
   // find middle earth
@@ -191,7 +180,7 @@ function forgeTheFellowShip() {
   // create the new div h1
   const rivendellH1 = document.createElement('h1');
   // create the new fellowship ul
-  const fellowshipUL = document.createElement('ul');
+  const fellowshipUl = document.createElement('ul');
   // find the hobbits
   const hobbits = document.querySelectorAll('.hobbit');
   // find the buddies
@@ -207,13 +196,12 @@ function forgeTheFellowShip() {
   // append the h1 to the new div
   rivendellDiv.appendChild(rivendellH1);
   // append the new ul to the div
-  rivendellDiv.appendChild(fellowshipUL);
+  rivendellDiv.appendChild(fellowshipUl);
 
   // loop through and add the hobbits to the new ul
   // alert that they've arrived
   for (hobbit of hobbits) {
     fellowshipUL.appendChild(hobbit);
-
     alert(`${hobbit.innerHTML} has arrived!`) // this gives html tags for ring div also
   };
   // loop through and add the buddies to the new ul
