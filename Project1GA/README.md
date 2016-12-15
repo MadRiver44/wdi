@@ -3,6 +3,10 @@
 ### Screen Shot of Game  
   ![StarMaster by Activision 1982](http://www.8-bitcentral.com/images/reviews/atari2600/starmaster2600Screen.jpg)
 
+###My whiteboard for project
+  ![Whiteboard of project](https://github.com/franklinbrooks/WDI_HAKUNA_MATATA/blob/master/Project1GA/20161215_151913.jpg)
+
+
 ### Technologies Used
 - HTML
 - CSS
