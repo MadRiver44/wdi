@@ -16,4 +16,79 @@
 </div>
 
 </body>
+
+<script>
+  document.body.addEventListener("keydown", function(event) {
+    if (event.keyCode == 32) {
+      console.log('Spacebar!');
+      shootIt();
+    }
+});
+      leftbeam
+      rightbeam
+
+  });
+</script>
+
+<script>
+  let awaitIt() = function() {
+    // splash screen
+    // press any key to begin
+  }
+</script>
+
+<script>
+  let startIt() = function() {
+    // initialize new player
+    // initialize game score / level / enemy / etc
+  }
+</script>
+
+<script>
+let shootIt = function() {  // 1) spacebar calls function that appends divs to gameboard
+  let leftBeam = document.body
+  let rightbeam =
+  document.body.append(leftBeam);
+  document.body.append(rightBeam);
+              // call audio event
+  removeIt();  // 2) function will then delete them from DOM at 1000 ms
+  checkIt();  // 3) and will then call a second function
+}
+</script>
+
+<script>
+let checkIt = function() {
+  if () { // 4) second function will check x/y of spaceship at that 1000ms point and
+    score++;
+          // additional functionality will make explosion visible and remove ship from DOM
+    return true;
+  } else {
+    return false;
+}
+
+</script>
+
+<script>
+let removeIt = function() {
+
+}
+</script>
+
+// add event listener to esc key to call info function aboutIt();
+
 </html>
+
+
+1) spacebar calls function that appends divs to gameboard (CSS will animate divs automatically)
+2) function will then delete them from DOM at 1000 ms and will call a second function
+3) second function will check x/y of spaceship at 1000ms point.  if within 20px of x/y point, score increments
+4) additional functionality will make explosion visible and remove ship from DOM
+
+
+
+
+
+
+
+
+
