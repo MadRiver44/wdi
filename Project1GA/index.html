@@ -8,24 +8,33 @@
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-
-
-<canvas id="myCanvas" width="1024" height="576" style="border:1px solid #000000;">
-</canvas>
-
-<div class='overlay'>
-<img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
->
-<div class='status'>
-<p>
-Test TEST 012 #*?
-</p>
-</div>
-</div>
-
-
-</div>
+  <div class="container">
+    <canvas id="myCanvas" width="1024" height="576">
+    </canvas>
+    <div class='overlay'>
+      <img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
+      >
+      <div class='status'>
+        <p id="round">
+          ROUND:
+        </p>
+        <p id="FUEL">
+          FUEL:
+        </p>
+        <p id="score">
+          SCORE:
+        </p>
+      </div>
+          </div>
+            <div id='crosshairs'>
+        <div id="main">
+          <div id="center"></div>
+          <div class="blue"></div>
+          <div class="yellow"></div>
+          <div class="red"></div>
+        </div>
+    </div>
+  </div>
 </body>
 
 <script src="main.js" type="text/javascript" charset="utf-8"></script>
