@@ -1,0 +1,34 @@
+
+
+body {
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 1024px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 576px;
+  z-index: 2;
+}
+
+.status {
+  position: fixed;
+  z-index: 4;
+  transform: perspective(30em) rotateX(6deg);
+  top: 440px;
+  left: 523px;
+  height: 130px;
+  width: 230px;
+  border-radius: 10px;
+  background-color: red;
+}
+
+
+
