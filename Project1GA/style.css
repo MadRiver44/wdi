@@ -2,6 +2,7 @@
 
 body {
   background-color: black;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .container {
@@ -27,8 +28,12 @@ body {
   height: 130px;
   width: 230px;
   border-radius: 10px;
-  background-color: red;
+  background-color: black;
+  color: #49fb35;
+  text-align: center;
+  vertical-align: center;
 }
+
 
 
 

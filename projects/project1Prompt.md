@@ -26,7 +26,8 @@ Your app must:
 
 ### Necessary Deliverables
 
-* A **git repository hosted on GitHub**, with a link to your hosted game, and frequent commits dating back to the very beginning of the project
+* A **git repository hosted on GitHub**, with a link to your hosted game, 
+and frequent commits dating back to the very beginning of the project
 * A **working game, built by you**, hosted somewhere on the internet (gh-pages)
 * **A ``README.md`` file** with explanations of the technologies used, the approach taken, a link to the live version, screenshots of the game, pictures of wireframes, installation, instructions, unsolved problems, etc.
 
