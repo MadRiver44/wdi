@@ -9,98 +9,118 @@
 </head>
 <body>
   <div class="container">
-    <canvas id="myCanvas" width="1024" height="576">
-    </canvas>
+    <canvas id="myCanvas" width="1024" height="576"></canvas>
+    <div id='game'>
+          <div class='target' id='target1'></div>
+    </div>
     <div class='overlay'>
       <img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
       >
-      <div class='status'>
-        <p id="round">
-          ROUND:
-        </p>
-        <p id="FUEL">
-          FUEL:
-        </p>
-        <p id="score">
-          SCORE:
-        </p>
+      <div id='status'>
       </div>
           </div>
-            <div id='crosshairs'>
-        <div id="main">
-          <div id="center"></div>
-          <div class="blue"></div>
-          <div class="yellow"></div>
-          <div class="red"></div>
+        <div id='crosshairs'>
+          <div id="main">
+            <div id="center"></div>
+            <div class="blue"></div>
+            <div class="yellow"></div>
+            <div class="red"></div>
+          </div>
         </div>
-    </div>
   </div>
 </body>
 
 <script src="main.js" type="text/javascript" charset="utf-8"></script>
 
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 32) {
+    console.log('Spacebar!');
+    shootIt();
+  }
+});
+</script>
 
-<script type='text/javascript'>
-    var MAX_DEPTH = 64;  // depth of field via brightness
-    var canvas, ctx;
-    var stars = new Array(64);  // This sets # of stars
+<script>
+let shootIt = function() {
+  const leftBeam = document.createElement('div');
+  const rightBeam = document.createElement('div');
+  leftBeam.setAttribute('id', 'leftbeam');
+  rightBeam.setAttribute('id', 'rightbeam');
+  const gameBoard = document.querySelector('#game');
+  gameBoard.appendChild(leftBeam);
+  gameBoard.appendChild(rightBeam);
+              // call audio event
+  removeIt();
+  checkIt();
+}
+</script>
 
-    window.onload = function() {
-      canvas = document.getElementById("myCanvas");
-      if( canvas && canvas.getContext ) {
-        ctx = canvas.getContext("2d");
-        initStars();
-        setInterval(loop,64); // this sets speed
-       }
-    }
+<script>
+let checkIt = function() {
+  const gameBoard = document.getElementById("game");
+  let target = document.getElementById('target1');
+  /*let targets = document.querySelectorAll('target');
+  for (target of targets) {*/
+    el = target.getBoundingClientRect();
+    let left = el.left + window.scrollX;
+    let top = el.top + window.scrollY;
+    console.log(`left is ${left} and top is ${top}`);
+  //}
+  if ((left > 582 && left < 622) && (top > 230 && top < 270)) {
+    alert('Hit');
+    score++;   // additional functionality will trigger audio, make explosion visible,
+    outputMessage(`ROUND : ${round} \n SCORE : ${score} \n FUEL : ${fuel}`);
+    gameBoard.removeChild(target);
+    /*const boom = document.createElement('div');
+    boom.setAttribute('class', 'explosion');
+    gameBoard.appendChild(boom);*/
+   }
+}
+</script>
 
-    function randomRange(minVal,maxVal) {
-      return Math.floor(Math.random() * (maxVal - minVal - 1)) + minVal;
-    }
+<script>
+let removeIt = function() {
+  setTimeout(function() {
+    const leftBeam = document.getElementById('leftbeam');
+    const rightBeam = document.getElementById('rightbeam');
+    const gameBoard = document.getElementById("game");
+    gameBoard.removeChild(leftBeam);
+    gameBoard.removeChild(rightBeam);
+  }, 499);
+};
+</script>
 
-    function initStars() {
-      for( var i = 0; i < stars.length; i++ ) {
-        stars[i] = {
-          x: randomRange(-25,25),
-          y: randomRange(-25,25),
-          z: randomRange(1,MAX_DEPTH)
-         }
-      }
-    }
+<script>
+let startIt = function() {
+    // initialize new player
+    outputMessage(`ROUND : ${round} \r SCORE : ${score} \r FUEL : ${fuel}`);
+  }
+</script>
 
-    function loop() {
-      var width = canvas.width;
-      var height = canvas.height;
-      var halfWidth  = canvas.width / 2;
-      var halfHeight = canvas.height / 2;
+<!--
+<script>
+  let crosshairCheck = function() {
+    if (enemy is inside crosshairs){
+    // change css to red;
+  }
+</script>
 
-      ctx.fillStyle = "rgb(0,0,0)";
-      ctx.fillRect(0,0,canvas.width,canvas.height);
+<script>
+  let awaitIt() = function() {
+    // splash screen
+    // press any key to begin
+  }
+</script>
 
-      for( var i = 0; i < stars.length; i++ ) {
-        stars[i].z -= 0.2;  // increment of position
-
-        if( stars[i].z <= 0 ) {
-          stars[i].x = randomRange(-25,25);
-          stars[i].y = randomRange(-25,25);
-          stars[i].z = MAX_DEPTH;
-        }
-
-        var k  = 128.0 / stars[i].z;
-        var px = stars[i].x * k + halfWidth; // add conditions: keypress = turn (width/height)
-        var py = stars[i].y * k + halfHeight;
-
-        if( px >= 0 && px <= 1024 && py >= 0 && py <= 576 ) {
-          var size = (1 - stars[i].z / 32.0) * 5;
-          var shade = parseInt((1 - stars[i].z / 32.0) * 255);
-          ctx.fillStyle = "rgb(" + shade + "," + shade + "," + shade + ")";
-          ctx.fillRect(px,py,size,size);
-        }
-      }
-    }
-  </script>
-
-
+<script>
+  let aboutIt() = function() {
+    // esc key toggles how to instructions
+  }
+</script>  -->
+<script>
+startIt();
+</script>
 </html>
 
 

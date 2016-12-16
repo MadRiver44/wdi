@@ -11,6 +11,13 @@ canvas {
   margin: 0 auto;
   width: 100%;
 }
+#game {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 576px;
+  z-index: 1;
+}
 .overlay {
   position: absolute;
   left: 0;
@@ -18,7 +25,7 @@ canvas {
   height: 576px;
   z-index: 2;
 }
-.status {
+#status {
   position: fixed;
   z-index: 4;
   transform: perspective(30em) rotateX(6deg);
@@ -31,8 +38,6 @@ canvas {
   color: #49fb35;
   text-align: center;
   vertical-align: center;
-}
-.status p {
   text-shadow: 2px 2px 5px #49fb35;
 }
 
@@ -93,51 +98,55 @@ canvas {
   border-radius: 10px;
   box-shadow: 1px 0px 1px #49fb35;
 }
-.leftbeam {
+#leftbeam {
   position: relative;
   height: 12px;
   width: 12px;
   border-radius: 12px;
   background-color: red;
-  animation: moveLeft 1s infinite;
+  animation: moveLeft .5s infinite;
   box-shadow: 0px 0px 12px 12px red;
 }
-.rightbeam {
+#rightbeam {
   position: relative;
   height: 12px;
   width: 12px;
   border-radius: 12px;
   background-color: red;
-  animation: moveRight 1s infinite;
+  animation: moveRight .5s infinite;
   box-shadow: 0px 0px 12px 12px red;
 }
 .target {
+  float: left;
   position: relative;
-  height: 50px;
+  height: 25px;
   width: 50px;
   border-radius: 50px;
   background-color: blue;
-  animation: moveTarget 4s alternate infinite;
+  animation: moveTarget 10s alternate infinite;
   z-index: -1;
+  border-radius: 50px / 25px;
 }
 @keyframes moveLeft {
   0% {left: 100px; top: 500px}
   25% {height: 8px; width: 8px; border-radius: 8px; box-shadow: 0px 0px 8px 8px red;}
   50% {height: 4px; width: 4px; border-radius: 4px; box-shadow: 0px 0px 4px 4px red;}
-  100% {left: 512px; top: 250px; height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 1px 1px red;}
+  100% {left: 517px; top: 248px; height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 1px 1px red;}
 }
 @keyframes moveRight {
   0% {left: 924px; top: 500px}
   25% {height: 8px; width: 8px; border-radius: 8px; box-shadow: 0px 0px 8px 8px red;}
   50% {height: 4px; width: 4px; border-radius: 4px; box-shadow: 0px 0px 4px 4px red;}
-  100% {left: 512px; top: 250px; height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 1px 1px red}
+  100% {left: 517px; top: 248px; height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 1px 1px red}
 }
 @keyframes moveTarget {
   0% {left: -100px; top: 250px}
   50% {left: 1200px; top: 250px}
   100% {left: -100px; top: 250px}
 }
+.explosion {
 
+}
 
 
 

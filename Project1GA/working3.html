@@ -5,29 +5,109 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class='container'>
-<div></div>
-
-<div class='leftbeam'></div>
-
-<div class='rightbeam'></div>
-
-<div class='target'></div>
-</div>
-
+  <div class='container' id='game'>
+    <div class='target' id='target1'></div>
+  </div>
 </body>
 
-<script>
-  document.body.addEventListener("keydown", function(event) {
-    if (event.keyCode == 32) {
-      console.log('Spacebar!');
-      shootIt();
-    }
-});
-      leftbeam
-      rightbeam
 
-  });
+<script>
+let score = 0;
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 32) {
+    console.log('Spacebar!');
+    shootIt();
+  }
+});
+</script>
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 16) {
+    console.log('Shift!');
+    removeIt();
+  }
+});
+</script>
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 9) {
+    console.log('Tab!');
+    checkIt();
+  }
+});
+</script>
+
+<script>
+let shootIt = function() {
+  const leftBeam = document.createElement('div');
+  const rightBeam = document.createElement('div');
+  leftBeam.setAttribute('id', 'leftbeam');
+  rightBeam.setAttribute('id', 'rightbeam');
+  const gameBoard = document.querySelector('#game');
+  gameBoard.appendChild(leftBeam);
+  gameBoard.appendChild(rightBeam);
+              // call audio event
+  removeIt();
+  checkIt();
+}
+</script>
+
+<script>
+let checkIt = function() {
+  const gameBoard = document.getElementById("game");
+  let target = document.getElementById('target1');
+  /*let targets = document.querySelectorAll('target');
+  for (target of targets) {*/
+    el = target.getBoundingClientRect();
+    let left = el.left + window.scrollX;
+    let top = el.top + window.scrollY;
+    console.log(`left is ${left} and top is ${top}`);
+  //}
+  if ((left > 582 && left < 622) && (top > 230 && top < 270)) {
+    alert('Hit');
+    // score++;   // additional functionality will trigger audio, make explosion visible,
+    gameBoard.removeChild(target);
+    /*const boom = document.createElement('div');
+    boom.setAttribute('class', 'explosion');
+    gameBoard.appendChild(boom);*/
+   }
+}
+</script>
+
+<script>
+let removeIt = function() {
+  setTimeout(function() {
+    const leftBeam = document.getElementById('leftbeam');
+    const rightBeam = document.getElementById('rightbeam');
+    const gameBoard = document.getElementById("game");
+    gameBoard.removeChild(leftBeam);
+    gameBoard.removeChild(rightBeam);
+  }, 499);
+};
+</script>
+
+<!-- <script> // working version
+let removeIt = function() {
+  const leftBeam = document.getElementById('leftbeam');
+  const rightBeam = document.getElementById('rightbeam');
+  const gameBoard = document.getElementById("game");
+  gameBoard.removeChild(leftBeam);
+  gameBoard.removeChild(rightBeam);
+}
+</script> -->
+
+<!-- <script>
+  let startIt() = function() {
+    // initialize new player
+    // initialize game score / level / enemy / etc
+  }
+</script>
+
+<script>
+  let crosshairCheck = function() {
+    if (enemy is inside crosshairs){
+    // change css to red;
+  }
 </script>
 
 <script>
@@ -38,52 +118,12 @@
 </script>
 
 <script>
-  let startIt() = function() {
-    // initialize new player
-    // initialize game score / level / enemy / etc
+  let aboutIt() = function() {
+    // esc key toggles how to instructions
   }
-</script>
-
-<script>
-let shootIt = function() {  // 1) spacebar calls function that appends divs to gameboard
-  let leftBeam = document.body
-  let rightbeam =
-  document.body.append(leftBeam);
-  document.body.append(rightBeam);
-              // call audio event
-  removeIt();  // 2) function will then delete them from DOM at 1000 ms
-  checkIt();  // 3) and will then call a second function
-}
-</script>
-
-<script>
-let checkIt = function() {
-  if () { // 4) second function will check x/y of spaceship at that 1000ms point and
-    score++;
-          // additional functionality will make explosion visible and remove ship from DOM
-    return true;
-  } else {
-    return false;
-}
-
-</script>
-
-<script>
-let removeIt = function() {
-
-}
-</script>
-
-// add event listener to esc key to call info function aboutIt();
+</script>  -->
 
 </html>
-
-
-1) spacebar calls function that appends divs to gameboard (CSS will animate divs automatically)
-2) function will then delete them from DOM at 1000 ms and will call a second function
-3) second function will check x/y of spaceship at 1000ms point.  if within 20px of x/y point, score increments
-4) additional functionality will make explosion visible and remove ship from DOM
-
 
 
 

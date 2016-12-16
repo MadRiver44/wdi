@@ -17,27 +17,15 @@ let play = function(text) {
 };
 
 let move = function(event) {
-  console.log('Now in move!');
-  console.log(event.target)
   let box = event.target;
-  console.log(box.getAttribute('data-position'));
   let index = (box.getAttribute('data-position'));
-  console.log('Board going to validateMove is ' + board);
   let validation = validMove(index);
   if (validation === true) {
-    console.log("THIS IS CURRENTPLAYER:", currentPlayer);
-    console.log("THIS IS BOARD[INDEX]: ", board[index])
     event.target.innerHTML  = `${currentPlayer}`;
     board[index] = currentPlayer;
-    console.log('Board after move method updates index is ' + board);
-    console.log('Leaving move, heading for evaluateBoard!');
     evaluateBoard(board);
   } else if (validation === false) {
-    console.log('Back in move from validMove');
-    console.log('This is current board[index]: ' + board[index]);
     board[index] = board[index];
-    console.log('This is updated board[index]: ' + board[index]);
-    console.log('Leaving move, heading for play!');
     outputMessage(`square is taken. ${currentPlayer} select another square:`);
   }
 };
