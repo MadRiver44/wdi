@@ -1,6 +1,7 @@
 body {
   background-color: black;
   font-family: 'Orbitron', sans-serif;
+  cursor: none;
 }
 .container {
   position: relative;
@@ -45,7 +46,7 @@ canvas {
   padding: 10px;
 }
 
-#crosshairs {
+.crosshairs {
   position: fixed;
   left: 539px;
   top: 200px;
@@ -53,6 +54,10 @@ canvas {
   width: 200px;
   z-index: 1;
   opacity: .5;
+}
+
+.crosshairsRed {
+  border: #ff0101;
 }
 
 #main {
@@ -92,7 +97,7 @@ canvas {
   left: 50px;
   top: 0;
 }
-#center {
+.center {
   display: inline-block;
   position: absolute;
   left: 95px;
@@ -102,6 +107,17 @@ canvas {
   border: 2px solid #49fb35;
   border-radius: 10px;
   box-shadow: 1px 0px 1px #49fb35;
+}
+.centerRed {
+  display: inline-block;
+  position: absolute;
+  left: 95px;
+  top: 55px;
+  height: 10px;
+  width: 10px;
+  border: 2px solid #ff0101;
+  border-radius: 10px;
+  box-shadow: 1px 0px 1px #ff0101;
 }
 #leftbeam {
   position: relative;
@@ -146,24 +162,72 @@ canvas {
   100% {left: 517px; top: 250px; height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 1px 1px red}
 }
 @keyframes moveTarget {
-  0% {left: -200px; top: 250px}
+  0% {left: -200px; top: 250px; height: 12px; width: 25px}
   12% {left: 700px; top: 10px}
-  25% {left: 917px; top: 250px}
+  25% {left: 917px; top: 250px; height: 25px; width: 50px}
   37% {left: 200px; top: 400px}
   43% {left: 517px; top: 100px}
-  50% {left: 517px; top: 250px}
+  50% {left: 517px; top: 250px; height: 12px; width: 25px}
   62% {left: 1000px; top: 400px}
-  69% {left: 200px; top: 250px}
+  69% {left: 200px; top: 250px; height: 33px; width: 66px}
   75% {left: 517px; top: 250px}
   88% {left: 200px; top: 100px}
-  100% {left: -200px; top: 250px}
+  100% {left: -200px; top: 250px; height: 12px; width: 25px}
 }
 .explosion {
-
+  background-image: url("https://cdn2.scratch.mit.edu/get_image/user/6540790_60x60.png?v=1440849489.45");
+  top: 250px;
+  left: 512px;
+  height: 100px;
 }
 
 
+/* MODAL POPUP */
 
+#modal {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+.modalcontent {
+    position: absolute;
+    color: gray;
+    font-size: 24px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 75%;
+    padding: 20px;
+    border: 10px solid red;
+    border-radius: 25px;
+    background-color: #ddd;
+}
+.modalcontent h1 {
+    color: black;
+    font-size: 36px;
+}
+.modalcontent button {
+    color: white;
+    background-color: red;
+    font-size: 24px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    margin: 5px 0px 60px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.modalcontent button:hover {
+    transform: scale(1.2);
+}
 
 
 

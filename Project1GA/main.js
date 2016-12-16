@@ -14,7 +14,7 @@ let outputMessage = function(text) {
 // All comments below are mine
     var MAX_DEPTH = 64;  // depth of field via brightness
     var canvas, ctx;
-    var stars = new Array(64);  // This sets # of stars
+    var stars = new Array(128);  // This sets # of stars
     window.onload = function() {
       canvas = document.getElementById("myCanvas");
       if( canvas && canvas.getContext ) {
@@ -60,7 +60,57 @@ let outputMessage = function(text) {
         }
       }
     }
-
+/*    function loopLeft() {
+      var width = canvas.width;
+      var height = canvas.height;
+      var halfWidth  = canvas.width / 2;
+      var halfHeight = canvas.height / 2;
+      ctx.fillStyle = "rgb(0,0,0)";
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+      for( var i = 0; i < stars.length; i++ ) {
+        stars[i].z -= 0.2;  // increment of each star's position
+        if( stars[i].z <= 0 ) {
+          stars[i].x = randomRange(-25,25);
+          stars[i].y = randomRange(-25,25);
+          stars[i].z = MAX_DEPTH;
+        }
+        var k  = 128.0 / stars[i].z;
+        var px = stars[i].x * k + width;
+        var py = stars[i].y * k + halfHeight;
+        if( px >= 0 && px <= 1024 && py >= 0 && py <= 576 ) {
+          var size = (1 - stars[i].z / 32.0) * 5;
+          var shade = parseInt((1 - stars[i].z / 32.0) * 255);
+          ctx.fillStyle = "rgb(" + shade + "," + shade + "," + shade + ")";
+          ctx.fillRect(px,py,size,size);
+        }
+      }
+    }
+    function loopRight() {
+      var width = canvas.width;
+      var height = canvas.height;
+      var halfWidth  = canvas.width / 2;
+      var halfHeight = canvas.height / 2;
+      ctx.fillStyle = "rgb(0,0,0)";
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+      for( var i = 0; i < stars.length; i++ ) {
+        stars[i].z -= 0.2;  // increment of each star's position
+        if( stars[i].z <= 0 ) {
+          stars[i].x = randomRange(-25,25);
+          stars[i].y = randomRange(-25,25);
+          stars[i].z = MAX_DEPTH;
+        }
+        var k  = 128.0 / stars[i].z;
+        var px = stars[i].x * k + width;
+        var py = stars[i].y * k + halfHeight;
+        if( px >= 0 && px <= 1024 && py >= 0 && py <= 576 ) {
+          var size = (1 - stars[i].z / 32.0) * 5;
+          var shade = parseInt((1 - stars[i].z / 32.0) * 255);
+          ctx.fillStyle = "rgb(" + shade + "," + shade + "," + shade + ")";
+          ctx.fillRect(px,py,size,size);
+        }
+      }
+    }
+*/
 
 
 

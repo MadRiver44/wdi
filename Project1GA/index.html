@@ -21,12 +21,12 @@
       <div id='message'></div>
       </div>
           </div>
-        <div id='crosshairs'>
+        <div class='crosshairs' id='xhairs'>
           <div id="main">
-            <div id="center"></div>
-            <div class="blue"></div>
-            <div class="yellow"></div>
-            <div class="red"></div>
+            <div id="center1" class="center"></div>
+            <div id="blue1" class="blue"></div>
+            <div id="yellow1" class="yellow"></div>
+            <div id="red1" class="red"></div>
           </div>
         </div>
   </div>
@@ -43,6 +43,22 @@ let statusMessage = `ROUND : ${round} \n ENEMIES REMAINING : ${enemies}
 document.body.addEventListener("keydown", function(event) {
   if (event.keyCode == 32) {
     shootIt();
+  }
+});
+</script>
+
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 39) {
+    loopRight();
+  }
+});
+</script>
+
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 37) {
+    loopLeft();
   }
 });
 </script>
@@ -78,9 +94,7 @@ let checkIt = function() {
     outputMessage(`ROUND : ${round} \n ENEMIES REMAINING : ${enemies}
     \n SCORE : ${score} \n FUEL : ${fuel}`);
     gameBoard.removeChild(target);
-    /*const boom = document.createElement('div');
-    boom.setAttribute('class', 'explosion');
-    gameBoard.appendChild(boom);*/
+    explodeIt();
    }
 }
 </script>
@@ -98,6 +112,18 @@ let removeIt = function() {
 </script>
 
 <script>
+  var explodeIt = function() {
+    const gameBoard = document.getElementById("game");
+    const boom = document.createElement('div');
+    boom.setAttribute('class', 'explosion');
+    gameBoard.appendChild(boom);
+    setTimeout(function() {
+      gameBoard.removeChild(boom);
+    }, 100);
+  }
+</script>
+
+<script>
 let startIt = function() {
     // initialize new player
     outputMessage(`ROUND : ${round} \n ENEMIES REMAINING : ${enemies}
@@ -105,12 +131,59 @@ let startIt = function() {
   }
 </script>
 
-<!--
+
 <script>
   let crosshairCheck = function() {
-    if (enemy is inside crosshairs){
-    // change css to red;
+  setInterval(function() {
+  let crossHairs = document.getElementById("xhairs");
+  const gameBoard = document.getElementById("game");
+  let target = document.getElementById('target1');
+    el = target.getBoundingClientRect();
+    let left = el.left + window.scrollX;
+    let top = el.top + window.scrollY;
+      if ((left > 540 && left < 739) && (top > 201 && top < 320)) {
+
+/*        blue.classList.toggle('crosshairsRed');
+        yellow.classList.toggle('crosshairsRed');
+        red.classList.toggle('crosshairsRed');
+        center.classList.toggle('crosshairsRed');*/
+      } else {
+        blue.classList.toggle('blue');
+        yellow.classList.toggle('yellow');
+        red.classList.toggle('red');
+        center.classList.toggle('center');
+      }
+  }, 100);
+
+
+
+  let crossHairs = document.getElementById("xhairs");
+  const gameBoard = document.getElementById("game");
+  let target = document.getElementById('target1');
+    el = target.getBoundingClientRect();
+    let left = el.left + window.scrollX;
+    let top = el.top + window.scrollY;
+      if ((left > 540 && left < 739) && (top > 201 && top < 320)) {
+        blue.classList.toggle('crosshairsRed');
+        yellow.classList.toggle('crosshairsRed');
+        red.classList.toggle('crosshairsRed');
+        center.classList.toggle('crosshairsRed');
+      } else {
+        blue.classList.toggle('blue');
+        yellow.classList.toggle('yellow');
+        red.classList.toggle('red');
+        center.classList.toggle('center');
+      }
+  };
+</script>
+<!--
+
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 37) {
+    loopLeft();
   }
+});
 </script>
 
 <script>
@@ -124,10 +197,44 @@ let startIt = function() {
   let aboutIt() = function() {
     // esc key toggles how to instructions
   }
-</script>  -->
+</script>
+TO DO:
+-animate explosion
+-add sounds
+-build class objects
+-add satellite obstacles
+-add splash screen
+-add more levels/enemies via class constructor
+-add info screen
+-add crosshairs toggle
+
+ AUDIO FEATURES
+      <audio autoplay="autoplay">
+        <source src="me.mp3" />
+      </audio>
+
+
+    window.onload = function () {
+    document.getElementById('button').onclick = function () {
+        document.getElementById('modal').style.display = "none"
+    };
+};
+
+    <div id="modal">
+        <div class="modalcontent">
+            <h1>Welcome to my Demo Homepage!</h1><br>
+            <p data-balloon-length="medium" data-balloon="Modal popup via JavaScript" data-balloon-pos="down">This is not a live page, but is submitted to General Assembly for consideration of admission to the<br>Web Development Immersive program.<br><br>Thank you for checking it out!  <br><br>Don't forget to leave your feedback after your visit!</p><br>
+            <button id="button">GOT IT!</button>
+        </div>
+    </div>
+
+
+
+-->
 
 <script>
 startIt();
+crosshairCheck();
 </script>
 </html>
 
