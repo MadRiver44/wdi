@@ -18,7 +18,10 @@
       <img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
       >
       <div id='status'>
-      <div id='message'></div>
+        <div class="message" id='round'></div>
+        <div class="message" id='enemies'></div>
+        <div class="message" id='fuel'></div>
+        <div class="message" id='score'></div>
       </div>
           </div>
         <div class='crosshairs' id='xhairs'>
@@ -35,11 +38,6 @@
 <script src="main.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
-let statusMessage = `ROUND : ${round} \n ENEMIES REMAINING : ${enemies}
-\n SCORE : ${score} \n FUEL : ${fuel}`;
-</script>
-
-<script>
 document.body.addEventListener("keydown", function(event) {
   if (event.keyCode == 32) {
     shootIt();
@@ -47,7 +45,9 @@ document.body.addEventListener("keydown", function(event) {
 });
 </script>
 
-<script>
+<audio><source src="audio/lasers.mp3" type="audio/mpeg"></audio>
+
+<!-- <script>
 document.body.addEventListener("keydown", function(event) {
   if (event.keyCode == 39) {
     loopRight();
@@ -61,8 +61,19 @@ document.body.addEventListener("keydown", function(event) {
     loopLeft();
   }
 });
-</script>
-
+</script> -->
+<!-- <script>
+let outputMessage = function() {
+  let newRound = document.getElementById('round');
+  let newEnemies = document.getElementById('enemies');
+  let newFuel = document.getElementById('fuel');
+  let newScore = document.getElementById('score');
+  newRound.innerHTML = `ROUND : ${round}`;
+  newEnemies.innerHTML = `ENEMIES REMAINING : ${enemies}`;
+  newFuel.innerHTML = `FUEL : ${fuel}`;
+  newScore.innerHTML = `SCORE : ${score}`;
+};
+</script> -->
 <script>
 let shootIt = function() {
   const leftBeam = document.createElement('div');
@@ -73,6 +84,8 @@ let shootIt = function() {
   gameBoard.appendChild(leftBeam);
   gameBoard.appendChild(rightBeam);
   removeIt();
+  let laserAudio = new Audio('audio/lasers.mp3');
+  laserAudio.play();
   checkIt();
 }
 </script>
@@ -91,8 +104,7 @@ let checkIt = function() {
   if ((left > 582 && left < 622) && (top > 230 && top < 270)) {
     score++;   // additional functionality will trigger audio, make explosion visible,
     enemies--;
-    outputMessage(`ROUND : ${round} \n ENEMIES REMAINING : ${enemies}
-    \n SCORE : ${score} \n FUEL : ${fuel}`);
+    //outputMessage();
     gameBoard.removeChild(target);
     explodeIt();
    }
@@ -117,6 +129,8 @@ let removeIt = function() {
     const boom = document.createElement('div');
     boom.setAttribute('class', 'explosion');
     gameBoard.appendChild(boom);
+    let explosionAudio = new Audio('audio/explosion.mp3');
+    explosionAudio.play();
     setTimeout(function() {
       gameBoard.removeChild(boom);
     }, 100);
@@ -126,65 +140,31 @@ let removeIt = function() {
 <script>
 let startIt = function() {
     // initialize new player
-    outputMessage(`ROUND : ${round} \n ENEMIES REMAINING : ${enemies}
-\n SCORE : ${score} \n FUEL : ${fuel}`);
+    outputMessage();
   }
 </script>
 
 
 <script>
   let crosshairCheck = function() {
-  setInterval(function() {
-  let crossHairs = document.getElementById("xhairs");
-  const gameBoard = document.getElementById("game");
-  let target = document.getElementById('target1');
-    el = target.getBoundingClientRect();
-    let left = el.left + window.scrollX;
-    let top = el.top + window.scrollY;
-      if ((left > 540 && left < 739) && (top > 201 && top < 320)) {
-
-/*        blue.classList.toggle('crosshairsRed');
-        yellow.classList.toggle('crosshairsRed');
-        red.classList.toggle('crosshairsRed');
-        center.classList.toggle('crosshairsRed');*/
-      } else {
-        blue.classList.toggle('blue');
-        yellow.classList.toggle('yellow');
-        red.classList.toggle('red');
-        center.classList.toggle('center');
+    setInterval(function() {
+      let center = document.getElementById("center1");
+      const gameBoard = document.getElementById("game");
+      let target = document.getElementById('target1');
+      el = target.getBoundingClientRect();
+      let left = el.left + window.scrollX;
+      let top = el.top + window.scrollY;
+      if ((left > 530 && left < 749) && (top > 191 && top < 330)) {
+        alert('center');
+        center.className = "centerRed";
+      else if ((left < 540 || left > 739) && (top < 201 || top > 320)) {
+        center.className == "center";
+        }
       }
-  }, 100);
-
-
-
-  let crossHairs = document.getElementById("xhairs");
-  const gameBoard = document.getElementById("game");
-  let target = document.getElementById('target1');
-    el = target.getBoundingClientRect();
-    let left = el.left + window.scrollX;
-    let top = el.top + window.scrollY;
-      if ((left > 540 && left < 739) && (top > 201 && top < 320)) {
-        blue.classList.toggle('crosshairsRed');
-        yellow.classList.toggle('crosshairsRed');
-        red.classList.toggle('crosshairsRed');
-        center.classList.toggle('crosshairsRed');
-      } else {
-        blue.classList.toggle('blue');
-        yellow.classList.toggle('yellow');
-        red.classList.toggle('red');
-        center.classList.toggle('center');
-      }
+    }, 100);
   };
 </script>
 <!--
-
-<script>
-document.body.addEventListener("keydown", function(event) {
-  if (event.keyCode == 37) {
-    loopLeft();
-  }
-});
-</script>
 
 <script>
   let awaitIt() = function() {
@@ -227,14 +207,13 @@ TO DO:
             <button id="button">GOT IT!</button>
         </div>
     </div>
-
-
-
 -->
 
 <script>
 startIt();
 crosshairCheck();
+let newScore = document.getElementById('score');
+newScore.innerHTML = `SCORE : ${score}`;
 </script>
 </html>
 

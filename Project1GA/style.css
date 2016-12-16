@@ -1,7 +1,7 @@
 body {
   background-color: black;
   font-family: 'Orbitron', sans-serif;
-  cursor: none;
+  /*cursor: none;*/
 }
 .container {
   position: relative;
@@ -42,8 +42,14 @@ canvas {
   text-shadow: 2px 2px 5px #49fb35;
 }
 
-#message {
+.message {
   padding: 10px;
+  z-index: 5;
+  color: #49fb35;
+  font-size: 1em;
+  text-align: center;
+  vertical-align: center;
+  text-shadow: 2px 2px 5px #49fb35;
 }
 
 .crosshairs {
@@ -119,6 +125,15 @@ canvas {
   border-radius: 10px;
   box-shadow: 1px 0px 1px #ff0101;
 }
+.blueRed {
+  display: inline-block;
+  height: 120px;
+  width: 30px;
+  border-left: 1px solid #ff0101;
+  border-top: 1px solid #ff0101;
+  border-bottom: 1px solid #ff0101;
+  box-shadow: -2px 0px 2px #ff0101;
+}
 #leftbeam {
   position: relative;
   height: 12px;
@@ -175,11 +190,24 @@ canvas {
   100% {left: -200px; top: 250px; height: 12px; width: 25px}
 }
 .explosion {
-  background-image: url("https://cdn2.scratch.mit.edu/get_image/user/6540790_60x60.png?v=1440849489.45");
   top: 250px;
-  left: 512px;
-  height: 100px;
+  left: 630px;
+  position: fixed;
+  height: 75px;
+  width: 75px;
+  border-radius: 50px;
+  background-color: red;
+  animation: blowUp 4s;
+  transition-timing-function: linear;
+  z-index: -1;
 }
+@keyframes blowUp {
+  0% {height: 25px; width: 25px; border-radius: 25px; box-shadow: 0px 0px 20px 20px red;}
+  25% {height: 75px; width: 75px; border-radius: 75px; box-shadow: 0px 0px 50px 50px red;}
+  50% {height: 50px; width: 50px; border-radius: 50px; box-shadow: 0px 0px 20px 20px red;}
+  75% {height: 25px; width: 25px; border-radius: 25px; box-shadow: 0px 0px 10px 10px red;}
+  100% {height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 10px 10px red;}
+ }
 
 
 /* MODAL POPUP */
