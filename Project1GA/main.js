@@ -3,9 +3,10 @@ console.log('JS is working');
 let score = 0;
 let fuel = 100;
 let round = 1;
+let enemies = 1;
 
 let outputMessage = function(text) {
-  let newHTML = document.getElementById('status');
+  let newHTML = document.getElementById('message');
   newHTML.innerHTML = text;
 };
 

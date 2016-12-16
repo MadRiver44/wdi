@@ -41,6 +41,10 @@ canvas {
   text-shadow: 2px 2px 5px #49fb35;
 }
 
+#message {
+  padding: 10px;
+}
+
 #crosshairs {
   position: fixed;
   left: 539px;
@@ -48,6 +52,7 @@ canvas {
   height: 120px;
   width: 200px;
   z-index: 1;
+  opacity: .5;
 }
 
 #main {
@@ -104,7 +109,7 @@ canvas {
   width: 12px;
   border-radius: 12px;
   background-color: red;
-  animation: moveLeft .5s infinite;
+  animation: moveLeft .5s;
   box-shadow: 0px 0px 12px 12px red;
 }
 #rightbeam {
@@ -113,7 +118,7 @@ canvas {
   width: 12px;
   border-radius: 12px;
   background-color: red;
-  animation: moveRight .5s infinite;
+  animation: moveRight .5s;
   box-shadow: 0px 0px 12px 12px red;
 }
 .target {
@@ -123,7 +128,8 @@ canvas {
   width: 50px;
   border-radius: 50px;
   background-color: blue;
-  animation: moveTarget 10s alternate infinite;
+  animation: moveTarget 30s alternate infinite;
+  transition-timing-function: linear;
   z-index: -1;
   border-radius: 50px / 25px;
 }
@@ -131,18 +137,26 @@ canvas {
   0% {left: 100px; top: 500px}
   25% {height: 8px; width: 8px; border-radius: 8px; box-shadow: 0px 0px 8px 8px red;}
   50% {height: 4px; width: 4px; border-radius: 4px; box-shadow: 0px 0px 4px 4px red;}
-  100% {left: 517px; top: 248px; height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 1px 1px red;}
+  100% {left: 517px; top: 250px; height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 1px 1px red;}
 }
 @keyframes moveRight {
   0% {left: 924px; top: 500px}
   25% {height: 8px; width: 8px; border-radius: 8px; box-shadow: 0px 0px 8px 8px red;}
   50% {height: 4px; width: 4px; border-radius: 4px; box-shadow: 0px 0px 4px 4px red;}
-  100% {left: 517px; top: 248px; height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 1px 1px red}
+  100% {left: 517px; top: 250px; height: 1px; width: 1px; border-radius: 1px; box-shadow: 0px 0px 1px 1px red}
 }
 @keyframes moveTarget {
-  0% {left: -100px; top: 250px}
-  50% {left: 1200px; top: 250px}
-  100% {left: -100px; top: 250px}
+  0% {left: -200px; top: 250px}
+  12% {left: 700px; top: 10px}
+  25% {left: 917px; top: 250px}
+  37% {left: 200px; top: 400px}
+  43% {left: 517px; top: 100px}
+  50% {left: 517px; top: 250px}
+  62% {left: 1000px; top: 400px}
+  69% {left: 200px; top: 250px}
+  75% {left: 517px; top: 250px}
+  88% {left: 200px; top: 100px}
+  100% {left: -200px; top: 250px}
 }
 .explosion {
 

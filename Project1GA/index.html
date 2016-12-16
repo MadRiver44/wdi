@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>StarMaster Clone</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -17,6 +18,7 @@
       <img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
       >
       <div id='status'>
+      <div id='message'></div>
       </div>
           </div>
         <div id='crosshairs'>
@@ -33,9 +35,13 @@
 <script src="main.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
+let statusMessage = `ROUND : ${round} \n ENEMIES REMAINING : ${enemies}
+\n SCORE : ${score} \n FUEL : ${fuel}`;
+</script>
+
+<script>
 document.body.addEventListener("keydown", function(event) {
   if (event.keyCode == 32) {
-    console.log('Spacebar!');
     shootIt();
   }
 });
@@ -50,7 +56,6 @@ let shootIt = function() {
   const gameBoard = document.querySelector('#game');
   gameBoard.appendChild(leftBeam);
   gameBoard.appendChild(rightBeam);
-              // call audio event
   removeIt();
   checkIt();
 }
@@ -68,9 +73,10 @@ let checkIt = function() {
     console.log(`left is ${left} and top is ${top}`);
   //}
   if ((left > 582 && left < 622) && (top > 230 && top < 270)) {
-    alert('Hit');
     score++;   // additional functionality will trigger audio, make explosion visible,
-    outputMessage(`ROUND : ${round} \n SCORE : ${score} \n FUEL : ${fuel}`);
+    enemies--;
+    outputMessage(`ROUND : ${round} \n ENEMIES REMAINING : ${enemies}
+    \n SCORE : ${score} \n FUEL : ${fuel}`);
     gameBoard.removeChild(target);
     /*const boom = document.createElement('div');
     boom.setAttribute('class', 'explosion');
@@ -87,14 +93,15 @@ let removeIt = function() {
     const gameBoard = document.getElementById("game");
     gameBoard.removeChild(leftBeam);
     gameBoard.removeChild(rightBeam);
-  }, 499);
+  }, 498);
 };
 </script>
 
 <script>
 let startIt = function() {
     // initialize new player
-    outputMessage(`ROUND : ${round} \r SCORE : ${score} \r FUEL : ${fuel}`);
+    outputMessage(`ROUND : ${round} \n ENEMIES REMAINING : ${enemies}
+\n SCORE : ${score} \n FUEL : ${fuel}`);
   }
 </script>
 
@@ -118,6 +125,7 @@ let startIt = function() {
     // esc key toggles how to instructions
   }
 </script>  -->
+
 <script>
 startIt();
 </script>
