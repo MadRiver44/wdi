@@ -143,6 +143,7 @@ let shootIt = function() {
   let laserAudio = new Audio('audio/lasers.mp3');
   laserAudio.play();
   checkIt();
+  winIt();
 }
 </script>
 
@@ -190,20 +191,25 @@ let removeIt = function() {
     explosionAudio.play();
     setTimeout(function() {
       gameBoard.removeChild(boom);
-    }, 1990);
+    }, 990);
   }
 </script>
 
 <script>
 let startIt = function() {
-    // initialize new player
-    outputNewMessages();
+  score = 0;
+  fuel = 100;
+  round = 1;
+  enemies = 1;
+  starSpeed = 64;
+  fuelRate = 1;
+  outputNewMessages();
+  addIt();
   }
 </script>
 
 <script>
 var myVar;
-
 function repeatIt() {
     let myVar = setInterval(crosshairCheck, 100);
 }
@@ -228,6 +234,30 @@ function repeatIt() {
       }
   };
 </script>
+
+<script>
+  let winIt = function() {
+    let newFuel = document.getElementById('fuel');
+    if (fuel === 0) {
+      loseIt();
+    } else if ((enemies === 0) && (level === 3)) {
+      winner();
+    } else if ((enemies === 0) && (level !==3)) {
+      advanceIt();
+    } else if (fuel < 25) {
+      newFuel.className = "fuelSpanRed";
+    } else {
+      outputNewMessages();
+    }
+  }
+
+let loseIt = function() {
+  alert("FUEL = 0.  YOU LOSE.  PRESS ENTER TO PLAY AGAIN ");
+  }
+</script>
+
+</script>
+
 <!--
 
 <script>
@@ -237,29 +267,15 @@ function repeatIt() {
   }
 </script>
 
-<script>
-  let aboutIt() = function() {
-    // esc key toggles how to instructions 27
-  }
-</script>
-
-<script>
-  let winIt() = function() {
-    // if (enemies === 0) && (level === 3) {
-      winner();
-    } else {
-      advanceIt();
-    }
-  }
-</script>
-
 TO DO:
+-move
+-add level boxes blue planet scout ship green planet 1 fighter 1 satellite red 2 fighters 1 satellite
 -function to add enemy / satellites to board
 -build class objects
 -add satellite obstacles
 -add splash screen
--add more levels/enemies via class constructor
 -add info modal
+-rotate ships along animation
 -Audio object <audio autoplay="autoplay"><source src="me.mp3"/></audio>
 
 -->
