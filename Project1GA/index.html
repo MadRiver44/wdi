@@ -18,10 +18,10 @@
       <img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
       >
       <div id='status'>
-        <div class="message" id='round'></div>
-        <div class="message" id='enemies'></div>
-        <div class="message" id='fuel'></div>
-        <div class="message" id='score'></div>
+        <div class="message" id='round'>ROUND : <span id="roundSpan"></span></div>
+        <div class="message" id='enemies'>ENEMIES : <span id="enemiesSpan"></span></div>
+        <div class="message" id='fuel'>FUEL : <span id="fuelSpan"></span></div>
+        <div class="message" id='score'>SCORE : <span id="scoreSpan"></span></div>
       </div>
           </div>
         <div class='crosshairs' id='xhairs'>
@@ -33,10 +33,26 @@
           </div>
         </div>
   </div>
+<!--  <div class="modal">
+        <div class="modalcontent">
+            <h1>Welcome to my Demo Homepage!</h1><br>
+            <p>This is not a live page, but is submitted to General Assembly for consideration of admission to the
+            <br>Web Development Immersive program.<br><br>Thank you for checking it out!
+            <br><br>Don't forget to leave your feedback after your visit!</p><br>
+        </div>
+    </div> -->
 </body>
 
 <script src="main.js" type="text/javascript" charset="utf-8"></script>
-
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 27) {
+    // document.getElementById('modal').style.display = "none";
+    var menu = document.querySelector('.menu') // Using a class instead, see note below.
+    menu.classList.toggle('visible');
+  }
+});
+</script>
 <script>
 document.body.addEventListener("keydown", function(event) {
   if (event.keyCode == 32) {
@@ -44,8 +60,35 @@ document.body.addEventListener("keydown", function(event) {
   }
 });
 </script>
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 38) {
+    starSpeed = 32;
+    fuelRate = 2;
+    let thrusterAudio = new Audio('audio/thrusters.mp3');
+    thrusterAudio.play();
+    initStars();
+  }
+});
 
-<audio><source src="audio/lasers.mp3" type="audio/mpeg"></audio>
+/*document.body.addEventListener("keyup", function(event) {
+  if (event.keyCode == 38) {
+    starSpeed = 64;
+    fuelRate = 1;
+    let thrusterAudio = new Audio('audio/thrusters.mp3');
+    var ply = document.getElementById('player');
+    var oldSrc = ply.src;
+    ply.src = "";
+  }
+});*/
+</script>
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 27) {
+    shootIt();
+  }
+});
+</script>
 
 <!-- <script>
 document.body.addEventListener("keydown", function(event) {
@@ -62,18 +105,29 @@ document.body.addEventListener("keydown", function(event) {
   }
 });
 </script> -->
-<!-- <script>
-let outputMessage = function() {
-  let newRound = document.getElementById('round');
-  let newEnemies = document.getElementById('enemies');
-  let newFuel = document.getElementById('fuel');
-  let newScore = document.getElementById('score');
-  newRound.innerHTML = `ROUND : ${round}`;
-  newEnemies.innerHTML = `ENEMIES REMAINING : ${enemies}`;
-  newFuel.innerHTML = `FUEL : ${fuel}`;
-  newScore.innerHTML = `SCORE : ${score}`;
+<script>
+let outputNewMessages = function() {
+  let newRound = document.getElementById('roundSpan');
+  let newEnemies = document.getElementById('enemiesSpan');
+  let newFuel = document.getElementById('fuelSpan');
+  let newScore = document.getElementById('scoreSpan');
+  newRound.innerHTML = "";
+  newEnemies.innerHTML = "";
+  newFuel.innerHTML = "";
+  newScore.innerHTML = "";
+  newRound.innerHTML = `${round}`;
+  newEnemies.innerHTML = `${enemies}`;
+  newFuel.innerHTML = `${fuel}`;
+  newScore.innerHTML = `${score}`;
 };
-</script> -->
+</script>
+
+<script>
+  let addIt = function() {
+    // add enemies etc to board
+  }
+</script>
+
 <script>
 let shootIt = function() {
   const leftBeam = document.createElement('div');
@@ -83,6 +137,8 @@ let shootIt = function() {
   const gameBoard = document.querySelector('#game');
   gameBoard.appendChild(leftBeam);
   gameBoard.appendChild(rightBeam);
+  fuel = fuel - 2;
+  outputNewMessages();
   removeIt();
   let laserAudio = new Audio('audio/lasers.mp3');
   laserAudio.play();
@@ -102,9 +158,9 @@ let checkIt = function() {
     console.log(`left is ${left} and top is ${top}`);
   //}
   if ((left > 582 && left < 622) && (top > 230 && top < 270)) {
-    score++;   // additional functionality will trigger audio, make explosion visible,
+    score++;
     enemies--;
-    //outputMessage();
+    outputNewMessages();
     gameBoard.removeChild(target);
     explodeIt();
    }
@@ -125,6 +181,7 @@ let removeIt = function() {
 
 <script>
   var explodeIt = function() {
+    outputNewMessages();
     const gameBoard = document.getElementById("game");
     const boom = document.createElement('div');
     boom.setAttribute('class', 'explosion');
@@ -133,35 +190,42 @@ let removeIt = function() {
     explosionAudio.play();
     setTimeout(function() {
       gameBoard.removeChild(boom);
-    }, 100);
+    }, 1990);
   }
 </script>
 
 <script>
 let startIt = function() {
     // initialize new player
-    outputMessage();
+    outputNewMessages();
   }
 </script>
 
-
 <script>
+var myVar;
+
+function repeatIt() {
+    let myVar = setInterval(crosshairCheck, 100);
+}
   let crosshairCheck = function() {
-    setInterval(function() {
+      console.log('tick');
       let center = document.getElementById("center1");
+      let blue = document.getElementById("blue1");
+      let red = document.getElementById("red1");
       const gameBoard = document.getElementById("game");
       let target = document.getElementById('target1');
       el = target.getBoundingClientRect();
       let left = el.left + window.scrollX;
       let top = el.top + window.scrollY;
-      if ((left > 530 && left < 749) && (top > 191 && top < 330)) {
-        alert('center');
+      if ((left > 520 && left < 759) && (top > 181 && top < 340)) {
         center.className = "centerRed";
-      else if ((left < 540 || left > 739) && (top < 201 || top > 320)) {
-        center.className == "center";
-        }
+        blue.className = "blueRed";
+        red.className = "redRed";
+      } else {
+        center.className = "center";
+        blue.className = "blue";
+        red.className = "red";
       }
-    }, 100);
   };
 </script>
 <!--
@@ -175,45 +239,34 @@ let startIt = function() {
 
 <script>
   let aboutIt() = function() {
-    // esc key toggles how to instructions
+    // esc key toggles how to instructions 27
   }
 </script>
+
+<script>
+  let winIt() = function() {
+    // if (enemies === 0) && (level === 3) {
+      winner();
+    } else {
+      advanceIt();
+    }
+  }
+</script>
+
 TO DO:
--animate explosion
--add sounds
+-function to add enemy / satellites to board
 -build class objects
 -add satellite obstacles
 -add splash screen
 -add more levels/enemies via class constructor
--add info screen
--add crosshairs toggle
+-add info modal
+-Audio object <audio autoplay="autoplay"><source src="me.mp3"/></audio>
 
- AUDIO FEATURES
-      <audio autoplay="autoplay">
-        <source src="me.mp3" />
-      </audio>
-
-
-    window.onload = function () {
-    document.getElementById('button').onclick = function () {
-        document.getElementById('modal').style.display = "none"
-    };
-};
-
-    <div id="modal">
-        <div class="modalcontent">
-            <h1>Welcome to my Demo Homepage!</h1><br>
-            <p data-balloon-length="medium" data-balloon="Modal popup via JavaScript" data-balloon-pos="down">This is not a live page, but is submitted to General Assembly for consideration of admission to the<br>Web Development Immersive program.<br><br>Thank you for checking it out!  <br><br>Don't forget to leave your feedback after your visit!</p><br>
-            <button id="button">GOT IT!</button>
-        </div>
-    </div>
 -->
 
 <script>
 startIt();
-crosshairCheck();
-let newScore = document.getElementById('score');
-newScore.innerHTML = `SCORE : ${score}`;
+repeatIt();
 </script>
 </html>
 

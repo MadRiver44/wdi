@@ -11,8 +11,7 @@ let outputMessage = function(text) {
   newHTML.innerHTML = text;
 };
 
-let play = function(text) {
-  console.log('playing!');
+let play = function() {
   outputMessage(`player ${currentPlayer} select a square: `);
 };
 

@@ -4,11 +4,9 @@ let score = 0;
 let fuel = 100;
 let round = 1;
 let enemies = 1;
+let starSpeed = 64;
+let fuelRate = 1;
 
-let outputMessage = function(text) {
-  let newHTML = document.getElementById('message');
-  newHTML.innerHTML = text;
-};
 
 // Background image adapted from http://codentronix.com/2011/07/22/html5-canvas-3d-starfield/
 // All comments below are mine
@@ -20,7 +18,7 @@ let outputMessage = function(text) {
       if( canvas && canvas.getContext ) {
         ctx = canvas.getContext("2d");
         initStars();
-        setInterval(loop,64); // this sets speed
+        setInterval(loop,starSpeed); // this sets speed
        }
     }
     function randomRange(minVal,maxVal) {
