@@ -262,8 +262,9 @@ canvas {
   overflow: hidden;
 }
 .container2 {
+  position: relative;
   margin: 0 auto;
-  width: 850px;
+  width: 1024px;
 }
 .firstLetterFlipper {
   display: inline-block;
@@ -271,10 +272,9 @@ canvas {
   margin: 4%;
   animation: flipIt 10s alternate infinite;
   perspective: 1000px;
-  transform: rotateY(-90deg);
+  transform: rotateY(-89deg);
   transition: 0.5s;
   transform-style: preserve-3d;
-
 }
 .firstLetter {
   display: inline-block;
@@ -282,6 +282,7 @@ canvas {
   color: #7FFF00;
   padding: 1%;
   font-size: 7em;
+  font-weight: 1000;
   animation: glowIt 2s alternate infinite;
   background-clip: text;
 }
@@ -291,9 +292,9 @@ canvas {
   100% {color: #7FFF00; text-shadow: 0px 0px 10px #7FFF00}
 }
 @keyframes flipIt {
-  0% {transform: rotateY(-90deg)}
+  0% {transform: rotateY(-89deg)}
   50% {transform: rotateY(0deg)}
-  100% {transform: rotateY(-90deg)}
+  100% {transform: rotateY(-89deg)}
 }
 @keyframes spreadIt {
   0% {}
@@ -301,13 +302,123 @@ canvas {
   100% {}
 }
 .saveLetter, .ourLetter, .satellitesLetter {
-  display: inline-block;
+  display: inline-block;  /*delete some styles once spread is up and running*/
   font-size: 3em;
   margin: 1.5%;
   color: #49fb35;
-  animation: glowAndSpreadIt 2s alternate infinite;
+  animation: glowIt 2s alternate infinite;
   background-clip: text
 }
+.saveLetterA {
+  position: absolute;
+  display: inline-block;
+  left: 180px;
+  top: 45px;
+  animation: spreadIt 10s alternate infinite;
+}
+.saveLetterV {
+  position: absolute;
+  display: inline-block;
+  left: 280px;
+  top: 45px;
+  animation: spreadIt 10s alternate infinite;
+}
+.saveLetterE {
+  position: absolute;
+  display: inline-block;
+  left: 380px;
+  top: 45px;
+  animation: spreadIt 10s alternate infinite;
+}
+.ourLetterU {
+  position: absolute;
+  display: inline-block;
+  left: 180px;
+  top: 245px;
+  animation: spreadIt 10s alternate infinite;
+}
+.ourLetterR {
+  position: absolute;
+  display: inline-block;
+  left: 280px;
+  top: 245px;
+  animation: spreadIt 10s alternate infinite;
+}
+.satellitesLetterA {
+  position: absolute;
+  display: inline-block;
+  left: 180px;
+  top: 440px;
+  animation: spreadIt 10s alternate infinite;
+}
+.satellitesLetterT {
+  position: absolute;
+  display: inline-block;
+  left: 280px;
+  top: 440px;
+  animation: spreadIt 10s alternate infinite;
+}
+.satellitesLetterE {
+  position: absolute;
+  display: inline-block;
+  left: 380px;
+  top: 440px;
+  animation: spreadIt 10s alternate infinite;
+}
+.satellitesLetterL {
+  position: absolute;
+  display: inline-block;
+  left: 480px;
+  top: 440px;
+  animation: spreadIt 10s alternate infinite;
+}
+.satellitesLetterL2 {
+  position: absolute;
+  display: inline-block;
+  left: 580px;
+  top: 440px;
+  animation: spreadIt 10s alternate infinite;
+}
+.satellitesLetterI {
+  position: absolute;
+  display: inline-block;
+  left: 680px;
+  top: 440px;
+  animation: spreadIt 10s alternate infinite;
+}
+.satellitesLetterT2 {
+  position: absolute;
+  display: inline-block;
+  left: 780px;
+  top: 440px;
+  animation: spreadIt 10s alternate infinite;
+}
+.satellitesLetterE2 {
+  position: absolute;
+  display: inline-block;
+  left: 880px;
+  top: 440px;
+  animation: spreadIt 10s alternate infinite;
+}
+.satellitesLetterS {
+  position: absolute;
+  display: inline-block;
+  left: 980px;
+  top: 440px;
+  animation: spreadIt 10s alternate infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
