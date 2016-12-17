@@ -296,9 +296,19 @@ canvas {
   50% {transform: rotateY(0deg)}
   100% {transform: rotateY(-89deg)}
 }
-@keyframes spreadIt {
+@keyframes spreadItSave {
   0% {}
-  50% {}
+  50% {left: 100px; top: 45px; transform: rotateY(-89deg)/* transform: rotate(-360deg)*/;}
+  100% {}
+}
+@keyframes spreadItOur {
+  0% {}
+  50% {left: 100px; top: 245px; transform: rotateY(-89deg);}
+  100% {}
+}
+@keyframes spreadItSatellites {
+  0% {}
+  50% {left: 100px; top: 440px; transform: rotateY(-89deg);}
   100% {}
 }
 .saveLetter, .ourLetter, .satellitesLetter {
@@ -314,98 +324,98 @@ canvas {
   display: inline-block;
   left: 180px;
   top: 45px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSave 10s alternate infinite;
 }
 .saveLetterV {
   position: absolute;
   display: inline-block;
   left: 280px;
   top: 45px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSave 10s alternate infinite;
 }
 .saveLetterE {
   position: absolute;
   display: inline-block;
   left: 380px;
   top: 45px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSave 10s alternate infinite;
 }
 .ourLetterU {
   position: absolute;
   display: inline-block;
   left: 180px;
   top: 245px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItOur 10s alternate infinite;
 }
 .ourLetterR {
   position: absolute;
   display: inline-block;
   left: 280px;
   top: 245px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItOur 10s alternate infinite;
 }
 .satellitesLetterA {
   position: absolute;
   display: inline-block;
   left: 180px;
   top: 440px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSatellites 10s alternate infinite;
 }
 .satellitesLetterT {
   position: absolute;
   display: inline-block;
   left: 280px;
   top: 440px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSatellites 10s alternate infinite;
 }
 .satellitesLetterE {
   position: absolute;
   display: inline-block;
   left: 380px;
   top: 440px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSatellites 10s alternate infinite;
 }
 .satellitesLetterL {
   position: absolute;
   display: inline-block;
   left: 480px;
   top: 440px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSatellites  10s alternate infinite;
 }
 .satellitesLetterL2 {
   position: absolute;
   display: inline-block;
   left: 580px;
   top: 440px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSatellites 10s alternate infinite;
 }
 .satellitesLetterI {
   position: absolute;
   display: inline-block;
   left: 680px;
   top: 440px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSatellites 10s alternate infinite;
 }
 .satellitesLetterT2 {
   position: absolute;
   display: inline-block;
   left: 780px;
   top: 440px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSatellites 10s alternate infinite;
 }
 .satellitesLetterE2 {
   position: absolute;
   display: inline-block;
   left: 880px;
   top: 440px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSatellites  10s alternate infinite;
 }
 .satellitesLetterS {
   position: absolute;
   display: inline-block;
   left: 980px;
   top: 440px;
-  animation: spreadIt 10s alternate infinite;
+  animation: spreadItSatellites 10s alternate infinite;
 }
 
 
