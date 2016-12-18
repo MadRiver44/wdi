@@ -217,13 +217,39 @@ canvas {
   12% {left: 700px; top: 10px}
   25% {left: 917px; top: 250px; height: 25px; width: 50px}
   37% {left: 200px; top: 400px}
-  43% {left: 517px; top: 100px}
-  50% {left: 517px; top: 250px; height: 12px; width: 25px}
+  43% {left: 370px; top: 100px; height: 12px; width: 25px}
+  50% {left: 517px; top: 250px}
   62% {left: 1000px; top: 400px}
   69% {left: 200px; top: 250px; height: 33px; width: 66px}
   75% {left: 517px; top: 250px}
   88% {left: 200px; top: 100px}
   100% {left: -200px; top: 250px; height: 12px; width: 25px}
+}
+@keyframes moveTargetTwo {
+  0% {left: 1800px; top: 0px; height: 12px; width: 25px}
+  12% {left: 1200px; top: 10px}
+  25% {left: 917px; top: 250px; height: 33px; width: 66px}
+  37% {left: 510px; top: 250px}
+  43% {left: 215px; top: 200px}
+  50% {left: 100px; top: 150px; height: 25px; width: 50px}
+  62% {left: -100px; top: 300px}
+  69% {left: 200px; top: 350px; height: 33px; width: 66px}
+  75% {left: 317px; top: 300px}
+  88% {left: 517px; top: 250px}
+  100% {left: 1800px; top: 0px; height: 12px; width: 25px}
+}
+@keyframes moveSatellite {
+  0% {left: 600px; top: -200px; height: 12px; width: 25px}
+  12% {left: 800px; top: 100px}
+  25% {left: 600px; top: 250px; height: 25px; width: 50px}
+  37% {left: 517px; top: 250px}
+  43% {left: 400px; top: 300px}
+  50% {left: 100px; top: 450px; height: 12px; width: 25px}
+  62% {left: 200px; top: 400px}
+  69% {left: 517px; top: 250px; height: 33px; width: 66px}
+  75% {left: 700px; top: 100px}
+  88% {left: 600px; top: 0px}
+  100% {left: 600px; top: -200px; height: 12px; width: 25px}
 }
 .explosion {
   top: 250px;
