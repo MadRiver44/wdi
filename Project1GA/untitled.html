@@ -1,194 +1,55 @@
 <!DOCTYPE html>
 <html>
-
-       <head>
-              <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-              <title>
-                     Warped Text
-              </title>
-              <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Orbitron:regular:latin'>
-              <style type='text/css'>
-                     #warped {position: relative; display: block; width:350px; height:350px;}
-
-                     #warped>span[class^=w]:nth-of-type(n+0){display:block; position:absolute;
-                     -moz-transform-origin:50% 100%; -webkit-transform-origin:50% 100%; -o-transform-origin:50%
-                     100%; -ms-transform-origin:50% 100%; transform-origin:50% 100%; }
-
-                     #warped span{font-family:'Orbitron';font-size:12px;font-weight:regular;font-style:normal;
-                     line-height:0.65; white-space:pre; overflow:visible; padding:0px;}
-
-                     #warped .w0 {-moz-transform: rotate(-0.99rad);-webkit-transform: rotate(-0.99rad);-o-transform:
-                     rotate(-0.99rad);-ms-transform: rotate(-0.99rad); transform: rotate(-0.99rad);
-                     width: 10px; height: 7px; left: 40.55px; top: 74.33px;}
-
-                     #warped .w1 {-moz-transform: rotate(-0.89rad);-webkit-transform: rotate(-0.89rad);-o-transform:
-                     rotate(-0.89rad);-ms-transform: rotate(-0.89rad); transform: rotate(-0.89rad);
-                     width: 6px; height: 7px; left: 50.24px; top: 63.85px;}
-
-                     #warped .w2 {-moz-transform: rotate(-0.79rad);-webkit-transform: rotate(-0.79rad);-o-transform:
-                     rotate(-0.79rad);-ms-transform: rotate(-0.79rad); transform: rotate(-0.79rad);
-                     width: 8px; height: 7px; left: 57.27px; top: 54.94px;}
-
-                     #warped .w3 {-moz-transform: rotate(-0.69rad);-webkit-transform: rotate(-0.69rad);-o-transform:
-                     rotate(-0.69rad);-ms-transform: rotate(-0.69rad); transform: rotate(-0.69rad);
-                     width: 8px; height: 7px; left: 66.89px; top: 46.21px;}
-
-                     #warped .w4 {-moz-transform: rotate(-0.59rad);-webkit-transform: rotate(-0.59rad);-o-transform:
-                     rotate(-0.59rad);-ms-transform: rotate(-0.59rad); transform: rotate(-0.59rad);
-                     width: 8px; height: 7px; left: 77.37px; top: 38.52px;}
-
-                     #warped .w5 {-moz-transform: rotate(-0.5rad);-webkit-transform: rotate(-0.5rad);-o-transform:
-                     rotate(-0.5rad);-ms-transform: rotate(-0.5rad); transform: rotate(-0.5rad);
-                     width: 4px; height: 7px; left: 88.81px; top: 32.89px;}
-
-                     #warped .w6 {-moz-transform: rotate(-0.41rad);-webkit-transform: rotate(-0.41rad);-o-transform:
-                     rotate(-0.41rad);-ms-transform: rotate(-0.41rad); transform: rotate(-0.41rad);
-                     width: 8px; height: 7px; left: 96.72px; top: 28.12px;}
-
-                     #warped .w7 {-moz-transform: rotate(-0.31rad);-webkit-transform: rotate(-0.31rad);-o-transform:
-                     rotate(-0.31rad);-ms-transform: rotate(-0.31rad); transform: rotate(-0.31rad);
-                     width: 8px; height: 7px; left: 108.91px; top: 23.62px;}
-
-                     #warped .w8 {-moz-transform: rotate(-0.2rad);-webkit-transform: rotate(-0.2rad);-o-transform:
-                     rotate(-0.2rad);-ms-transform: rotate(-0.2rad); transform: rotate(-0.2rad);
-                     width: 8px; height: 7px; left: 121.5px; top: 20.42px;}
-
-                     #warped .w9 {-moz-transform: rotate(-0.11rad);-webkit-transform: rotate(-0.11rad);-o-transform:
-                     rotate(-0.11rad);-ms-transform: rotate(-0.11rad); transform: rotate(-0.11rad);
-                     width: 4px; height: 7px; left: 134.37px; top: 18.74px;}
-
-                     #warped .w10 {-moz-transform: rotate(-0.03rad);-webkit-transform: rotate(-0.03rad);-o-transform:
-                     rotate(-0.03rad);-ms-transform: rotate(-0.03rad); transform: rotate(-0.03rad);
-                     width: 8px; height: 7px; left: 143.34px; top: 18.02px;}
-
-                     #warped .w11 {-moz-transform: rotate(0.08rad);-webkit-transform: rotate(0.08rad);-o-transform:
-                     rotate(0.08rad);-ms-transform: rotate(0.08rad); transform: rotate(0.08rad);
-                     width: 8px; height: 7px; left: 156.33px; top: 18.42px;}
-
-                     #warped .w12 {-moz-transform: rotate(0.18rad);-webkit-transform: rotate(0.18rad);-o-transform:
-                     rotate(0.18rad);-ms-transform: rotate(0.18rad); transform: rotate(0.18rad);
-                     width: 8px; height: 7px; left: 169.21px; top: 20.17px;}
-
-                     #warped .w13 {-moz-transform: rotate(0.27rad);-webkit-transform: rotate(0.27rad);-o-transform:
-                     rotate(0.27rad);-ms-transform: rotate(0.27rad); transform: rotate(0.27rad);
-                     width: 4px; height: 7px; left: 181.91px; top: 22.68px;}
-
-                     #warped .w14 {-moz-transform: rotate(0.35rad);-webkit-transform: rotate(0.35rad);-o-transform:
-                     rotate(0.35rad);-ms-transform: rotate(0.35rad); transform: rotate(0.35rad);
-                     width: 5px; height: 7px; left: 190.45px; top: 25.61px;}
-
-                     #warped .w15 {-moz-transform: rotate(0.44rad);-webkit-transform: rotate(0.44rad);-o-transform:
-                     rotate(0.44rad);-ms-transform: rotate(0.44rad); transform: rotate(0.44rad);
-                     width: 8px; height: 7px; left: 199.55px; top: 30.05px;}
-
-                     #warped .w16 {-moz-transform: rotate(0.53rad);-webkit-transform: rotate(0.53rad);-o-transform:
-                     rotate(0.53rad);-ms-transform: rotate(0.53rad); transform: rotate(0.53rad);
-                     width: 4px; height: 7px; left: 211.27px; top: 35.19px;}
-
-                     #warped .w17 {-moz-transform: rotate(0.61rad);-webkit-transform: rotate(0.61rad);-o-transform:
-                     rotate(0.61rad);-ms-transform: rotate(0.61rad); transform: rotate(0.61rad);
-                     width: 8px; height: 7px; left: 218.5px; top: 41.17px;}
-
-                     #warped .w18 {-moz-transform: rotate(0.72rad);-webkit-transform: rotate(0.72rad);-o-transform:
-                     rotate(0.72rad);-ms-transform: rotate(0.72rad); transform: rotate(0.72rad);
-                     width: 8px; height: 7px; left: 228.68px; top: 49.25px;}
-
-                     #warped .w19 {-moz-transform: rotate(0.82rad);-webkit-transform: rotate(0.82rad);-o-transform:
-                     rotate(0.82rad);-ms-transform: rotate(0.82rad); transform: rotate(0.82rad);
-                     width: 8px; height: 7px; left: 237.97px; top: 58.34px;}
-
-                     #warped .w20 {-moz-transform: rotate(0.91rad);-webkit-transform: rotate(0.91rad);-o-transform:
-                     rotate(0.91rad);-ms-transform: rotate(0.91rad); transform: rotate(0.91rad);
-                     width: 3px; height: 7px; left: 247.24px; top: 66.36px;}
-
-                     #warped .w21 {-moz-transform: rotate(0.99rad);-webkit-transform: rotate(0.99rad);-o-transform:
-                     rotate(0.99rad);-ms-transform: rotate(0.99rad); transform: rotate(0.99rad);
-                     width: 8px; height: 7px; left: 250.83px; top: 74.91px;}
-
-                     #warped .w22 {-moz-transform: rotate(6.85rad);-webkit-transform: rotate(6.85rad);-o-transform:
-                     rotate(6.85rad);-ms-transform: rotate(6.85rad); transform: rotate(6.85rad);
-                     width: 35px; height: 24px; left: 357.56px; top: 69.79px;}
-
-                     #warped .w23 {-moz-transform: rotate(7.04rad);-webkit-transform: rotate(7.04rad);-o-transform:
-                     rotate(7.04rad);-ms-transform: rotate(7.04rad); transform: rotate(7.04rad);
-                     width: 11px; height: 24px; left: 391.57px; top: 87.02px;}
-
-                     #warped .w24 {-moz-transform: rotate(7.14rad);-webkit-transform: rotate(7.14rad);-o-transform:
-                     rotate(7.14rad);-ms-transform: rotate(7.14rad); transform: rotate(7.14rad);
-                     width: 11px; height: 24px; left: 402.59px; top: 98.62px;}
-
-                     #warped .w25 {-moz-transform: rotate(7.29rad);-webkit-transform: rotate(7.29rad);-o-transform:
-                     rotate(7.29rad);-ms-transform: rotate(7.29rad); transform: rotate(7.29rad);
-                     width: 23px; height: 24px; left: 409.6px; top: 116.34px;}
-
-                     #warped .w26 {-moz-transform: rotate(7.44rad);-webkit-transform: rotate(7.44rad);-o-transform:
-                     rotate(7.44rad);-ms-transform: rotate(7.44rad); transform: rotate(7.44rad);
-                     width: 13px; height: 24px; left: 425.27px; top: 136.68px;}
-
-                     #warped .w27 {-moz-transform: rotate(7.55rad);-webkit-transform: rotate(7.55rad);-o-transform:
-                     rotate(7.55rad);-ms-transform: rotate(7.55rad); transform: rotate(7.55rad);
-                     width: 10px; height: 24px; left: 432.45px; top: 152.17px;}
-
-                     #warped .w28 {-moz-transform: rotate(7.68rad);-webkit-transform: rotate(7.68rad);-o-transform:
-                     rotate(7.68rad);-ms-transform: rotate(7.68rad); transform: rotate(7.68rad);
-                     width: 18px; height: 24px; left: 432.84px; top: 170.64px;}
-
-                     #warped .w29 {-moz-transform: rotate(7.84rad);-webkit-transform: rotate(7.84rad);-o-transform:
-                     rotate(7.84rad);-ms-transform: rotate(7.84rad); transform: rotate(7.84rad);
-                     width: 19px; height: 24px; left: 434.48px; top: 194.02px;}
-
-                     #warped .w30 {-moz-transform: rotate(7.97rad);-webkit-transform: rotate(7.97rad);-o-transform:
-                     rotate(7.97rad);-ms-transform: rotate(7.97rad); transform: rotate(7.97rad);
-                     width: 11px; height: 24px; left: 437.41px; top: 213.97px;}
-
-                     #warped .w31 {-moz-transform: rotate(8.08rad);-webkit-transform: rotate(8.08rad);-o-transform:
-                     rotate(8.08rad);-ms-transform: rotate(8.08rad); transform: rotate(8.08rad);
-                     width: 11px; height: 24px; left: 434.65px; top: 229.73px;}
-
-                     #warped .w32 {-moz-transform: rotate(8.27rad);-webkit-transform: rotate(8.27rad);-o-transform:
-                     rotate(8.27rad);-ms-transform: rotate(8.27rad); transform: rotate(8.27rad);
-                     width: 36px; height: 24px; left: 413.15px; top: 256.72px;}
-
-                     #warped .w33 {-moz-transform: rotate(8.5rad);-webkit-transform: rotate(8.5rad);-o-transform:
-                     rotate(8.5rad);-ms-transform: rotate(8.5rad); transform: rotate(8.5rad);
-                     width: 23px; height: 24px; left: 402.2px; top: 286.39px;}
-
-                     #warped .w34 {-moz-transform: rotate(8.66rad);-webkit-transform: rotate(8.66rad);-o-transform:
-                     rotate(8.66rad);-ms-transform: rotate(8.66rad); transform: rotate(8.66rad);
-                     width: 15px; height: 24px; left: 390.27px; top: 304.31px;}
-
-                     #warped .w35 {-moz-transform: rotate(8.82rad);-webkit-transform: rotate(8.82rad);-o-transform:
-                     rotate(8.82rad);-ms-transform: rotate(8.82rad); transform: rotate(8.82rad);
-                     width: 23px; height: 24px; left: 367.68px; top: 319.46px;}
-
-                     #warped .w36 {-moz-transform: rotate(8.96rad);-webkit-transform: rotate(8.96rad);-o-transform:
-                     rotate(8.96rad);-ms-transform: rotate(8.96rad); transform: rotate(8.96rad);
-                     width: 11px; height: 24px; left: 354.73px; top: 330.58px;}
-
-                     #warped .w37 {-moz-transform: rotate(9.07rad);-webkit-transform: rotate(9.07rad);-o-transform:
-                     rotate(9.07rad);-ms-transform: rotate(9.07rad); transform: rotate(9.07rad);
-                     width: 10px; height: 24px; left: 340.99px; top: 336.69px;}
-
-                     #warped .w38 {-moz-transform: rotate(9.18rad);-webkit-transform: rotate(9.18rad);-o-transform:
-                     rotate(9.18rad);-ms-transform: rotate(9.18rad); transform: rotate(9.18rad);
-                     width: 15px; height: 24px; left: 321.76px; top: 341.79px;}
-
-                     #warped .w39 {-moz-transform: rotate(9.31rad);-webkit-transform: rotate(9.31rad);-o-transform:
-                     rotate(9.31rad);-ms-transform: rotate(9.31rad); transform: rotate(9.31rad);
-                     width: 12px; height: 24px; left: 305.06px; top: 345.02px;}
-
-                     #warped .w40 {-moz-transform: rotate(9.42rad);-webkit-transform: rotate(9.42rad);-o-transform:
-                     rotate(9.42rad);-ms-transform: rotate(9.42rad); transform: rotate(9.42rad);
-                     width: 11px; height: 24px; left: 289.09px; top: 345.99px;}
-
-              </style>
-       </head>
-
-       <body>
-              <div id='warped'>
-                     <span class='w0'>P</span><span class='w1'>r</span><span class='w2'>e</span><span class='w3'>s</span><span class='w4'>s</span><span class='w5'> </span><span class='w6'>a</span><span class='w7'>n</span><span class='w8'>y</span><span class='w9'> </span><span class='w10'>k</span><span class='w11'>e</span><span class='w12'>y</span><span class='w13'> </span><span class='w14'>t</span><span class='w15'>o</span><span class='w16'> </span><span class='w17'>b</span><span class='w18'>e</span><span class='w19'>g</span><span class='w20'>i</span><span class='w21'>n</span>
-              </div>
-       </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Info Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+</head>
+<body>
+  <div class="statusModal" id="fuelModal">
+    <br>
+    FUEL = 0. GAME OVER.
+    <br>
+    <button id="fuelButton">PLAY AGAIN</button>
+  </div>
+  <div class="statusModal" id="winModal">
+    <br>
+    ENEMIES = 0. YOU WIN!
+    <br>
+    <button id="enemiesButton">PLAY AGAIN</button>
+  </div>
+  <div class="statusModal" id="satelliteModal">
+    <br>
+    OUR SATELLITE HAS BEEN DESTROYED.
+    <br>
+    GAME OVER.
+    <br>
+    <button id="satelliteButton">PLAY AGAIN</button>
+  </div>
+</body>
+<script>
+       window.onload = function () {
+              document.getElementById('fuelButton').onclick = function () {
+              awaitIt();
+            };
+        };
+</script>
+<script>
+       window.onload = function () {
+              document.getElementById('enemiesButton').onclick = function () {
+              awaitIt();
+            };
+        };
+</script>
+<script>
+       window.onload = function () {
+              document.getElementById('satelliteButton').onclick = function () {
+              awaitIt();
+            };
+        };
+</script>
 
 </html>
 

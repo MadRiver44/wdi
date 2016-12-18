@@ -8,43 +8,67 @@
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-<article>
-Spacebar: Shoot Enemy Ships To Score Points
-<br>
-Each shot of twin laser cannons uses 2 fuel.
-<br>
-If you run out of fuel, you lose.
-<br>
-If you shoot a friendly satellite, you lose.
-<br>
-<img src="satellite.gif">
-<ul>
-<li>Level 1 : Blue Planet</li>
-<li>One enemy scout ship</li>
-<li>One friendly satellite</li>
-</ul>
-<img src="ufo.gif">
-<ul>
-<li>Level 2 : Green Planet</li>
-<li>One enemy fighter ship</li>
-<li>One friendly satellite</li>
-</ul>
-<img src="ufo2.gif">
-<ul>
-<li>Level 3 : Red Planet</li>
-<li>Two enemy fighter ships</li>
-<li>One friendly satellite</li>
-</ul>
-</article>
-</div>
-
+  <div class="info" id="infoModal">
+    <article>
+    <br>
+    SAVE OUR SATELLITES
+    <br>
+    Spacebar: Shoot Enemy Ships To Score Points
+    <br>
+    Each shot of twin laser cannons uses 2 fuel.
+    <br>
+    <img src="satellite.gif" height="50" width="50">
+    <br>
+    If you run out of fuel, you lose.
+    <br>
+    If you shoot a friendly satellite, you lose.
+    <br>
+    <img src="ufo.gif" height="25" width="50">
+    <br>
+    Level 1 :
+    <br>
+    Two enemy scout ships
+    <br>
+    One friendly satellite
+    <br>
+    <img src="ufo2.gif" height="25" width="50">
+    <br>
+    PRESS ESCAPE TO RETURN TO GAME
+    <br>
+    </article>
+  </div>
 </body>
 
+<script>
+
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 27) {
+    let infodiv = document.getElementById("infoModal");
+    infodiv.classList.toggle("invisible");
+    infodiv.classList.toggle("info");
+  }
+});
+
+</script>
 
 </html>
 
 
+  <div class="info" id="infoModal">
+    <article>
+    <br>
+    FUEL = 0. GAME OVER.
+    <br>
+    <button id="button">PLAY AGAIN</button>
+    </article>
+  </div>
+      <script>
+        window.onload = function () {
+            document.getElementById('button').onclick = function () {
+            document.getElementById('modal').style.display = "none"
+            };
+        };
+    </script>
 
 
 

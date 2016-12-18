@@ -12,8 +12,8 @@
   <div class="container">
     <canvas id="myCanvas" width="1024" height="576"></canvas>
     <div id='game'>
-<div class='target' id='target1'>
-</div>
+<!-- <div class='target' id='target1'>
+</div> -->
     <div class='overlay'>
       <img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
       >
@@ -33,47 +33,41 @@
           </div>
         </div>
   </div>
-<!--  <div class="modal">
-<div class="container">
-<article>
-Spacebar: Shoot Enemy Ships To Score Points
-<br>
-Each shot of twin laser cannons uses 2 fuel.
-<br>
-If you run out of fuel, you lose.
-<br>
-If you shoot a friendly satellite, you lose.
-<br>
-<ul>
-<li>Level 1 : Blue Planet</li>
-<li>One enemy scout ship</li>
-<li>One friendly satellite</li>
-</ul>
-<ul>
-<li>Level 2 : Green Planet</li>
-<li>One enemy fighter ship</li>
-<li>One friendly satellite</li>
-</ul>
-<ul>
-<li>Level 3 : Red Planet</li>
-<li>Two enemy fighter ships</li>
-<li>One friendly satellite</li>
-</ul>
-</article>
-</div>
-    </div> -->
+<!--      <div class="info" id="infoModal">
+    <article>
+    <br>
+    SAVE OUR SATELLITES
+    <br>
+    Spacebar: Shoot Enemy Ships To Score Points
+    <br>
+    Each shot of twin laser cannons uses 2 fuel.
+    <br>
+    <img src="satellite.gif" height="50" width="50">
+    <br>
+    If you run out of fuel, you lose.
+    <br>
+    If you shoot a friendly satellite, you lose.
+    <br>
+    <img src="ufo.gif" height="25" width="50">
+    <br>
+    Level 1 :
+    <br>
+    Two enemy scout ships
+    <br>
+    One friendly satellite
+    <br>
+    <img src="ufo2.gif" height="25" width="50">
+    <br>
+    PRESS ESCAPE TO RETURN TO GAME
+    <br>
+    </article>
+  </div>
+</body> -->
+
 </body>
 
 <script src="main.js" type="text/javascript" charset="utf-8"></script>
-<script>
-document.body.addEventListener("keydown", function(event) {
-  if (event.keyCode == 27) {
-    // document.getElementById('modal').style.display = "none";
-    var menu = document.querySelector('.menu') // Using a class instead, see note below.
-    menu.classList.toggle('visible');
-  }
-});
-</script>
+
 <script>
 document.body.addEventListener("keydown", function(event) {
   if (event.keyCode == 32) {
@@ -143,21 +137,24 @@ let outputNewMessages = function() {
 };
 </script>
 
-<!-- <script>
+<script>
   let addIt = function() {
   const newTarget1 = document.createElement('div');
   const newTarget2 = document.createElement('div');
   const newSatellite = document.createElement('div');
   newTarget1.setAttribute('id', 'target1');
+  newTarget1.setAttribute('class', 'target');
   newTarget2.setAttribute('id', 'target2');
+  newTarget2.setAttribute('class', 'target');
   newSatellite.setAttribute('id', 'satellite');
+  newSatellite.setAttribute('class', 'satellite');
   const gameBoard = document.querySelector('#game');
   gameBoard.appendChild(newTarget1);
   gameBoard.appendChild(newTarget2);
   gameBoard.appendChild(newSatellite);
   outputNewMessages();
   }
-</script> -->
+</script>
 
 <script>
 let shootIt = function() {
@@ -182,8 +179,8 @@ let shootIt = function() {
 let checkIt = function() {
   const gameBoard = document.getElementById("game");
   let target = document.getElementById('target1');
-  /*let targets = document.querySelectorAll('target');
-  for (target of targets) {*/
+  let targets = document.querySelectorAll('target');
+  /*for (target of targets) {*/
     el = target.getBoundingClientRect();
     let left = el.left + window.scrollX;
     let top = el.top + window.scrollY;
@@ -235,7 +232,7 @@ let startIt = function() {
   starSpeed = 64;
   fuelRate = 1;
   outputNewMessages();
-  /*addIt();*/
+  addIt();
   }
 </script>
 
@@ -293,26 +290,25 @@ let loseIt = function() {
 
 <script>
   let awaitIt = function() {
-    // splash screen
-    // press any key to begin
+    document.onkeypress=function(e){
+    let splashScreen = document.getElementById("infoModal");
+    splashScreen.style.display = "none";
+      startIt();
+      repeatIt();
+    }
   }
 </script>
 
 TO DO:
--function to add enemy / satellites to board
--move
--add levels
--add level / win / lose modals
+-add target 2 and satellite hit functionality
+-add win / lose modals
 -build class objects
 -link splash screen
--enable info modal
-
--rotate ships along animation
--Audio object <audio autoplay="autoplay"><source src="me.mp3"/></audio>
 
 -->
 
 <script>
+// awaitIt();
 startIt();
 repeatIt();
 </script>
