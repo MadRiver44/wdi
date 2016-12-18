@@ -12,8 +12,11 @@
   <div class="container">
     <canvas id="myCanvas" width="1024" height="576"></canvas>
     <div id='game'>
-          <div class='target' id='target1'></div>
-    </div>
+
+<div class='target' id='target1'>
+          <!-- <img class='target' id='target1src="ufo.gif"> -->
+</div>
+
     <div class='overlay'>
       <img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
       >
@@ -34,12 +37,33 @@
         </div>
   </div>
 <!--  <div class="modal">
-        <div class="modalcontent">
-            <h1>Welcome to my Demo Homepage!</h1><br>
-            <p>This is not a live page, but is submitted to General Assembly for consideration of admission to the
-            <br>Web Development Immersive program.<br><br>Thank you for checking it out!
-            <br><br>Don't forget to leave your feedback after your visit!</p><br>
-        </div>
+<div class="container">
+<article>
+Spacebar: Shoot Enemy Ships To Score Points
+<br>
+Each shot of twin laser cannons uses 2 fuel.
+<br>
+If you run out of fuel, you lose.
+<br>
+If you shoot a friendly satellite, you lose.
+<br>
+<ul>
+<li>Level 1 : Blue Planet</li>
+<li>One enemy scout ship</li>
+<li>One friendly satellite</li>
+</ul>
+<ul>
+<li>Level 2 : Green Planet</li>
+<li>One enemy fighter ship</li>
+<li>One friendly satellite</li>
+</ul>
+<ul>
+<li>Level 3 : Red Planet</li>
+<li>Two enemy fighter ships</li>
+<li>One friendly satellite</li>
+</ul>
+</article>
+</div>
     </div> -->
 </body>
 
@@ -122,11 +146,21 @@ let outputNewMessages = function() {
 };
 </script>
 
-<script>
+<!-- <script>
   let addIt = function() {
-    // add enemies etc to board
+  const newTarget1 = document.createElement('div');
+  const newTarget2 = document.createElement('div');
+  const newSatellite = document.createElement('div');
+  newTarget1.setAttribute('id', 'target1');
+  newTarget2.setAttribute('id', 'target2');
+  newSatellite.setAttribute('id', 'satellite');
+  const gameBoard = document.querySelector('#game');
+  gameBoard.appendChild(newTarget1);
+  gameBoard.appendChild(newTarget2);
+  gameBoard.appendChild(newSatellite);
+  outputNewMessages();
   }
-</script>
+</script> -->
 
 <script>
 let shootIt = function() {
@@ -261,20 +295,21 @@ let loseIt = function() {
 <!--
 
 <script>
-  let awaitIt() = function() {
+  let awaitIt = function() {
     // splash screen
     // press any key to begin
   }
 </script>
 
 TO DO:
--move
--add level boxes blue planet scout ship green planet 1 fighter 1 satellite red 2 fighters 1 satellite
 -function to add enemy / satellites to board
+-move
+-add levels
+-add level / win / lose modals
 -build class objects
--add satellite obstacles
--add splash screen
--add info modal
+-link splash screen
+-enable info modal
+
 -rotate ships along animation
 -Audio object <audio autoplay="autoplay"><source src="me.mp3"/></audio>
 
