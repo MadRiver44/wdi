@@ -79,10 +79,106 @@
 
 </body>
 <script src="splash.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+  let awaitIt = function() {
+    let splashScreen = document.getElementById("splashScreen");
+    let gameScreen = document.getElementById("gameContainer");
+    document.onkeypress=function(e){
+      splashScreen.style.display = "none";
+      //gameContainer.style.display = "block";
+        startIt();
+        repeatIt();
+    }
+  }
+</script>
 </html>
 
+<!--
+    <div class="info" id="infoModal">
+    <article>
+    <br>
+    SAVE OUR SATELLITES
+    <br>
+    Spacebar: Shoot Enemy Ships To Score Points
+    <br>
+    Each shot of twin laser cannons uses 2 fuel.
+    <br>
+    <img src="satellite.gif" height="50" width="50">
+    <br>
+    If you run out of fuel, you lose.
+    <br>
+    If you shoot a friendly satellite, you lose.
+    <br>
+    <img src="ufo.gif" height="25" width="50">
+    <br>
+    Level 1 :
+    <br>
+    Two enemy scout ships
+    <br>
+    One friendly satellite
+    <br>
+    <img src="ufo2.gif" height="25" width="50">
+    <br>
+    PRESS ESCAPE TO RETURN TO GAME
+    <br>
+    </article>
+  </div>
+
+    <div class="statusModal" id="fuelModal">
+    <br>
+    FUEL = 0. GAME OVER.
+    <br>
+    <button id="fuelButton">PLAY AGAIN</button>
+  </div>
 
 
+  <div class="statusModal" id="winModal">
+    <br>
+    ENEMIES = 0. YOU WIN!
+    <br>
+    <button id="enemiesButton">PLAY AGAIN</button>
+  </div>
+
+  <div class="statusModal" id="satelliteModal">
+    <br>
+    OUR SATELLITE HAS BEEN DESTROYED.
+    <br>
+    GAME OVER.
+    <br>
+    <button id="satelliteButton">PLAY AGAIN</button>
+  </div>
+-->
+<script>
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 27) {
+    let infodiv = document.getElementById("infoModal");
+    infodiv.classList.toggle("invisible");
+    infodiv.classList.toggle("statusModal");
+  }
+});
+</script>
+<script>
+  window.onload = function () {
+    document.getElementById('fuelButton').onclick = function () {
+      awaitIt();
+     };
+  };
+</script>
+<script>
+  window.onload = function () {
+    document.getElementById('enemiesButton').onclick = function () {
+      awaitIt();
+    };
+  };
+</script>
+<script>
+  window.onload = function () {
+    document.getElementById('satelliteButton').onclick = function () {
+       awaitIt();
+    };
+  };
+</script>
 
 
 

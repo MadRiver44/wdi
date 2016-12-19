@@ -4,16 +4,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>StarMaster Clone</title>
+  <title>Save Our Satellites</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="gameContainer">
     <canvas id="myCanvas" width="1024" height="576"></canvas>
     <div id='game'>
-<!-- <div class='target' id='target1'>
-</div> -->
     <div class='overlay'>
       <img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
       >
@@ -33,37 +31,6 @@
           </div>
         </div>
   </div>
-<!--      <div class="info" id="infoModal">
-    <article>
-    <br>
-    SAVE OUR SATELLITES
-    <br>
-    Spacebar: Shoot Enemy Ships To Score Points
-    <br>
-    Each shot of twin laser cannons uses 2 fuel.
-    <br>
-    <img src="satellite.gif" height="50" width="50">
-    <br>
-    If you run out of fuel, you lose.
-    <br>
-    If you shoot a friendly satellite, you lose.
-    <br>
-    <img src="ufo.gif" height="25" width="50">
-    <br>
-    Level 1 :
-    <br>
-    Two enemy scout ships
-    <br>
-    One friendly satellite
-    <br>
-    <img src="ufo2.gif" height="25" width="50">
-    <br>
-    PRESS ESCAPE TO RETURN TO GAME
-    <br>
-    </article>
-  </div>
-</body> -->
-
 </body>
 
 <script src="main.js" type="text/javascript" charset="utf-8"></script>
@@ -75,51 +42,7 @@ document.body.addEventListener("keydown", function(event) {
   }
 });
 </script>
-<script>
-document.body.addEventListener("keydown", function(event) {
-  if (event.keyCode == 38) {
-    starSpeed = 32;
-    fuelRate = 2;
-    let thrusterAudio = new Audio('audio/thrusters.mp3');
-    thrusterAudio.play();
-    initStars();
-  }
-});
 
-/*document.body.addEventListener("keyup", function(event) {
-  if (event.keyCode == 38) {
-    starSpeed = 64;
-    fuelRate = 1;
-    let thrusterAudio = new Audio('audio/thrusters.mp3');
-    var ply = document.getElementById('player');
-    var oldSrc = ply.src;
-    ply.src = "";
-  }
-});*/
-</script>
-<script>
-document.body.addEventListener("keydown", function(event) {
-  if (event.keyCode == 27) {
-    shootIt();
-  }
-});
-</script>
-
-<!-- <script>
-document.body.addEventListener("keydown", function(event) {
-  if (event.keyCode == 39) {
-    loopRight();
-  }
-});
-</script>
-
-<script>
-document.body.addEventListener("keydown", function(event) {
-  if (event.keyCode == 37) {
-    loopLeft();
-  }
-});
-</script> -->
 <script>
 let outputNewMessages = function() {
   let newRound = document.getElementById('roundSpan');
@@ -140,17 +63,14 @@ let outputNewMessages = function() {
 <script>
   let addIt = function() {
   const newTarget1 = document.createElement('div');
-  const newTarget2 = document.createElement('div');
+
   const newSatellite = document.createElement('div');
   newTarget1.setAttribute('id', 'target1');
   newTarget1.setAttribute('class', 'target');
-  newTarget2.setAttribute('id', 'target2');
-  newTarget2.setAttribute('class', 'target');
   newSatellite.setAttribute('id', 'satellite');
   newSatellite.setAttribute('class', 'satellite');
   const gameBoard = document.querySelector('#game');
   gameBoard.appendChild(newTarget1);
-  gameBoard.appendChild(newTarget2);
   gameBoard.appendChild(newSatellite);
   outputNewMessages();
   }
@@ -171,7 +91,7 @@ let shootIt = function() {
   let laserAudio = new Audio('audio/lasers.mp3');
   laserAudio.play();
   checkIt();
-  winIt();
+  determineIt();
 }
 </script>
 
@@ -179,20 +99,28 @@ let shootIt = function() {
 let checkIt = function() {
   const gameBoard = document.getElementById("game");
   let target = document.getElementById('target1');
-  let targets = document.querySelectorAll('target');
-  /*for (target of targets) {*/
+  let friendly = document.getElementById('satellite');
     el = target.getBoundingClientRect();
+    la = friendly.getBoundingClientRect();
     let left = el.left + window.scrollX;
+    let laLeft = la.left + window.scrollX;
     let top = el.top + window.scrollY;
-    console.log(`left is ${left} and top is ${top}`);
-  //}
-  if ((left > 582 && left < 622) && (top > 230 && top < 270)) {
-    score++;
-    enemies--;
-    outputNewMessages();
-    gameBoard.removeChild(target);
-    explodeIt();
-   }
+    let laTop = la.top + window.scrollY;
+    console.log(`laLeft is ${laLeft} and laTop is ${laTop}`);
+    if ((left > 582 && left < 622) && (top > 230 && top < 270)) {
+      score++;
+      enemies--;
+      outputNewMessages();
+      gameBoard.removeChild(target);
+      explodeIt();
+      determineIt();
+    } else if ((laLeft > 600 && laLeft < 650) && (laTop > 225 && laTop < 265)) {
+      satellites = satellites -1;
+      outputNewMessages();
+      gameBoard.removeChild(friendly);
+      explodeIt();
+      determineIt();
+    }
 }
 </script>
 
@@ -215,24 +143,22 @@ let removeIt = function() {
     const boom = document.createElement('div');
     boom.setAttribute('class', 'explosion');
     gameBoard.appendChild(boom);
-    let explosionAudio = new Audio('audio/explosion.mp3');
+    let explosionAudio = new Audio('explosion.mp3');
     explosionAudio.play();
     setTimeout(function() {
-      gameBoard.removeChild(boom);
+    gameBoard.removeChild(boom);
     }, 990);
   }
 </script>
 
 <script>
-let startIt = function() {
-  score = 0;
-  fuel = 100;
-  round = 1;
-  enemies = 1;
-  starSpeed = 64;
-  fuelRate = 1;
-  outputNewMessages();
-  addIt();
+  let startIt = function() {
+    score = 0;
+    fuel = 100;
+    round = 1;
+    enemies = 1;
+    outputNewMessages();
+    addIt();
   }
 </script>
 
@@ -264,51 +190,49 @@ function repeatIt() {
 </script>
 
 <script>
-  let winIt = function() {
+  let determineIt = function() {
     let newFuel = document.getElementById('fuel');
     if (fuel === 0) {
-      loseIt();
-    } else if ((enemies === 0) && (level === 3)) {
-      winner();
-    } else if ((enemies === 0) && (level !==3)) {
-      advanceIt();
+      fuelIt();
+    } else if (satellites === 0) {
+      lostIt();
+    } else if (enemies === 0) {
+      winIt();
     } else if (fuel < 25) {
       newFuel.className = "fuelSpanRed";
     } else {
       outputNewMessages();
     }
   }
-
-let loseIt = function() {
-  alert("FUEL = 0.  YOU LOSE.  PRESS ENTER TO PLAY AGAIN ");
-  }
 </script>
 
+<script>
+let fuelIt = function() {
+    alert("FUEL = 0. YOU LOSE.");
+}
+</script>
+
+<script>
+let lostIt = function() {
+    setTimeout(function() {
+      alert("SATELLITE DESTROYED. YOU LOSE.");
+    }, 800);
+}
+</script>
+
+<script>
+let winIt = function() {
+    setTimeout(function() {
+      alert("ENEMY DESTROYED! YOU WIN!");
+    }, 800);
+}
 </script>
 
 <!--
-
-<script>
-  let awaitIt = function() {
-    document.onkeypress=function(e){
-    let splashScreen = document.getElementById("infoModal");
-    splashScreen.style.display = "none";
-      startIt();
-      repeatIt();
-    }
-  }
-</script>
-
 TO DO:
--add target 2 and satellite hit functionality
--add win / lose modals
--build class objects
--link splash screen
-
--->
+-build class objects -->
 
 <script>
-// awaitIt();
 startIt();
 repeatIt();
 </script>

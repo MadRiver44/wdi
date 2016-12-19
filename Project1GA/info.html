@@ -27,7 +27,7 @@
     <br>
     Level 1 :
     <br>
-    Two enemy scout ships
+    One enemy scout ship
     <br>
     One friendly satellite
     <br>
@@ -45,7 +45,7 @@ document.body.addEventListener("keydown", function(event) {
   if (event.keyCode == 27) {
     let infodiv = document.getElementById("infoModal");
     infodiv.classList.toggle("invisible");
-    infodiv.classList.toggle("info");
+    infodiv.classList.toggle("statusModal");
   }
 });
 
@@ -53,22 +53,13 @@ document.body.addEventListener("keydown", function(event) {
 
 </html>
 
-
-  <div class="info" id="infoModal">
-    <article>
-    <br>
-    FUEL = 0. GAME OVER.
-    <br>
-    <button id="button">PLAY AGAIN</button>
-    </article>
-  </div>
-      <script>
+<!--       <script>
         window.onload = function () {
             document.getElementById('button').onclick = function () {
             document.getElementById('modal').style.display = "none"
             };
         };
-    </script>
+    </script> -->
 
 
 
