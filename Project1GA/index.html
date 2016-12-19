@@ -2,240 +2,121 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>Save Our Satellites</title>
-  <link rel="stylesheet" href="style.css">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <title>Save Our Satellites Game</title>
+  <link href="style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 </head>
 <body>
-  <div class="container" id="gameContainer">
-    <canvas id="myCanvas" width="1024" height="576"></canvas>
-    <div id='game'>
-    <div class='overlay'>
-      <img src="http://img08.deviantart.net/1cd3/i/2014/092/f/0/preybird_fighter_cockpit_by_iteachvader-d6mxx0l.png"
-      >
-      <div id='status'>
-        <div class="message" id='round'>ROUND : <span id="roundSpan"></span></div>
-        <div class="message" id='enemies'>ENEMIES : <span id="enemiesSpan"></span></div>
-        <div class="message" id='fuel'>FUEL : <span id="fuelSpan"></span></div>
-        <div class="message" id='score'>SCORE : <span id="scoreSpan"></span></div>
-      </div>
-          </div>
-        <div class='crosshairs' id='xhairs'>
-          <div id="main">
-            <div id="center1" class="center"></div>
-            <div id="blue1" class="blue"></div>
-            <div id="yellow1" class="yellow"></div>
-            <div id="red1" class="red"></div>
-          </div>
+  <div class="splash" id="splashScreen">
+    <div class="container2">
+      <div class="firstLetterFlipper">
+        <div class="firstLetter">
+          S
         </div>
+      </div>
+      <div class="saveLetterA">
+        <div class="saveLetter">
+          A
+        </div>
+      </div>
+      <div class="saveLetterV">
+        <div class="saveLetter">
+          V
+        </div>
+      </div>
+      <div class="saveLetterE">
+        <div class="saveLetter">
+          E
+        </div>
+      </div><br>
+      <div class="firstLetterFlipper">
+        <div class="firstLetter">
+          O
+        </div>
+      </div>
+      <div class="ourLetterU">
+        <div class="ourLetter">
+          U
+        </div>
+      </div>
+      <div class="ourLetterR">
+        <div class="ourLetter">
+          R
+        </div>
+      </div><br>
+      <div class="firstLetterFlipper">
+        <div class="firstLetter">
+          S
+        </div>
+      </div>
+      <div class="satellitesLetterA">
+        <div class="satellitesLetter">
+          A
+        </div>
+      </div>
+      <div class="satellitesLetterT">
+        <div class="satellitesLetter">
+          T
+        </div>
+      </div>
+      <div class="satellitesLetterE">
+        <div class="satellitesLetter">
+          E
+        </div>
+      </div>
+      <div class="satellitesLetterL">
+        <div class="satellitesLetter">
+          L
+        </div>
+      </div>
+      <div class="satellitesLetterL2">
+        <div class="satellitesLetter">
+          L
+        </div>
+      </div>
+      <div class="satellitesLetterI">
+        <div class="satellitesLetter">
+          I
+        </div>
+      </div>
+      <div class="satellitesLetterT2">
+        <div class="satellitesLetter">
+          T
+        </div>
+      </div>
+      <div class="satellitesLetterE2">
+        <div class="satellitesLetter">
+          E
+        </div>
+      </div>
+      <div class="satellitesLetterS">
+        <div class="satellitesLetter">
+          S
+        </div>
+      </div>
+      <div class="rotator">
+        <div id='warped'>
+          <span class='w0'>P</span><span class='w1'>r</span><span class='w2'>e</span><span class='w3'>s</span><span class='w4'>s</span> <span class='w5'></span><span class='w6'>a</span><span class='w7'>n</span><span class='w8'>y</span> <span class='w9'></span><span class='w10'>k</span><span class='w11'>e</span><span class='w12'>y</span> <span class='w13'></span><span class='w14'>t</span><span class='w15'>o</span> <span class='w16'></span><span class='w17'>b</span><span class='w18'>e</span><span class='w19'>g</span><span class='w20'>i</span><span class='w21'>n</span>
+        </div>
+      </div>
+      <div class="satelliteArt"><img src="satellite.gif"></div>
+    </div>
+    <script charset="utf-8" src="splash.js" type="text/javascript">
+    </script>
+    <script>
+
+    document.onkeypress=function(e){
+      window.location = 'info.html';
+    }
+
+    </script>
   </div>
 </body>
-
-<script src="main.js" type="text/javascript" charset="utf-8"></script>
-
-<script>
-document.body.addEventListener("keydown", function(event) {
-  if (event.keyCode == 32) {
-    shootIt();
-  }
-});
-</script>
-
-<script>
-let outputNewMessages = function() {
-  let newRound = document.getElementById('roundSpan');
-  let newEnemies = document.getElementById('enemiesSpan');
-  let newFuel = document.getElementById('fuelSpan');
-  let newScore = document.getElementById('scoreSpan');
-  newRound.innerHTML = "";
-  newEnemies.innerHTML = "";
-  newFuel.innerHTML = "";
-  newScore.innerHTML = "";
-  newRound.innerHTML = `${round}`;
-  newEnemies.innerHTML = `${enemies}`;
-  newFuel.innerHTML = `${fuel}`;
-  newScore.innerHTML = `${score}`;
-};
-</script>
-
-<script>
-  let addIt = function() {
-  const newTarget1 = document.createElement('div');
-
-  const newSatellite = document.createElement('div');
-  newTarget1.setAttribute('id', 'target1');
-  newTarget1.setAttribute('class', 'target');
-  newSatellite.setAttribute('id', 'satellite');
-  newSatellite.setAttribute('class', 'satellite');
-  const gameBoard = document.querySelector('#game');
-  gameBoard.appendChild(newTarget1);
-  gameBoard.appendChild(newSatellite);
-  outputNewMessages();
-  }
-</script>
-
-<script>
-let shootIt = function() {
-  const leftBeam = document.createElement('div');
-  const rightBeam = document.createElement('div');
-  leftBeam.setAttribute('id', 'leftbeam');
-  rightBeam.setAttribute('id', 'rightbeam');
-  const gameBoard = document.querySelector('#game');
-  gameBoard.appendChild(leftBeam);
-  gameBoard.appendChild(rightBeam);
-  fuel = fuel - 2;
-  outputNewMessages();
-  removeIt();
-  let laserAudio = new Audio('audio/lasers.mp3');
-  laserAudio.play();
-  checkIt();
-  determineIt();
-}
-</script>
-
-<script>
-let checkIt = function() {
-  const gameBoard = document.getElementById("game");
-  let target = document.getElementById('target1');
-  let friendly = document.getElementById('satellite');
-    el = target.getBoundingClientRect();
-    la = friendly.getBoundingClientRect();
-    let left = el.left + window.scrollX;
-    let laLeft = la.left + window.scrollX;
-    let top = el.top + window.scrollY;
-    let laTop = la.top + window.scrollY;
-    console.log(`laLeft is ${laLeft} and laTop is ${laTop}`);
-    if ((left > 582 && left < 622) && (top > 230 && top < 270)) {
-      score++;
-      enemies--;
-      outputNewMessages();
-      gameBoard.removeChild(target);
-      explodeIt();
-      determineIt();
-    } else if ((laLeft > 600 && laLeft < 650) && (laTop > 225 && laTop < 265)) {
-      satellites = satellites -1;
-      outputNewMessages();
-      gameBoard.removeChild(friendly);
-      explodeIt();
-      determineIt();
-    }
-}
-</script>
-
-<script>
-let removeIt = function() {
-  setTimeout(function() {
-    const leftBeam = document.getElementById('leftbeam');
-    const rightBeam = document.getElementById('rightbeam');
-    const gameBoard = document.getElementById("game");
-    gameBoard.removeChild(leftBeam);
-    gameBoard.removeChild(rightBeam);
-  }, 498);
-};
-</script>
-
-<script>
-  var explodeIt = function() {
-    outputNewMessages();
-    const gameBoard = document.getElementById("game");
-    const boom = document.createElement('div');
-    boom.setAttribute('class', 'explosion');
-    gameBoard.appendChild(boom);
-    let explosionAudio = new Audio('explosion.mp3');
-    explosionAudio.play();
-    setTimeout(function() {
-    gameBoard.removeChild(boom);
-    }, 990);
-  }
-</script>
-
-<script>
-  let startIt = function() {
-    score = 0;
-    fuel = 100;
-    round = 1;
-    enemies = 1;
-    outputNewMessages();
-    addIt();
-  }
-</script>
-
-<script>
-var myVar;
-function repeatIt() {
-    let myVar = setInterval(crosshairCheck, 100);
-}
-  let crosshairCheck = function() {
-      console.log('tick');
-      let center = document.getElementById("center1");
-      let blue = document.getElementById("blue1");
-      let red = document.getElementById("red1");
-      const gameBoard = document.getElementById("game");
-      let target = document.getElementById('target1');
-      el = target.getBoundingClientRect();
-      let left = el.left + window.scrollX;
-      let top = el.top + window.scrollY;
-      if ((left > 520 && left < 759) && (top > 181 && top < 340)) {
-        center.className = "centerRed";
-        blue.className = "blueRed";
-        red.className = "redRed";
-      } else {
-        center.className = "center";
-        blue.className = "blue";
-        red.className = "red";
-      }
-  };
-</script>
-
-<script>
-  let determineIt = function() {
-    let newFuel = document.getElementById('fuel');
-    if (fuel === 0) {
-      fuelIt();
-    } else if (satellites === 0) {
-      lostIt();
-    } else if (enemies === 0) {
-      winIt();
-    } else if (fuel < 25) {
-      newFuel.className = "fuelSpanRed";
-    } else {
-      outputNewMessages();
-    }
-  }
-</script>
-
-<script>
-let fuelIt = function() {
-    alert("FUEL = 0. YOU LOSE.");
-}
-</script>
-
-<script>
-let lostIt = function() {
-    setTimeout(function() {
-      alert("SATELLITE DESTROYED. YOU LOSE.");
-    }, 800);
-}
-</script>
-
-<script>
-let winIt = function() {
-    setTimeout(function() {
-      alert("ENEMY DESTROYED! YOU WIN!");
-    }, 800);
-}
-</script>
-
-<!--
-TO DO:
--build class objects -->
-
-<script>
-startIt();
-repeatIt();
-</script>
 </html>
+
+
+
+
 
 

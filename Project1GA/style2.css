@@ -1,6 +1,7 @@
 body {
   background-color: black;
   font-family: 'Orbitron', sans-serif;
+  /*cursor: none;*/
 }
 .container {
   position: relative;
@@ -453,8 +454,7 @@ canvas {
   }
 }
 .splash {
-  margin: 0 auto;
-  width: 100%;
+  z-index: 8;
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   overflow: hidden;
