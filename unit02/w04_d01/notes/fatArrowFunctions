@@ -1,0 +1,36 @@
+//function add(x,y) {
+//  return x+y;
+//}
+
+let add = (x,y) => {
+  return x+y;
+};
+
+add(2,3);
+
+// use fatArrow when callback is required (ie map() or setTimeout)
+
+let x = [1,2,3];
+let y = x.map(function(number) {
+  return number + 1;
+});
+console.log(y);
+
+// in fatArrow syntax, becomes:
+
+let y = x.map((number) => {
+  return number + 1;
+});
+
+// ...and can be condensed to one line if return is removed (return is implicit with =>)
+let y = x.map((number) => number + 1);
+
+// can pass a function to map as a parameter (if parentheses used ,would invoke function in parameter and return an error):
+
+let x = [1,2,3];
+let add = (x) => x+1;
+let y = x.map(add);
+
+console.log(y[0]);
+
+

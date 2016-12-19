@@ -8,7 +8,6 @@ class Game {
     this.satellites = 1;
   }
 }
-
 const shootIt = function() {
   const leftBeam = document.createElement('div');
   const rightBeam = document.createElement('div');
@@ -49,7 +48,7 @@ let addIt = function() {
   const newSatellite = document.createElement('div');
   newTarget1.setAttribute('id', 'target1');
   newTarget1.setAttribute('class', 'target');
-  newSatellite.setAttribute('id', 'satellite');
+  newSatellite.setAttribute('id', 'satellite1');
   newSatellite.setAttribute('class', 'satellite');
   const gameBoard = document.querySelector('#game');
   gameBoard.appendChild(newTarget1);
@@ -59,7 +58,7 @@ let addIt = function() {
 let checkIt = function() {
   const gameBoard = document.getElementById('game');
   let target = document.getElementById('target1');
-  let friendly = document.getElementById('satellite');
+  let friendly = document.getElementById('satellite1');
   let targetBCR = target.getBoundingClientRect();
   let friendlyBCR = friendly.getBoundingClientRect();
   let targetLeft = targetBCR.left + window.scrollX;
@@ -68,13 +67,13 @@ let checkIt = function() {
   let friendlyTop = friendlyBCR.top + window.scrollY;
   if ((targetLeft > 582 && targetLeft < 622) && (targetTop > 230 && targetTop < 270)) {
     score++;
-    enemies--;
+    this.enemies--;
     outputNewMessages();
     gameBoard.removeChild(target);
     explodeIt();
     determineIt();
   } else if ((friendlyLeft > 600 && friendlyLeft < 650) && (friendlyTop > 225 && friendlyTop < 265)) {
-    satellites = satellites - 1;
+    this.satellites = this.satellites - 1;
     outputNewMessages();
     gameBoard.removeChild(friendly);
     explodeIt();
@@ -103,10 +102,10 @@ var explodeIt = function() {
   }, 990);
 }
 let startIt = function() {
-  score = 0;
-  fuel = 100;
-  round = 1;
-  enemies = 1;
+  this.score = 0;
+  this.fuel = 100;
+  this.round = 1;
+  this.enemies = 1;
   outputNewMessages();
   addIt();
   repeatIt();
