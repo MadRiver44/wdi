@@ -1,0 +1,31 @@
+{
+  "name": "wdi_hakuna_matata",
+  "version": "1.0.0",
+  "description": "![Timon&Pumbaa](Timon&Pumbaa.jpeg)",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^3.12.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franklinbrooks/WDI_HAKUNA_MATATA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franklinbrooks/WDI_HAKUNA_MATATA/issues"
+  },
+  "homepage": "https://github.com/franklinbrooks/WDI_HAKUNA_MATATA#readme"
+}

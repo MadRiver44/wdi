@@ -1,27 +1,48 @@
-console.log('JS is working');
-let score = 0;
-let fuel = 100;
-let round = 1;
-let enemies = 1;
-let satellites = 1;
-document.body.addEventListener("keydown", function(event) {
-  if (event.keyCode == 32) {
+/* console.log('JS is working'); */
+class Game {
+  constructor() {
+    this.score = 0;
+    this.fuel = 100;
+    this.round = 1;
+    this.enemies = 1;
+    this.satellites = 1;
+  }
+}
+
+const shootIt = function() {
+  const leftBeam = document.createElement('div');
+  const rightBeam = document.createElement('div');
+  leftBeam.setAttribute('id', 'leftbeam');
+  rightBeam.setAttribute('id', 'rightbeam');
+  const gameBoard = document.querySelector('#game');
+  gameBoard.appendChild(leftBeam);
+  gameBoard.appendChild(rightBeam);
+  this.fuel = this.fuel - 2;
+  outputNewMessages();
+  removeIt();
+  const laserAudio = new Audio('audio/lasers.mp3');
+  laserAudio.play();
+  checkIt();
+  determineIt();
+}
+document.body.addEventListener('keydown', function(event) {
+  if (event.keyCode === 32) {
     shootIt();
   }
 });
-let outputNewMessages = function() {
+const outputNewMessages = function() {
   let newRound = document.getElementById('roundSpan');
   let newEnemies = document.getElementById('enemiesSpan');
   let newFuel = document.getElementById('fuelSpan');
   let newScore = document.getElementById('scoreSpan');
-  newRound.innerHTML = "";
-  newEnemies.innerHTML = "";
-  newFuel.innerHTML = "";
-  newScore.innerHTML = "";
-  newRound.innerHTML = `${round}`;
-  newEnemies.innerHTML = `${enemies}`;
-  newFuel.innerHTML = `${fuel}`;
-  newScore.innerHTML = `${score}`;
+  newRound.innerHTML = '';
+  newEnemies.innerHTML = '';
+  newFuel.innerHTML = '';
+  newScore.innerHTML = '';
+  newRound.innerHTML = `${this.round}`;
+  newEnemies.innerHTML = `${this.enemies}`;
+  newFuel.innerHTML = `${this.fuel}`;
+  newScore.innerHTML = `${this.score}`;
 };
 let addIt = function() {
   const newTarget1 = document.createElement('div');
@@ -35,41 +56,24 @@ let addIt = function() {
   gameBoard.appendChild(newSatellite);
   outputNewMessages();
 }
-let shootIt = function() {
-  const leftBeam = document.createElement('div');
-  const rightBeam = document.createElement('div');
-  leftBeam.setAttribute('id', 'leftbeam');
-  rightBeam.setAttribute('id', 'rightbeam');
-  const gameBoard = document.querySelector('#game');
-  gameBoard.appendChild(leftBeam);
-  gameBoard.appendChild(rightBeam);
-  fuel = fuel - 2;
-  outputNewMessages();
-  removeIt();
-  let laserAudio = new Audio('audio/lasers.mp3');
-  laserAudio.play();
-  checkIt();
-  determineIt();
-}
 let checkIt = function() {
-  const gameBoard = document.getElementById("game");
+  const gameBoard = document.getElementById('game');
   let target = document.getElementById('target1');
   let friendly = document.getElementById('satellite');
-  el = target.getBoundingClientRect();
-  la = friendly.getBoundingClientRect();
-  let left = el.left + window.scrollX;
-  let laLeft = la.left + window.scrollX;
-  let top = el.top + window.scrollY;
-  let laTop = la.top + window.scrollY;
-  console.log(`laLeft is ${laLeft} and laTop is ${laTop}`);
-  if ((left > 582 && left < 622) && (top > 230 && top < 270)) {
+  let targetBCR = target.getBoundingClientRect();
+  let friendlyBCR = friendly.getBoundingClientRect();
+  let targetLeft = targetBCR.left + window.scrollX;
+  let friendlyLeft = friendlyBCR.left + window.scrollX;
+  let targetTop = targetBCR.top + window.scrollY;
+  let friendlyTop = friendlyBCR.top + window.scrollY;
+  if ((targetLeft > 582 && targetLeft < 622) && (targetTop > 230 && targetTop < 270)) {
     score++;
     enemies--;
     outputNewMessages();
     gameBoard.removeChild(target);
     explodeIt();
     determineIt();
-  } else if ((laLeft > 600 && laLeft < 650) && (laTop > 225 && laTop < 265)) {
+  } else if ((friendlyLeft > 600 && friendlyLeft < 650) && (friendlyTop > 225 && friendlyTop < 265)) {
     satellites = satellites - 1;
     outputNewMessages();
     gameBoard.removeChild(friendly);
@@ -81,14 +85,14 @@ let removeIt = function() {
   setTimeout(function() {
     const leftBeam = document.getElementById('leftbeam');
     const rightBeam = document.getElementById('rightbeam');
-    const gameBoard = document.getElementById("game");
+    const gameBoard = document.getElementById('game');
     gameBoard.removeChild(leftBeam);
     gameBoard.removeChild(rightBeam);
   }, 498);
 };
 var explodeIt = function() {
   outputNewMessages();
-  const gameBoard = document.getElementById("game");
+  const gameBoard = document.getElementById('game');
   const boom = document.createElement('div');
   boom.setAttribute('class', 'explosion');
   gameBoard.appendChild(boom);
@@ -107,56 +111,54 @@ let startIt = function() {
   addIt();
   repeatIt();
 }
-var myVar;
 
 function repeatIt() {
   let myVar = setInterval(crosshairCheck, 100);
 }
 let crosshairCheck = function() {
-  console.log('tick');
-  let center = document.getElementById("center1");
-  let blue = document.getElementById("blue1");
-  let red = document.getElementById("red1");
-  const gameBoard = document.getElementById("game");
+  let center = document.getElementById('center1');
+  let blue = document.getElementById('blue1');
+  let red = document.getElementById('red1');
+  const gameBoard = document.getElementById('game');
   let target = document.getElementById('target1');
   el = target.getBoundingClientRect();
   let left = el.left + window.scrollX;
   let top = el.top + window.scrollY;
   if ((left > 520 && left < 759) && (top > 181 && top < 340)) {
-    center.className = "centerRed";
-    blue.className = "blueRed";
-    red.className = "redRed";
+    center.className = 'centerRed';
+    blue.className = 'blueRed';
+    red.className = 'redRed';
   } else {
-    center.className = "center";
-    blue.className = "blue";
-    red.className = "red";
+    center.className = 'center';
+    blue.className = 'blue';
+    red.className = 'red';
   }
 };
 let determineIt = function() {
   let newFuel = document.getElementById('fuel');
-  if (fuel === 0) {
+  if (this.fuel === 0) {
     fuelIt();
-  } else if (satellites === 0) {
+  } else if (this.satellites === 0) {
     lostIt();
-  } else if (enemies === 0) {
+  } else if (this.enemies === 0) {
     winIt();
-  } else if (fuel < 25) {
-    newFuel.className = "fuelSpanRed";
+  } else if (this.fuel < 25) {
+    newFuel.className = 'fuelSpanRed';
   } else {
     outputNewMessages();
   }
 }
 let fuelIt = function() {
-  alert("FUEL = 0. YOU LOSE.");
+  alert('FUEL = 0. YOU LOSE.');
 }
 let lostIt = function() {
   setTimeout(function() {
-    alert("SATELLITE DESTROYED. YOU LOSE.");
+    alert('SATELLITE DESTROYED. YOU LOSE.');
   }, 800);
 }
 let winIt = function() {
     setTimeout(function() {
-      alert("ENEMY DESTROYED! YOU WIN!");
+      alert('ENEMY DESTROYED! YOU WIN!');
     }, 800);
   }
   // Background image adapted from http://codentronix.com/2011/07/22/html5-canvas-3d-starfield/
@@ -178,7 +180,7 @@ function randomRange(minVal, maxVal) {
 }
 
 function initStars() {
-  for (var i = 0; i < stars.length; i++) {
+  for (let i = 0; i < stars.length; i++) {
     stars[i] = {
       x: randomRange(-25, 25),
       y: randomRange(-25, 25),
@@ -188,26 +190,26 @@ function initStars() {
 }
 
 function loop() {
-  var width = canvas.width;
-  var height = canvas.height;
-  var halfWidth = canvas.width / 2;
-  var halfHeight = canvas.height / 2;
-  ctx.fillStyle = "rgb(0,0,0)";
+  let width = canvas.width;
+  let height = canvas.height;
+  let halfWidth = canvas.width / 2;
+  let halfHeight = canvas.height / 2;
+  ctx.fillStyle = 'rgb(0,0,0)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  for (var i = 0; i < stars.length; i++) {
+  for (let i = 0; i < stars.length; i++) {
     stars[i].z -= 0.2; // increment of each star's position
     if (stars[i].z <= 0) {
       stars[i].x = randomRange(-25, 25);
       stars[i].y = randomRange(-25, 25);
       stars[i].z = MAX_DEPTH;
     }
-    var k = 128.0 / stars[i].z;
-    var px = stars[i].x * k + halfWidth; // add conditions: keypress = turn (width/height)
-    var py = stars[i].y * k + halfHeight;
+    let k = 128.0 / stars[i].z;
+    let px = stars[i].x * k + halfWidth; // add conditions: keypress = turn (width/height)
+    let py = stars[i].y * k + halfHeight;
     if (px >= 0 && px <= 1024 && py >= 0 && py <= 576) {
       var size = (1 - stars[i].z / 32.0) * 5;
       var shade = parseInt((1 - stars[i].z / 32.0) * 255);
-      ctx.fillStyle = "rgb(" + shade + "," + shade + "," + shade + ")";
+      ctx.fillStyle = 'rgb(' + shade + ',' + shade + ',' + shade + ')';
       ctx.fillRect(px, py, size, size);
     }
   }
