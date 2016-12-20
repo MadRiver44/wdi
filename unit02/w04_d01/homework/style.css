@@ -1,0 +1,24 @@
+@media screen and (min-width: 300px) {
+    .container {
+        width: 300px;
+    }
+    .movie {
+      width: 80%;
+    }
+}
+@media screen and (min-width: 600px) {
+    .container {
+        width: 600px;
+    }
+    .movie {
+      width: 40%;
+    }
+}
+@media screen and (min-width: 900px) {
+    .container {
+        width: 900px;
+    }
+    .movie {
+      width: 20%;
+    }
+}
