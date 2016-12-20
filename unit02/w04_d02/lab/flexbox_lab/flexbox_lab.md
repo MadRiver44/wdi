@@ -7,8 +7,8 @@
 * Recreate a basic navigation design for desktop, tablet and mobile.  
 * Full desing mockups will be provided. 
 * Use the following media queries:
-    - @media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
-    - @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+    - @media only screen and (min-width : 320px) and (max-width : 480px) 
+    - @media only screen and (min-width : 480px) and (max-width : 800px)
 
 **Use the below table to capture time to complete**
 
