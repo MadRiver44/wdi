@@ -1,0 +1,9 @@
+#info {
+  display: inline-block;
+  float: right;
+}
+
+#peeps {
+  display: inline-block;
+  float: left;
+}

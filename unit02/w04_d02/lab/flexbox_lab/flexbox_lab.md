@@ -2,7 +2,7 @@
 
 ## WARM UP - 30min
 
-**Copy\Paste your link for CodePen here**
+**http://codepen.io/franklinbrooks/pen/dOrRQM?editors=1100**
 
 * Recreate a basic navigation design for desktop, tablet and mobile.  
 * Full desing mockups will be provided. 
@@ -27,7 +27,7 @@ Apply responsive design to you tic tac toe game.
 
 ## Lab 1 - Working with FlexBox - Standard Layout - 20min
 
-**Copy\Paste link for your personal CodePen here**
+**http://codepen.io/franklinbrooks/pen/VmRzBy?editors=1100**
 
 Use basic flexbox properties\values to recreate the layout in standard_layout.png.  Remember to set display flex on the parent and flex on the child items.
 
