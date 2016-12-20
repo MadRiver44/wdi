@@ -1,4 +1,4 @@
-/* eslint-env jquery */
+
 $("<h3>Ready...Set...Sing...</h3>").insertAfter('h1'); 
 const arr = [];
 const count = 3;
@@ -16,6 +16,7 @@ $('sing-button').click(function() {
     else { $('#bottle').append(arr[arrCounter++]);
            counter-
            console.log()
+           //console.log("This has run " + arrCounter + " times")
     } 
   },1000)
 });
