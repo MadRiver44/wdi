@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Blog - with React</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Hakuna Matata's mini blog</h1>
+  </header>
+  <main>
+
+  </main>
+
+   <!-- We would not normally link the React JavaScript files
+   like we're doing here; this is just for demo purposes. Nor would
+   we inline the JavaScript that we write; again, that's for demo purposes.
+   We will be using additional tools to compile our React but for this
+   intro only we are compiling our code right in the browser.
+   -->
+  <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <!-- This is now the beginning of the JS we write, using React -->
+  <script type="text/babel">
+    // This posts array is created just to simulate data fetching. Imagine,
+    // for the purposes of this lecture, that you retrieved this blog post
+    // data using your leet Ajax skills. We'll learn how to do this with React
+    // soon.
+    const posts = [{title:'post one',content:'this is post one',},{title:'post two',content:'this is post two!',},{title:'post three',content:'this is post three!!!',},];
+
+
+  </script>
+</body>
+</html>
