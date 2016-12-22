@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: skyblue;
+  padding: 16px;
+  width: 100%;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.post {
+  border: 1px solid grey;
+  font-size: 18px;
+  height: 256px;
+  margin: 12px auto;
+  padding: 10px;
+  width: 600px;
+}
