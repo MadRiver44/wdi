@@ -23,3 +23,8 @@ main {
   padding: 10px;
   width: 600px;
 }
+h1 {
+  color: red;
+  font-size: 30px;
+  z-index: 2;
+}

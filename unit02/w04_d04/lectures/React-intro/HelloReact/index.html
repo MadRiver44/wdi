@@ -13,15 +13,38 @@
   <main>
 
   </main>
+  <main id='main2'>
+  </main>
 
   <script src="https://unpkg.com/react@latest/dist/react.js"></script>
   <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-  <!-- This is now the beginning of the JS we write, using React -->
+
   <script type="text/babel">
+class HelloReact extends React.Component {
+  render() {
+  return (
+  <div>
+    <h1>Hello!!</h1>
+    <MyDiv />
+    </div>
+    );
+  }
+}
 
+class MyDiv extends React.Component {
+  render() {
+  return (
+<div>Hello again</div>
+  )
+  }
+}
 
+ReactDOM.render(<HelloReact />, document.querySelector('main'));
+ReactDOM.render(<MyDiv/>, document.querySelector('#main2'));
 
   </script>
 </body>
 </html>
+
+

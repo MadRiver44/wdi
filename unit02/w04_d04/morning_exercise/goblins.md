@@ -34,3 +34,31 @@ For a total of 100 times...
 And at which positions in line will those Goblins be standing.
 
 Geez! GO!
+
+let gobs = [];
+for(let i=0;i<100;i++){
+  gobs.push(false);
+}
+function witch(n){
+  for(let i=0;i<100;i++){
+      if(i%n===0){
+      gobs[i] = !gobs[i]
+      }
+    }
+  }
+function metaWitch(){
+  for(let i=0;i<100;i++){
+    witch(i);
+  }
+}
+metaWitch();
+
+
+let cured = [];
+for(let i = 0;i<100;i++){
+  if(gobs[i]===true){
+    cured.push(i+1);
+  }
+}
+
+console.log(cured);
