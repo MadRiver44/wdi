@@ -1,7 +1,7 @@
 # Make your own Google Maps
 In this lab we are going to build a front end web app that displays satellite images for different areas given an address. This is going to use the [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/start) to convert user inputed addresses into `latitude, longitude` coordinates. Then we're going to use the [NASA API](https://api.nasa.gov/api.html) to fetch the satellite image url for the geolocation and display the image on the page.
 
-### `Befor committing`: remove your Google API Key from your code
+### `Before committing`: remove your Google API Key from your code
 
 ### Steps
 **Create your Google Developer Account.**
@@ -29,4 +29,4 @@ In this lab we are going to build a front end web app that displays satellite im
 16. Make it responsive and pretty.
 17. Happy Holidays!
 
-### `Befor committing`: remove your Google API Key from your code
+### `Before committing`: remove your Google API Key from your code
