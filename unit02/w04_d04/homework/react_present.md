@@ -40,7 +40,7 @@ We expect the following to be completed during break:
   - **Git Commit** your work after every video and push the commits to your Github.
   - The entire course must be completed by **10p on Monday January 2nd**. Submit via issue ticket linking to your forked West Bos course repo and all the work you've done.
 
-2. Read the [React Docs Quickstart](https://facebook.github.io/react/docs/hello-world.html) and go through the [React tic-tac-toe tutorial](https://facebook.github.io/react/docs/hello-world.html). You do not need to include this in the issue ticket, but you DO need to complete it.
+2. Read the [React Docs Quickstart](https://facebook.github.io/react/docs/hello-world.html) and go through the [React tic-tac-toe tutorial](https://facebook.github.io/react/tutorial/tutorial.html). You do not need to include this in the issue ticket, but you DO need to complete it.
 
 3. Go over our Hakuna Matata wiki and read through all of the resources that we've given you.
 
