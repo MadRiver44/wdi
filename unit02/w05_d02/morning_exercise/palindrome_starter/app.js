@@ -1,0 +1,4 @@
+// GO!
+function isPalindrome(str) {
+
+}
