@@ -1,3 +1,16 @@
 {
-  "foo": "bar1111"
+  "header": "CHICKEN TIKKA MASALA",
+  "author": "John Doe",
+  "foo": "bar1111",
+  "ingredients": ["6 garlic cloves, finely grated",
+                  "4 teaspoons finely grated peeled ginger",
+                  "4 teaspoons ground turmeric",
+                  "2 teaspoons garam masala",
+                  "2 teaspoons ground cumin",
+                  "1 tablespoon kosher salt",
+                  "2 pounds skinless, boneless chicken breasts",
+                  "3 tablespoons ghee (clarified butter) or vegetable oil",
+                  "1 small onion, thinly sliced...",
+                  "..."
+                  ]
 }

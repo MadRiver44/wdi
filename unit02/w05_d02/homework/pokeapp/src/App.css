@@ -1,0 +1,84 @@
+.App {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.App-header {
+  background-color: #222;
+  height: 120px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.selector {
+  margin: 0 auto;
+  display: inline-block;
+  width: 40%;
+  float: left;
+}
+
+select {
+  width: 50%;
+  font-size: 1.25em;
+}
+
+.propertyTable {
+  display: inline-block;
+  width: 45%;
+  height: 300px;
+  border: 1px solid black;
+}
+
+footer {
+  margin: 0 auto;
+}
+
+.heart, a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.clearfix {
+  clear: both;
+  display: table;
+  content: '';
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/*@media screen and (min-width: 600px) {
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 2em;
+    text-align: center;
+    line-height: 150%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 100px;
+    text-align: center;
+    line-height: 150%;
+  }
+}*/
