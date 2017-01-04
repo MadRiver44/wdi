@@ -37,6 +37,11 @@ select {
   border: 1px solid black;
 }
 
+.property {
+  text-align: center;
+  line-height: 100px;
+}
+
 footer {
   margin: 0 auto;
 }

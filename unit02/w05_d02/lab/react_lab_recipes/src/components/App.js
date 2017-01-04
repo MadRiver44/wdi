@@ -8,13 +8,13 @@ console.log('JSONData', JSONData)
 
 
 class App extends React.Component {
-  foodArray = ['Sugar', 'Pepper']
+
   render() {
     return (
       <div>
         <div>I AM APP!!!!!!!!!!!!!!! {JSONData.foo}</div>
         <Header />
-        <Ingredients foodList={this.foodArray}/>
+        <Ingredients />
         <Nav />
       </div>
     )
