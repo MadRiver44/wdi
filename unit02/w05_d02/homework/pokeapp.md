@@ -14,7 +14,7 @@ Build an app that renders the names of the first 151 Pokémon in the pokéapi da
 
 1. Using all of the knowledge you learned today about project management workflow, complete the following steps before jumping into a line of code:
   - Wireframe the mock up above, <a href="https://facebook.github.io/react/docs/thinking-in-react.html">React Docs style.</a>
-  - Write user stories to match with the functionality.
+  - Write user stories to match with the functionality. You must submit a link to your Trello board for this project so we can review the user stories you have created. **Be sure to set your Trello board to PUBLIC**
   - Break down the user stories into steps to code.
 
 2. Tackle app above with React. Make sure to write clean code, with frequent git commits (we should be able to view the story of building your app based on your commits).
