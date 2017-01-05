@@ -23,6 +23,23 @@ Build an app that renders the names of the first 151 Pokémon in the pokéapi da
 
 4. Submit hw via github issue, **including a bitballoon link** of your final app.
 
+## React Tips
+
+When loading initial data via an API call, place the API call in the component's `componentDidMount` method:
+
+```javascript
+class myComponent extends Component {
+  componentDidMount() {
+    initialApiCall();
+  }
+
+  render() {
+    return (
+      a bunch of jsx...
+    )
+  }
+```
+
 ## Bonus
 
 Feeling like a rockstar? Add the Pokémon's abilities to the rendered profile (see mockup above).
