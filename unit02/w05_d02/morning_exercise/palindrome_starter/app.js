@@ -1,5 +1,6 @@
 // GO!
 function isPalindrome(str) {
+<<<<<<< HEAD
   let newStr = '';
   for (i=0; i<str.length; i++) {
     newStr = str[i] + newStr;
@@ -20,5 +21,8 @@ isPalindrome(sees);
 function checkPalindrome(input) {
   let cleanReverse = input.split(' ').join('').split('').reverse();
   return (cleanReverse.join('') === input.split(' ').join('') ? true : false);
+=======
+  
+>>>>>>> e3863f5d9ceccf25a51d31945974b3dc1b066dbb
 }
 checkPalindrome('racecar');
