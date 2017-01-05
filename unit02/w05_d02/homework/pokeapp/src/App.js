@@ -4,11 +4,28 @@ import Header from './Header';
 import Footer from './Footer';
 import Selector from './Selector';
 import PropertyTable from './PropertyTable';
-import JSONData from './Data.json';
-
-console.log(JSONData.pokemon[0].name)
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {}
+  }
+
+// Onload API call working, but app currently initializes Selector box via hardcoded JSON data
+
+/*componentDidMount() {
+  const xhrRequest = new XMLHttpRequest();
+  xhrRequest.onreadystatechange = () => {
+    if (xhrRequest.readyState === 4 && xhrRequest.status === 200) {
+      this.state.data = JSON.parse(xhrRequest.responseText);
+      console.log(xhrRequest.responseText);
+      this.setState(this.state);
+    }
+  };
+  xhrRequest.open('GET', 'http://pokeapi.co/api/v2/pokemon/?limit=151&offset=0');
+  xhrRequest.send();
+}*/
+
   render() {
     return (
       <div className="App">
@@ -16,8 +33,12 @@ class App extends Component {
           <Header />
         </div>
         <div className='container'>
-          <Selector />
-          <PropertyTable />
+          <Selector
+
+          />
+          <PropertyTable
+
+          />
         </div>
         <Footer />
       </div>
@@ -26,28 +47,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-/*let getPokeName = function() {
-  let userChoice = document.querySelector('pokeSelector').value;
-  const xhrRequest = new XMLHttpRequest();
-  xhrRequest.open('GET', `https://pokeapi.co/api/v2/pokemon/1/`);
-  xhrRequest.send();
-
-  xhrRequest.onreadystatechange = function() {
-    if (xhrRequest.readyState === 4 && xhrRequest.status === 200) {
-      let parseData = JSON.parse(xhrRequest.responseText);
-      let pokeName = (parseData.name);
-      let nameDiv = document.getElementById('location');
-      nameDiv.innerHTML = `${pokeName}`;
-      console.log(pokeName);
-    }
-  }
-}*/
-
-
-
-
-
-
-
