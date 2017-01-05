@@ -1,0 +1,120 @@
+#stats {
+  border: 1px solid;
+  padding: 10px;
+  background: black;
+  opacity: 0.8;
+  color: #fff;
+  height: 900px;
+  width: 708px;
+  margin: 32px auto;
+}
+
+#stats h2 {
+  border-bottom: 1px solid white;
+}
+
+#counter {
+  border: 1px solid crimson;
+  background-color: crimson;
+  width: 55px;
+  height: 34px;
+  padding-top: 18px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+
+body {
+  background-image: url('https://img1.etsystatic.com/015/0/7873785/il_570xN.432229613_cw53.jpg');
+  background-position-y: -110px;
+}
+
+#title {
+    border: 1px solid;
+    padding: 20px;
+    background: black;
+    opacity: 0.8;
+    color: #fff;
+}
+
+#root {
+  margin-top: 36px;
+}
+
+/*html {
+background: rgba(73,155,234,1);
+background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,1)));
+background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+  height: 1000px;
+}*/
+
+.App {
+  text-align: center;
+  opacity:1.0;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+button {
+    background-color: crimson; /* Green */
+    border: none;
+    color: white;
+    margin: 3px;
+    border-radius: 3px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 400px;
+}
+
+
+button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #008CBA;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(-0px);
+}
+
+button[disabled=disabled], button:disabled {
+  opacity: 0.65; 
+  cursor: not-allowed;
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ @font-face {font-family:"STARWARS";src:url("STARWARS.eot?") format("eot"),url("STARWARS.woff") format("woff"),url("STARWARS.ttf") format("truetype"),url("STARWARS.svg#STARWARS") format("svg");font-weight:normal;font-style:normal;}
