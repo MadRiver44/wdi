@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  border: 1px solid black;
+  overflow: hidden;
+  padding: 20px;
+  margin: auto;
+  width: 80%;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+
+.App h1 {
+  font-size: 20px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.App div {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 30px 10px 10px 10px;
+  float: left;
+  color: #fff;
+  background: darkcyan;
+}
+
+img {
+  margin-top: 6px;
+}
+
+.App .Weather { background: tomato; }
+.App .Search { background: darkslategrey; }
+.App .Happy { background: brown; }
+.App .Photo { background: royalblue; }
+
+
