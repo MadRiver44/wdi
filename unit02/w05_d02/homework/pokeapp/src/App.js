@@ -8,7 +8,12 @@ import PropertyTable from './PropertyTable';
 class App extends Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = {
+      pokemon: '',
+      weight: '',
+      power1: '',
+      power2: ''
+    }
   }
 
 // Onload API call working, but app currently initializes Selector box via hardcoded JSON data

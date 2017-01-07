@@ -1,13 +1,30 @@
-.App {
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+#root {
   margin: 0 auto;
   text-align: center;
 }
 
+.App {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
 .App-header {
+  margin: 0;
+  padding: 0;
   background-color: #222;
-  height: 120px;
-  padding: 20px;
+  height: 150px;
   color: white;
+}
+
+h1 {
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
 }
 
 .App-intro {
@@ -16,12 +33,13 @@
 
 .container {
   margin: 0 auto;
+  padding: 0;
 }
 
 .selector {
   margin: 0 auto;
   display: inline-block;
-  width: 40%;
+  width: 20%;
   float: left;
 }
 
@@ -32,15 +50,19 @@ select {
 
 .propertyTable {
   display: inline-block;
-  width: 45%;
+  width: 70%;
   height: 300px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .property {
   text-align: center;
-  line-height: 75px;
+  line-height: 50px;
   font-size: 1em;
+}
+#nameDiv {
+  height: 40%;
+  line-height: 25px;
 }
 
 footer {
