@@ -58,6 +58,8 @@ convertDate(timestamp) {
   console.log(ts); // working
   let x = typeof ts;
   console.log(x); // string
+  ts = ts + '000';
+  console.log(ts); // working
   ts = Number(ts); // cast it to a Number
   console.log(ts); // working
   let y = typeof ts;
@@ -118,23 +120,6 @@ render() {
 }
 
 export default App;
- /* {this.state.jobs.map((job, i) => <option key={i} onClick={()=> this.getJobListing(job, i)}> {job} </option>)}
-  let jobList = [];
-    for (let i=0; i<this.state.jobs.length; i++) {
-  }
-{this.jobs.map((job, i) => <option key={i}> {job} </option>)}
 
-Object
-  by:"d8niel"
-  id:13334592
-  score:1
-  time:1483688499
-  title:
-  "Drchrono (YC W11) Looking for Python/Django Engineers"
-  type:"job"
-  url:"https://www.hackerrank.com/tests/527036edb11ff/0ca5532381fbebad9fffaa28dc90475f"
-
-
-*/
 
 

@@ -46,6 +46,8 @@ h1 {
 select {
   width: 50%;
   font-size: 1.25em;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .propertyTable {

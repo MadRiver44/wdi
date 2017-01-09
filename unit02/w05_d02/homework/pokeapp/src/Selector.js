@@ -1,8 +1,8 @@
-import React from 'react';
+/*import React from 'react';
 import JSONData from './Data.json';
 /*import PropertyTable from './PropertyTable';*/
 
-class Selector extends React.Component {
+/*class Selector extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -48,19 +48,12 @@ getPokeStats(pokemon, i) {  // Takes args from click event in JSX below
       pokemonNames.push(JSONData.results[i].name);
     }
     return (
-      <div className='selector'>
-        <h2>Pokemon</h2>
-        <form>
-          <select id='pokeSelector' size="11">
-          {pokemonNames.map((pokemon, i) => <option key={i} onClick={()=> this.getPokeStats(pokemon, i)}> {pokemon} </option>)}
-          </select>
-        </form>
-      </div>
+
     )
   }
 }
 
-export default Selector;
+export default Selector;*/
 
 
 
