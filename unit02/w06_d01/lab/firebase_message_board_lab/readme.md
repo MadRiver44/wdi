@@ -2,10 +2,13 @@
 
 * [sql vs nosql](https://www.sitepoint.com/sql-vs-nosql-differences/)
 * [Firebase vs Parse](http://blog.back4app.com/2016/06/15/firebase-parse/)
+* [Tutorialspoint](https://www.tutorialspoint.com/firebase/firebase_overview.htm)
+
+### Official Firebase Documentation
 * [Adding Firebase To Your JS Project](https://firebase.google.com/docs/web/setup)
 * [Read & Write Data](https://firebase.google.com/docs/database/web/read-and-write)
 
-## Lab 1 - Create A Locally Hosted Firebase App (40min)
+## Lab 1 - Create A Locally Hosted Firebase App (60min)
 
 In the **`firebase_message_board_lab`** folder you will find the following files/folder:
 
@@ -64,7 +67,7 @@ firebase.database.ref('refname').remove()
 2. Open the url:port# stated in the console
 
 
-## Lab 2 - Host Your App On Firebase (15min)
+## Lab 2 - Host Your App On Firebase (20min)
 
 ### Setup Firebase Hosting
 1. Open terminal
@@ -88,6 +91,6 @@ firebase.database.ref('refname').remove()
 9. open the url stated in the return results and confirm site is working
 
 ### Bonus 
-Whiteboard the bootstrap html and include all css for each class
+Whiteboard the bootstrap html and include the css for each class
 
 
