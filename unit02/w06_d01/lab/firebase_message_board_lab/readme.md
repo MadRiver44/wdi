@@ -1,6 +1,6 @@
 ## Lab 1 - Create A Locally Hosted Firebase App (40min)
 
-In the `firebase_message_board_lab` folder you will find the following files/folder:
+In the **`firebase_message_board_lab`** folder you will find the following files/folder:
 
 - css
     + style.css
@@ -36,16 +36,16 @@ In the `firebase_message_board_lab` folder you will find the following files/fol
 
 ### Configure app.js
 1. Follow the instructions in app.js to create the code needed to 
-2. Once all your js code has been added run `firebase serve`
+2. Once all your js code has been added run **`firebase serve`**
 
 ## Lab 2 - Host Your App On Firebase (15min)
 
 ### Setup Firebase Hosting
 1. Open terminal
 2. cd into the lab folder
-3. run `npm install -g firebase-tools`. 
-4. run `firebase login`.
-5. run `firebase init`
+3. run **`npm install -g firebase-tools`** 
+4. run **`firebase login`**
+5. run **`firebase init`**
     - select "Hosting: Configure and deploy Firebase Hosting sites"
     - select the Firebase App you created which should be "HM-MSG-FORUM"
     - continue to hit enter until wizard completes
@@ -58,7 +58,7 @@ In the `firebase_message_board_lab` folder you will find the following files/fol
     -css
     -js
     index.html 
-8. run `firebase deploy` to push to files to firebase hosting
+8. run **`firebase deploy`** to push to files to firebase hosting
 9. open the url stated in the return results and confirm site is working
 
 ### Bonus 
