@@ -1,9 +1,9 @@
 ### References
 
-[sql vs nosql](https://www.sitepoint.com/sql-vs-nosql-differences/)
-[Firebase vs Parse](http://blog.back4app.com/2016/06/15/firebase-parse/)
-[Adding Firebase To Your JS Project](https://firebase.google.com/docs/web/setup)
-[Read & Write Data](https://firebase.google.com/docs/database/web/read-and-write)
+* [sql vs nosql](https://www.sitepoint.com/sql-vs-nosql-differences/)
+* [Firebase vs Parse](http://blog.back4app.com/2016/06/15/firebase-parse/)
+* [Adding Firebase To Your JS Project](https://firebase.google.com/docs/web/setup)
+* [Read & Write Data](https://firebase.google.com/docs/database/web/read-and-write)
 
 ## Lab 1 - Create A Locally Hosted Firebase App (40min)
 
