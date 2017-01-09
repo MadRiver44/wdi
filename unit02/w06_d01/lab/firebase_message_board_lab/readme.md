@@ -86,9 +86,9 @@ firebase.database.ref('refname').remove()
     - firebase.json 
     - public (folder)
 7. Move the following folders\files into public folder:
-    -css
-    -js
-    index.html 
+    - css
+    - js
+    - index.html 
 8. run **`firebase deploy`** to push to files to firebase hosting
 9. open the url stated in the return results and confirm site is working
 
