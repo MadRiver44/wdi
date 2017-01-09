@@ -63,8 +63,10 @@ firebase.database.ref('refname/' + id).update({object key\values})
 firebase.database.ref('refname').remove()
 ```
 
-1. Once all your js code has been added run **`firebase serve`**
-2. Open the url:port# stated in the console
+### Install firebase-tools and start the server
+1. run **`npm install -g firebase-tools`** 
+2. Once all your js code has been added run **`firebase serve`**
+3. Open the url:port# stated in the console
 
 
 ## Lab 2 - Host Your App On Firebase (20min)
