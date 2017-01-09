@@ -1,3 +1,10 @@
+### References
+
+[sql vs nosql](https://www.sitepoint.com/sql-vs-nosql-differences/)
+[Firebase vs Parse](http://blog.back4app.com/2016/06/15/firebase-parse/)
+[Adding Firebase To Your JS Project](https://firebase.google.com/docs/web/setup)
+[Read & Write Data](https://firebase.google.com/docs/database/web/read-and-write)
+
 ## Lab 1 - Create A Locally Hosted Firebase App (40min)
 
 In the **`firebase_message_board_lab`** folder you will find the following files/folder:
@@ -11,7 +18,7 @@ In the **`firebase_message_board_lab`** folder you will find the following files
 
 ### Setup Firebase
 
-* Review: [Adding Firebase To Your JS Project](https://firebase.google.com/docs/web/setup)
+Review: [Adding Firebase To Your JS Project](https://firebase.google.com/docs/web/setup)
 
 1. Signup for a free account at Firebase.com
 2. In the FB Console create a new app called **HM-MSG-FORUM**
