@@ -14,11 +14,11 @@ In the `firebase_message_board_lab` folder you will find the following files/fol
 * Review: [Adding Firebase To Your JS Project](https://firebase.google.com/docs/web/setup)
 
 1. Signup for a free account at Firebase.com
-2. In the FB Console create a new app called "HM-MSG-FORUM"
-3. On the OVERVIEW page click "Add Firebase To Your Web App"
-4. Copy all the code into keys.js
-5. Go to your app and click on Database
-6. Click on "Rules" and change both Read and Write to true:
+2. In the FB Console create a new app called **HM-MSG-FORUM**
+3. On the **OVERVIEW** page click **Add Firebase To Your Web App**
+4. Copy all the code into **keys.js**
+5. Go to your app and click on **Database**
+6. Click on **Rules** and change both Read and Write to true:
 ```javascript
 {
   "rules": {
