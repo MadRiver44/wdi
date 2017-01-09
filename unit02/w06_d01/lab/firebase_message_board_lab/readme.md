@@ -35,7 +35,7 @@ In the **`firebase_message_board_lab`** folder you will find the following files
     - keys.js 
 
 ### Configure app.js
-1. Follow the instructions in app.js to create the code needed to 
+Follow the instructions in app.js to create the code needed to 
 
 Here are the firebase references you will need to use:
 ```javascript
@@ -53,8 +53,8 @@ firebase.database.ref('refname/' + id).update({object key\values})
 firebase.database.ref('refname').remove()
 ```
 
-2. Once all your js code has been added run **`firebase serve`**
-3. Open the url:port# stated in the console
+1. Once all your js code has been added run **`firebase serve`**
+2. Open the url:port# stated in the console
 
 
 ## Lab 2 - Host Your App On Firebase (15min)
