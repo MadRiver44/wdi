@@ -45,7 +45,7 @@ Review: [Adding Firebase To Your JS Project](https://firebase.google.com/docs/we
     - keys.js 
 
 ### Configure app.js
-Follow the instructions in app.js to create the code needed to 
+Follow the instructions in app.js to add the code needed to support our forum messaging app.
 
 Here are the firebase references you will need to use:
 ```javascript
