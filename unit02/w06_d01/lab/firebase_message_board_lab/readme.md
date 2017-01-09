@@ -38,6 +38,21 @@ In the **`firebase_message_board_lab`** folder you will find the following files
 1. Follow the instructions in app.js to create the code needed to 
 2. Once all your js code has been added run **`firebase serve`**
 
+```javascript
+// connect to firebase API
+firebase.database()
+// connect to specific firebase reference object
+firebase.database.ref('refname')
+// create new objects in reference object
+firebase.database.ref('refname').push({object key\values})
+// grab a specific reference object
+firebase.database.ref('refname/' + id);
+// update a specific referene object
+firebase.database.ref('refname/' + id).update({object key\values})
+// revmoe a specific reference object
+firebase.database.ref('refname').remove()
+```
+
 ## Lab 2 - Host Your App On Firebase (15min)
 
 ### Setup Firebase Hosting
