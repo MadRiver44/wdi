@@ -93,6 +93,6 @@ firebase.database.ref('refname').remove()
 9. open the url stated in the return results and confirm site is working
 
 ### Bonus 
-Whiteboard the bootstrap html and include the css for each class
+Whiteboard the bootstrap html and include detailed css for the bootstrap specific css
 
 
