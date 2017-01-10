@@ -1,12 +1,13 @@
 import React from 'react';
 
 class Input extends React.Component {
+
   createTweed(event) {
     event.preventDefault();
-    const message = {
+    const tweed = {
       content: this.content.value,
     }
-    this.props.addTweed(message);
+    this.props.addTweed(tweed);
     this.addTweedForm.reset();
   }
 

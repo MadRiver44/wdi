@@ -2,10 +2,11 @@ import React from 'react';
 
 class TweedrFeed extends React.Component {
   render() {
-    const { currentMessage } = this.props;
+    const { tweeds } = this.props;
 
     return (
-      <div>
+      <div className='Tweeds'>
+        <br />
         <p>Tweed Placeholder</p>
       </div>
     )

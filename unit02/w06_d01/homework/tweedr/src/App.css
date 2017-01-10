@@ -18,6 +18,12 @@
   font-size: large;
 }
 
+.Tweeds {
+  margin: 0 auto;
+  width: 60%;
+  border: 1px solid black;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
