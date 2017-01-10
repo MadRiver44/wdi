@@ -4,6 +4,7 @@
  
 ### **RE**presentational **S**tate **T**ransfer
 
+- **Roy Thomas Fielding** - Designer of specs/prinicipal
 - A set of principles that assign how HTTP and URLs Web standards are used. (The backbone of the Internet)
 - An architectural style, and an approach to communications that is often used in the development of **Web services/APIs**.
 - Use http for all **CRUD** operations - **Create, Read, Update, Destroy/Delete**
