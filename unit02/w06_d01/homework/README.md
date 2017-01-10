@@ -5,11 +5,11 @@ Let's make a cool new app called **Tweedr**! Not Twitter, jeez...
 
 It's dealers choice tonight, so build this app using **React**, **a Firebase database**, and one of the following to make database requests:
 
-[Rebase](https://github.com/tylermcginnis/re-base) (From Vinces's lecture today)
+[Rebase](https://github.com/tylermcginnis/re-base) (From Vince's lecture today)
 
-[Firebase API](https://firebase.google.com/docs/reference/rest/database/) (From Joe's lecture today)
+[Firebase API](https://firebase.google.com/docs/reference/js/) (From Joe's lecture today)
 
-[Axios](https://www.npmjs.com/package/axios) (From last week's lectures)
+[Axios](https://www.npmjs.com/package/axios) via the [Firebase REST API](https://firebase.google.com/docs/reference/rest/database/) (From last week's lectures)
 
 ### Step I: Mock Up
 
