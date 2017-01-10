@@ -1,5 +1,4 @@
 .App {
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -17,25 +16,7 @@
 
 .App-intro {
   font-size: large;
-  margin: 0 auto;
 }
-
-select {
-  height: 200px;
-  width: 100px;
-  font-size: 20px;
-  color: white;
-  background-color: gray;
-}
-
-.currentMessageDiv {
-  margin: 0 auto;
-  height: 300px;
-  width: 400px;
-  color: white;
-  background-color: gray;
-}
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

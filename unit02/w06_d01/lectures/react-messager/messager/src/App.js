@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import AddMessageForm from './components/AddMessageForm';
 import MessageList from './components/MessageList';
+import MessageTitleList from './components/MessageTitleList';
+import CurrentMessageDisplay from './components/CurrentMessageDisplay';
 import base from './base';
 
 class App extends Component {
   constructor() {
     super();
-
     this.state = {
       messages: {},
+      currentMessage: {}
     };
-
     this.addMessage = this.addMessage.bind(this);
+    this.updateMessageDisplay = this.updateMessageDisplay.bind(this);
   }
 
   componentDidMount() {
@@ -41,18 +42,44 @@ class App extends Component {
     this.setState({ messages });
   }
 
+  updateMessageDisplay(myMessage) {
+    console.log(this.currentMessage);
+  }
+
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Messenger App</h2>
         </div>
-        <AddMessageForm addMessage={this.addMessage} />
-        <MessageList messages={this.state.messages} />
+        <MessageTitleList messages={this.state.messages}
+        />
+        <CurrentMessageDisplay
+          currentMessage={this.state.currentMessage}
+          updateMessageDisplay={this.updateMessageDisplay}
+        />
+        <AddMessageForm
+          addMessage={this.addMessage}
+        />
+        <MessageList
+          messages={this.state.messages}
+        />
       </div>
     );
   }
 }
+
+/*Loop through messages and add each title to the select.
+The onClick event handler in the select should call updateMessageDisplay.
+You should pass currentMessage to currentMessageDisplay as a prop*/
+
+
+
+
+
+
+
+
+
 
 export default App;
