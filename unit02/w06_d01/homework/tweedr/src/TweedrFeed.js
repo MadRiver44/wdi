@@ -14,3 +14,6 @@ class TweedrFeed extends React.Component {
 }
 
 export default TweedrFeed;
+
+
+/*  this.state.tweeds.map((tweed, i) => { return (<li key={i}> {tweed.post} })  */
