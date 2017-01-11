@@ -6,9 +6,10 @@
 
 .App-header {
   background-color: white;
-  height: 40px;
+  height: 30px;
   padding: 20px;
   color: gray;
+  border-bottom: 2px solid #d0d3d5;
 }
 
 .App-intro {
@@ -16,10 +17,50 @@
 }
 
 .tweedfeed {
-  margin: 0 auto;
+  margin: 10px auto;
+  padding-top: 20px;
   width: 60%;
   height: 1000px;
+  background-color: #e8f5fd;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #d0d3d5;
+}
+
+.textarea {
+  height: 30px;
+  width: 80%;
+  border: 1px solid blue;
+  border-radius: 5px;
+  font-size: .75em;
+  padding-left: 20px;
+}
+
+.textarea:focus {
+  height: 100px;
+  padding-left: 20px;
+}
+
+.tweedit {
+  height: 40px;
+  width: 80px;
+  margin-top: 10px;
+  margin-right: 70px;
+  float: right;
+  background-color: #2f9ac3;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+
+.clearfix {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+.tweed {
   background-color: white;
+  border: 1px 1px 1px 1px solid #d0d3d5;
 }
 
 footer {

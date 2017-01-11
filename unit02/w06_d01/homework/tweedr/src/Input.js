@@ -23,3 +23,15 @@ class Input extends React.Component {
 }
 
 export default Input;
+
+/*handleChange(event) {
+  let previousState = this.state.whatever;
+  this.setState() {
+    whatever: event.target.value
+  }
+} */
+
+
+
+
+
