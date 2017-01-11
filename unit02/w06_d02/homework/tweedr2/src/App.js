@@ -12,7 +12,7 @@ class App extends Component {
         initialTweed: 'initial'
       }
     };
-    this.addTweed = this.addTweed.bind(this);
+/*    this.addTweed = this.addTweed.bind(this);*/
     this.displayTweeds = this.displayTweeds.bind(this);
   }
 
@@ -25,19 +25,27 @@ class App extends Component {
       this.setState({
         tweeds: tweeds
       })
-      /*console.log(this.state.tweeds);*/
-      this.displayTweeds();
-    })
+      this.displayTweeds(); // https://tweedr-ed6e3.firebaseio.com/Tweedr/tweeds/.json
+    })  // https://tweedr-ed6e3.firebaseio.com/Tweedr/tweeds/tweed-1484058017254/content.json
     .catch((error) => {
       console.log(error);
     })
 }
 
-/*  componentWillUnmount() {
-    base.removeBinding(this.baseRef);
-  }*/
+  displayTweeds() {
+    const tweeds = {...this.state.tweeds};
+    let keyArray = Object.keys(this.state.tweeds);
+    console.log(keyArray);
+  }
+/*   {Object.keys(tweeds)
+          .map((key) => <div key={key} value={key}>{tweeds[key].title}</div>)}
 
-  addTweed(tweed) {
+
+keyArray.forEach(key in keyArray) {Object.keys(tweeds)
+          .map((key) => <div className='tweed' key={key} value={key}>{tweeds[key].title}</div>)
+  */
+
+/*    addTweed(tweed) {
     // retrieve our current messages state
     const tweeds = {...this.state.tweeds};
     // add our new message, appending the current time
@@ -46,25 +54,49 @@ class App extends Component {
     tweeds[`tweed-${timestamp}`] = tweed;
     // set the messages portion of our app's state
     this.setState({ tweeds });
-  }
+  }*/
 
-  displayTweeds() {
-    console.log(this.state.tweeds);
-/*    const tweeds = {...this.state.tweeds};
-    for (tweed in tweeds) {Object.keys(tweeds)
-          .map((key) => <div className='tweed' key={key} value={key}>{tweeds[key].title}</div>)*/
-  }
+/*updateTweed() {
+  const url = 'put url here';
+  axios.post(url, {
+    // an example of how data can be sent...
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(() => {
+    // once you post, what other request should be made? maybe retrieve the current state of the database?? maybe ?
+    console.log("POSTED");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}*/
 
-/*   changeCurrentMessage(event) {
-    event.preventDefault();
-    this.setState({ currentMessage: this.state.messages[event.target.value]});
-  }
-
-   deleteCurrentMessage(event) {
+/*changeCurrentMessage(event) {
     event.preventDefault();
     this.setState({ currentMessage: this.state.messages[event.target.value]});
   }*/
 
+/*deleteTweed() {
+  // with the url you use for DELETE,
+  // how do you route the request the specific item you want to delete?
+  const url = 'put url here';
+  axios.delete(url)
+    .then(() => {
+      // what other actions do you want to take when deleting data...
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+}
+
+  deleteCurrentMessage(event) {
+    event.preventDefault();
+    this.setState({ currentMessage: this.state.messages[event.target.value]});
+  }
+
+*/
 
   render() {
     return (

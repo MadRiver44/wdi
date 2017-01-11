@@ -10,12 +10,10 @@ import base from './base';
 class App extends Component {
   constructor() {
     super();
-
     this.state = {
       messages: {},
       currentMessage: {},
     };
-
     this.addMessage = this.addMessage.bind(this);
     this.changeCurrentMessage = this.changeCurrentMessage.bind(this);
   }
@@ -47,7 +45,6 @@ class App extends Component {
 
   changeCurrentMessage(event) {
     event.preventDefault();
-
     this.setState({ currentMessage: this.state.messages[event.target.value]});
   }
 
