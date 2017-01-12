@@ -1,16 +1,12 @@
 import React, { Component/*, PropTypes*/ } from 'react';
+import Tweed from './Tweed';
+
 class TweedFeed extends Component {
-  /*const { tweeds } = this.props;*/
+/*  const { tweeds } = this.props;*/
   render() {
     return (
       <div className='tweedfeed'>
-          <br />
-          <input type='textarea' className='textarea' placeholder="What's happening?" ></input>
-          <br />
-          <button className='tweedit'>Tweed it!</button>
-          <br className='clearfix'/>
-          <br />
-          <div className='tweed'>A Sample Tweed</div>
+        <Tweed />
       </div>
     );
   }
@@ -18,4 +14,7 @@ class TweedFeed extends Component {
 
 export default TweedFeed;
 
- /*{ this.state.tweeds.map((tweed, i) => { return (<li key={i}> {tweed.post} }) } */
+ /*{ this.state.tweeds.map((tweed, i) => { return (<div key={i}> {tweed.post} }) } */
+
+/*          <input type='textarea' className='textarea' placeholder="What's happening?" ></input>
+          <button className='tweedit'>Tweed it!</button>*/

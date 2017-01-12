@@ -16,13 +16,22 @@
   font-size: large;
 }
 
+form {
+  margin: 10px auto 0px;
+  padding-top: 20px;
+  width: 60%;
+  height: 120px;
+  background-color: #e8f5fd;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #d0d3d5;
+}
+
 .tweedfeed {
-  margin: 10px auto;
+  margin: 0 auto;
   padding-top: 20px;
   width: 60%;
   height: 1000px;
   background-color: #e8f5fd;
-  border-radius: 10px 10px 0px 0px;
   border: 1px solid #d0d3d5;
 }
 
@@ -36,15 +45,27 @@
 }
 
 .textarea:focus {
-  height: 100px;
+  height: 50px;
   padding-left: 20px;
 }
 
-.tweedit {
+button {
   height: 40px;
   width: 80px;
   margin-top: 10px;
   margin-right: 70px;
+  float: right;
+  background-color: #2f9ac3;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+
+.modifybutton {
+  height: 25px;
+  width: 50px;
+  margin-top: 10px;
+  margin-right: 25px;
   float: right;
   background-color: #2f9ac3;
   border-radius: 5px;
@@ -58,9 +79,19 @@
   clear: both;
 }
 
-.tweed {
+.tweedFrame {
+  width: 100%;
   background-color: white;
-  border: 1px 1px 1px 1px solid #d0d3d5;
+  border: 1px solid #d0d3d5;
+}
+
+.tweedText {
+  margin: 0 auto;
+  width: 90%;
+  background-color: white;
+  border: 1px solid #d0d3d5;
+  border-radius: 5px;
+  text-align: center;
 }
 
 footer {

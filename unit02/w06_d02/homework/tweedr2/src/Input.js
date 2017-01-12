@@ -22,6 +22,7 @@ class Input extends React.Component {
   render() {
     return (
       <form
+        className='form'
         ref={(input) => this.addTweedForm = input}
         onSubmit={(e) => this.addTweed(e)}
       >
