@@ -105,7 +105,7 @@ class App extends Component {
   handleChange(e) {
     this.setState({ value: e.target.value });
   }
-  
+
   //Also since we already bound the `handleSubmit` method to the constructor,
   //`postRequest` method is automatically bound and has access to the state.
   handleSubmit(e) {
@@ -127,7 +127,7 @@ class App extends Component {
             and assign them a name that makes it clear what the prop does
           */}
         <Input
-          inputValue={this.state.input}
+          inputValue={this.state.value}
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
         />
