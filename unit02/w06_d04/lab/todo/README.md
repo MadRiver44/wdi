@@ -2,24 +2,24 @@
 
 In this lab you will be guided through a full build of a single page CRUD app built with React and Firebase. There are two main objectives of this exercise:
 
-To guide you through the process of creating an application while utilizing a coherent and verbose project management workflow.
-To give you further exposure to creating, updating and deleting data on a server via REST requests.
+1. To guide you through the process of creating an application while utilizing a coherent and verbose project management workflow.
+2. To give you further exposure to creating, updating and deleting data on a server via REST requests.
 
 ### FOLLOW THE INSTRUCTIONS. READ EVERYTHING
 
->There is no reason for anyone not to be able to finish this lab in the allotted time. I have included solutions so that you can check your work along the way. This is not meant to serve as an assessment of your abilities, but rather as a Unit 2 project warmup. The most important part of today is to pay close attention to the process of referring to user stories, completing your predefined tasks in order and making git commits once each task is complete.
+>Everyone should be able to finish this lab in the allotted time. I have included solutions at the end of each section so that you can check your work along the way. This is not meant to serve as an assessment of your abilities, but rather as a Unit 2 project warmup. The most important part of today is to pay close attention to the process of referring to user stories, completing your predefined tasks in order, and making git commits once each task is complete.
 
 # Instructions
 
 ### Get organized
 
-I have created a mockup consisting of wireframes for each application state. It can be found in this directory. Take at least **2 minutes** to study it. Not how this is not merely a sketch of the UI, but instead a representation of the user flow through the app. All possible user actions are illustrated through these frames and their transitions. THIS IS THE LEVEL OF DETAIL WE EXPECT FROM YOUR UNIT 2 WIREFRAMES.
+I have created a mockup consisting of wireframes for each application state. It can be found in this directory. Take at least **2 minutes** to study it. Note how this is not merely a sketch of the UI, but instead a representation of the user flow through the app. All possible user actions are illustrated through these frames and their transitions. THIS IS THE LEVEL OF DETAIL WE EXPECT FROM YOUR UNIT 2 WIREFRAMES.
 
 Copy this [Trello board](https://trello.com/b/4KZf0kRl/to-do-list-app) so that you have your own copy to modify during this lab. Take at least **3 minutes** to read through all of the user stories. Take note of the columns - there are only three: `Backlog`, `In progress` and `Done`. The title of the cards reflect the “goal” of the user story. The acceptance criteria of the user story reflect the steps that a user should be able to take once the story has been completed. WE EXPECT THE SAME FORMAT FOR YOUR UNIT 2 PROJECT BOARDS.
 
 ### Set up Firebase
 
-Go to your firebase console and create a new project called todo. In the database dashboard for this project, change your rules to look like this:
+Go to your Firebase console and create a new project called `todo`. In the database dashboard for this project, change your rules to look like this:
 
 ```json
 {
@@ -32,7 +32,7 @@ Go to your firebase console and create a new project called todo. In the databas
 
 ### Initialize your app
 
-**Important**: you must create your react app outside of your hakuna matata directory. This is because we will be creating a git repo for this lab project and **you will break everything** if you run `git init` inside of a git repo.
+**Important**: you must **create your react app outside of your WDI_HAKUNA_MATATA directory**. This is because we will be creating a git repo for this lab project and **you will break everything** if you run `git init` inside of a git repo.
 
 ```
 create-react-app todo
@@ -53,7 +53,7 @@ git init
 git add -A
 git commit -m “First commit”
 ```
-Got to GitHub and create a new repo. Call it something like “React Firebase Todo List” so potential employers can find it and know what it’s all about.
+Go to GitHub and create a new repo. Do not check the checkbox that adds a readme file. Call your repo something like “React Firebase Todo List” so potential employers can find it and know what it’s all about.
 
 Follow the instructions for pushing your repo up to github and confirm that it’s been pushed.
 
@@ -113,7 +113,7 @@ export default App;
 
 ```
 
-This sets you up with an input for entering text for a new todo item. Take **2 minutes** to read it. Take note of what the `handleNewTodoInput` function is doing. What does the `13` mean? Look it up.
+This sets you up with an input for entering text for a new todo item. Take **2 minutes** to read it. Take note of what the `handleNewTodoInput` function is doing. What does the `charCode === 13` mean? Look it up.
 
 Fill in the `createTodo` function. This function will be call with a string, `todoText` as an argument. It should then use axios to make a `POST` request to your Firebase database server with the data for the newly created todo. The data should have a `title` and a `createdAt` attributes. Just use the JS `new Date` for the `createdAt` timestamp. When the response is returned, it will then use setState to update `this.state.todos`. NOTE: use the data of the response object as the key/property name when adding the new todo data to the todos object.
 
@@ -163,7 +163,7 @@ Then add the `renderTodoList` method.
   }
 ```
 
-Is it working? What about when you reload the page? Are all of the acceptance criteria from out "User creates a todo" user story met?
+Is it working? What about when you reload the page? Are all of the acceptance criteria from our "User creates a todo" user story met?
 
 Add a `componentDidMount` function to fetch all existing todos from your Firebase database on page load. Check the format of this data and make sure that when your create a new todo and add it to the state that it matches this format.
 
@@ -309,8 +309,7 @@ Add a click handler `enableEditMode` that sets an `edit` key to true in the stat
 
 Modify your `renderSelectedTodo` method to check if `this.state.edit` is true. If so, the `renderSelectedTodo` method should display an input that is prepopulated with the `currentTodo`s title. The `Edit` button should also be replaced by a `Save` button when the edit mode is turned on.
 
-Add an `updateCurrentTodo` click handler to the `Save` button. This method should send a `PATCH` request to update the current todo information in your database. (Hint: use `refs` to get the value of the input). When the response is returned, update the current todo with the new title value by resetting it in your state. You should also make sure you set `edit` to `false` in your state to the input is replaced by static text and your edit button comes back.
-
+Add an `updateCurrentTodo` click handler to the `Save` button. This method should send a `PATCH` request to update the current todo information in your database. (Hint: use `refs` to get the value of the input). When the response is returned, update the current todo with the new title value by resetting it in your state. You should also make sure you set `edit` to `false` in your state so the input is replaced by static text and your edit button comes back.
 
 Are all of your acceptance criteria met?
 
@@ -335,4 +334,4 @@ Congrats :)
 Great job on getting your MVP working. As you can see, there are no more user stories to complete. But that doesn't mean that work is over. Before you start styling, it would be a good idea to debug your code and clean it up.
 
 1. What error do you get when you delete the currently selected to do? How about when we delete a todo that is the current todo we either clear out the current todo or change the current todo to the next or previous one in the list.
-2. Split up your single component into multiple. I think that for this app you shouldn't need more than five (including your App component). 7 is the absolute most you would need but you could do a nice refactory by only adding 3 (new todo box, list, selected area). Remember, your state should live as "high up" as possible. You really don't need to have any state in the children components for this app. They can do just fine getting all of their data and callbacks as props.
+2. Split up your single component into multiple. I think that for this app you shouldn't need more than five (including your App component). 7 is the absolute most you would need but you could do a nice refactor by only adding 3 (new todo box, list, selected area). Remember, your state should live as "high up" as possible. You really don't need to have any state in the children components for this app. They can do just fine getting all of their data and callbacks as props.
