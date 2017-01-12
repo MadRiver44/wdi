@@ -1,5 +1,7 @@
 ## React Star Wars feed, with routing
 
+IMPORTANT NOTE: When installing react router you have to run `npm install --save react-router@next` to install version 4 of react router.
+
 For this lab you will add another route and another component.
 
 - `npm install` to install the necessary dependencies
