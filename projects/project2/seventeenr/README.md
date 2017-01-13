@@ -49,7 +49,7 @@ let checkIt = function() {
 }
 ```` -->
 ### Build Strategy
-Facebook is great about reminding you of birthdays - the same day.  And what about all of your friends and family who don't use FB?  Wouldn't it be great to see all your events in the horizon? And what if you are not able to complete your plans for that day? If you track of your events on Google Calendar, they do not persist beyond their scheduled date.
+Facebook is great about reminding you of birthdays - the same day.  And what about all of your friends and family who don't use FB?  Wouldn't it be great to see all your events on the horizon? And what if you are not able to complete your plans for that day? If you track of your events on Google Calendar, they do not persist beyond their scheduled date.
 
 Seventeenr is a desktop app to help you keep track of holidays and other events in 2017. It uses Axios API calls to a Firebase server which allow the user full CRUD functionality over a collection of events which will persist until the user deletes them.
 
