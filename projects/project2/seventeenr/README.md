@@ -3,10 +3,9 @@
 [Link to Trello:](https://trello.com/b/madxhpLU/seventeenr)
 
 ### Wireframes for project: 
-  ![Wireframe 1]()
-  ![Wireframe 2]()
-  ![Wireframe 3]()
-  ![Wireframe 4]()
+  ![Wireframe 1: READ + CREATE](https://github.com/franklinbrooks/WDI_HAKUNA_MATATA/blob/master/projects/project2/seventeenr/images/20170113_115557.jpg)
+  ![Wireframe 2: READ + UPDATE](https://github.com/franklinbrooks/WDI_HAKUNA_MATATA/blob/master/projects/project2/seventeenr/images/20170113_115612.jpg)
+  ![Wireframe 3: READ + DELETE](https://github.com/franklinbrooks/WDI_HAKUNA_MATATA/blob/master/projects/project2/seventeenr/images/20170113_115654.jpg)
 <!-- ###My whiteboard for project
   ![Wireframe 2](https://github.com/franklinbrooks/WDI_HAKUNA_MATATA/blob/master/Project1GA/20161215_151913.jpg)
 
