@@ -11,7 +11,7 @@
   ![Wireframe 2](https://github.com/franklinbrooks/WDI_HAKUNA_MATATA/blob/master/Project1GA/20161215_151913.jpg)
 
 ###My implementation of project
-  ![Wireframe 3](https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/58573994c4d9cc6dc44bf258/screenshot.png) -->
+  ![Seventeenr Screenshot](https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/58573994c4d9cc6dc44bf258/screenshot.png) -->
 
 ### Technologies Used
 - HTML
@@ -50,7 +50,9 @@ let checkIt = function() {
 }
 ```` -->
 ### Build Strategy
-This app uses Axios API calls to a Firebase server which allow the user full CRUD functionality over a collection of events.
+Facebook is great about reminding you of birthdays - the same day.  And what about all of your friends and family who don't use FB?  Wouldn't it be great to see all your events in the horizon? And what if you are not able to complete your plans for that day? If you track of your events on Google Calendar, they do not persist beyond their scheduled date.
+
+Seventeenr is a desktop app to help you keep track of holidays and other events in 2017. It uses Axios API calls to a Firebase server which allow the user full CRUD functionality over a collection of events which will persist until the user deletes them.
 
 This project will be built over five days.
 Day 1: Wireframes, README, Trello, Firebase, Axios and other dependencies, and initial file structure implemented. Basic layout of DOM elements render via React.
