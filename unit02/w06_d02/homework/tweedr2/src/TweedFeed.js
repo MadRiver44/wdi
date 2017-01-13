@@ -16,5 +16,8 @@ export default TweedFeed;
 
  /*{ this.state.tweeds.map((tweed, i) => { return (<div key={i}> {tweed.post} }) } */
 
-/*          <input type='textarea' className='textarea' placeholder="What's happening?" ></input>
-          <button className='tweedit'>Tweed it!</button>*/
+/*.map((obj, index) => <Tweed
+  key={obj.key}
+
+
+  />*/

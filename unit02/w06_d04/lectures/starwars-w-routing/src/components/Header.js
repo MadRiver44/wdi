@@ -13,7 +13,7 @@ const Header = () => (
           activeOnlyWhenExact
           activeClassName="active"
         >
-          Home
+          SW Home
         </Link>
       </li>
       <li>
@@ -23,6 +23,15 @@ const Header = () => (
           activeClassName="active"
         >
           People List
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/contact"
+          activeOnlyWhenExact
+          activeClassName="active"
+        >
+          Contact
         </Link>
       </li>
     </ul>

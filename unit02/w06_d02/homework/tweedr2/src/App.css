@@ -7,9 +7,14 @@
 .App-header {
   background-color: white;
   height: 30px;
+  line-height: 1px;
   padding: 20px;
   color: gray;
   border-bottom: 2px solid #d0d3d5;
+}
+
+h2 {
+
 }
 
 .App-intro {
@@ -65,7 +70,7 @@ button {
   height: 25px;
   width: 50px;
   margin-top: 10px;
-  margin-right: 25px;
+  margin-right: 20px;
   float: right;
   background-color: #2f9ac3;
   border-radius: 5px;
@@ -87,6 +92,7 @@ button {
 
 .tweedText {
   margin: 0 auto;
+  padding: 10px;
   width: 90%;
   background-color: white;
   border: 1px solid #d0d3d5;

@@ -3,6 +3,7 @@ import { BrowserRouter, Match, Miss } from 'react-router';
 import axios from 'axios';
 import Header from './components/Header';
 import Home from './components/Home';
+import Contact from './components/Contact';
 import PeopleList from './components/PeopleList';
 import Person from './components/Person';
 import NotFound from './components/NotFound';
@@ -31,17 +32,26 @@ class App extends Component {
         <div className="App">
           <Header />
           <div className="main">
-            <Match exactly pattern="/" component={Home} />
+            <Match
+              exactly
+              pattern="/"
+              component={Home}
+            />
             <Match
               exactly pattern="/people"
-              component={() => <PeopleList people={this.state.people} />}
+              component={() =>
+                <PeopleList people={this.state.people} />}
             />
             <Match
               exactly
               pattern="/people/:id"
               component={({ params }) =>
-                <Person person={this.state.people[params.id - 1]} />
-              }
+                <Person person={this.state.people[params.id - 1]} />}
+            />
+            <Match
+              exactly
+              pattern="/contact"
+              component={() => <Contact />}
             />
             <Miss component={NotFound} />
           </div>

@@ -13,7 +13,7 @@ class App extends Component {
       tweeds: {
       }
     };
-/*    this.addTweed = this.addTweed.bind(this);*/
+    this.addTweed = this.addTweed.bind(this);
     this.displayTweeds = this.displayTweeds.bind(this);
   }
 
@@ -23,7 +23,7 @@ class App extends Component {
     .then((response) => {
       let tweeds = response.data.Tweedr.tweeds;
       this.setState({
-        tweeds: tweeds
+        tweeds: tweeds // also can set state of 'is ready' to true once data returns
       })
       this.displayTweeds();
     })
@@ -34,41 +34,46 @@ class App extends Component {
 
   displayTweeds() {
     /*const tweeds = {...this.state.tweeds};*/  // this spread should allow access to tweed values
-    let keyArray = Object.keys(this.state.tweeds);
-    let currentTweed = keyArray[0];
-    console.log(currentTweed);
-    console.log(this.state.tweeds);
+/*    let keyArray = Object.keys(this.state.tweeds);
+    let currentTweed = keyArray[0];*/
+    console.log(this.state.tweeds.tweed-1484041777190.content);
     // .{keyArray[0]}.content  or  .tweed-1484041777190.content
   }
  /*  https://tweedr-ed6e3.firebaseio.com/Tweedr/tweeds/tweed-1484058017254/content.json
      https://tweedr-ed6e3.firebaseio.com/Tweedr/tweeds/.json
      Object.keys(keyArray).map((key) => <div key={key} value={key}>{tweeds[key].title}</div>)}
      keyArray.forEach(key in keyArray)
+
+.then((res) => {
+.map((index) =>
+res.data[index].key = index;
+return res.data[index]}).reverse();
+
      {Object.keys(tweeds).map((key) => <div className='tweed' key={key} value={key}>{tweeds[key].title}</div>)
   */
 
     addTweed(tweed) {
-      console.log(this.state.tweeds);
-/*    // retrieve our current messages state
+    // retrieve our current messages state
     const tweeds = {...this.state.tweeds};
     // add our new message, appending the current time
     // to give our new message a unique key
     const timestamp = Date.now();
-    tweeds[`tweed-${timestamp}`] = tweed;
+    tweeds[`tweed-${timestamp}`] = tweed;  // POST may do this step for us???
     // set the messages portion of our app's state
-    this.setState({ tweeds });*/
+    this.setState({ tweeds });
+    console.log(tweeds);
   }
 
 /*updateTweed() {
   const url = 'https://tweedr-ed6e3.firebaseio.com/.json';
-  axios.post(url, {
+  axios.post(url, {   // add variable to reference currentTweed
     // an example of how data can be sent...
     firstName: 'Fred',
     lastName: 'Flintstone'
   })
   .then(() => {
     // once you post, what other request should be made? maybe retrieve the current state of the database?? maybe ?
-    console.log("POSTED");
+    this.displayTweeds();
   })
   .catch((error) => {
     console.log(error);
@@ -77,10 +82,10 @@ class App extends Component {
 
 /*deleteTweed() {
   // how do you route the request the specific item you want to delete?
-  const url = 'https://tweedr-ed6e3.firebaseio.com/.json'; // add variable to reference currentTweed
-  axios.delete(url)
+  const url = 'https://tweedr-ed6e3.firebaseio.com/.json';
+  axios.delete(url)  // add variable to reference currentTweed
     .then(() => {
-      // what other actions do you want to take when deleting data...
+      this.displayTweeds();
     })
     .catch((error) => {
       console.log(error);
@@ -101,7 +106,9 @@ class App extends Component {
           <h2>Tweedr2</h2>
         </div>
         <div className="App-intro">
-          <Input />
+          <Input
+          addTweed={this.addTweed}
+          />
           <TweedFeed
           tweeds={this.state.tweeds}
           />

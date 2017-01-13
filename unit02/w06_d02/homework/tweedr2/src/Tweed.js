@@ -20,4 +20,4 @@ class Tweed extends React.Component {
 
 export default Tweed;
 
-/*This will show edit and delete buttons, as well as text of tweed*/
+/*onChange={(e) => props.message = e.target.value}*/
