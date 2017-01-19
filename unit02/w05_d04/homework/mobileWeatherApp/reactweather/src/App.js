@@ -79,12 +79,26 @@ getWeather() {
         <div className="main">
           <article>
             <h1>Mobile Weather App</h1>
+
+
             <form>
-              <input className="input" id="zip" name="zipcode"
-              placeholder="Zip code" type="text" value={this.state.userZip} onChange={this.handleChange} />
-              <button id="mySubmitButton" type="button"
-              onClick={this.getWeather}>Get weather</button>
+              <input
+                className="input"
+                id="zip"
+                name="zipcode"
+                placeholder="Zip code"
+                type="text"
+                value={this.state.userZip}
+                onChange={this.handleChange}
+              />
+              <button
+                id="mySubmitButton"
+                type="button"
+                onClick={this.getWeather}>Get weather
+              </button>
             </form>
+
+
               <br />
               <br />
             <div id='location'>

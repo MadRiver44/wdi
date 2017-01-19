@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Event from './Event';
+/*import Event from './Event';*/
 
 class Read extends Component {
   render() {
     return (
       <div className='container'>
       <div className="read">
-        Events will display here
-        <Event />
+        className=read Events will display here
+
       </div>
       </div>
     );
@@ -15,3 +15,5 @@ class Read extends Component {
 }
 
 export default Read;
+
+/*<Event />*/

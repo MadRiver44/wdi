@@ -2,25 +2,33 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
-  height: 60px;
+  height: 120px;
   padding: 20px;
   color: white;
 }
 
-.App-intro {
+.App-header div {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.App-header a {
+  color: white;
+}
+
+.main {
   margin: 0 auto;
-  font-size: large;
+  width: 99%;
+}
+.home {
+  margin: 0 auto;
   width: 99%;
 }
 .container {
-  width: 49%;
+  width: 45%;
   display: inline-block;
 }
 

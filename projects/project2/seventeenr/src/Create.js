@@ -6,7 +6,7 @@ class Create extends Component {
     return (
       <div className='container'>
       <div className="create">
-        Add an event
+        className=create Add an event
         <div className="addevent">
           <input type='textarea' className="textbox" placeholder='Add an event' />
         </div>

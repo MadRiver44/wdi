@@ -45,6 +45,7 @@ class App extends Component {
             <Match
               exactly
               pattern="/people/:id"
+<<<<<<< HEAD
               component={({ params }) =>
                 <Person person={this.state.people[params.id - 1]} />}
             />
@@ -52,6 +53,19 @@ class App extends Component {
               exactly
               pattern="/contact"
               component={() => <Contact />}
+=======
+              component={({ params, location }) =>
+                // Here we add the peopleLength prop so we can
+                // later check to make sure that our id is not
+                // greater than the size of our array. We pass the
+                // id prop for the same reason.
+                <Person
+                  peopleLength={this.state.people.length}
+                  person={this.state.people[params.id - 1]}
+                  id={params.id}
+                />
+              }
+>>>>>>> 1e394d7b663b7583f257262d4a3d905db2805368
             />
             <Miss component={NotFound} />
           </div>
