@@ -63,3 +63,28 @@
 Using the [prompt](https://github.com/flatiron/prompt) Library add an interactive prompt that enables a user to do calculation via terminal. Read it...learn to read docs...it's not painful...use your imagination
 
 **Resource:** [https://github.com/flatiron/prompt](https://github.com/flatiron/prompt)
+
+Select the FirstName, City, and Country from the Customer table.
+SELECT FirstName, City, Country FROM Customer
+
+Select the Id, ContactTitle, Country, Phone and Fax from the Supplier table.
+SELECT Id, ContactTitle, Country, Phone, Fax FROM Supplier
+
+Select all of the columns from the Order table.
+SELECT * FROM [Order]
+
+Select every column except the SupplierId from the Product table.
+SELECT Id, ProductName, UnitPrice, Package, IsDiscontinued FROM Product
+
+Select everything from customers who live in countries with is in them.
+SELECT * FROM Customer WHERE Country LIKE '%is%'
+
+Select the Id, LastName and Phone from customers who live in countries that start with i. (After that, you probably want to add Country to your select to confirm, don't you?)
+SELECT Country, Id, LastName, Phone FROM Customer WHERE Country LIKE 'i%'
+
+Select the ProductName, UnitPrice IsDiscontinued and Package for all products with unit prices over $20, come in a package of either '10 - 500 g pkgs.' or '24 - 200 g pkgs.' and are not discontinued.
+SELECT ProductName, UnitPrice, IsDiscontinued, Package FROM Product WHERE UnitPrice > 20 AND IsDiscontinued = 'FALSE' AND Package = '10 - 500 g pkgs.' OR Package = '24 - 200 g pkgs.' 
+
+ORDER
+Select everything from all of the customers orderd by country ascending and last name descending.
+SELECT * FROM Customer ORDER BY Country ASC, LastName DESC
