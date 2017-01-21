@@ -1,5 +1,5 @@
 CREATE TABLE movies (
-  id serial PRIMARY KEY,
+  movie_id serial PRIMARY KEY,
   title varchar(255) NOT NULL,
   synopsis text,
   release_date timestamp
