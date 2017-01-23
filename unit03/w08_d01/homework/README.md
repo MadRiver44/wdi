@@ -11,7 +11,7 @@ You all are off to a great start! Tonight we will be reinforcing your PSQL and E
 1. In your `homework` folder, create a new folder called `express_pizza_practice` to work in.
 
 2. Using Patrick's bird themed lab on Express Routing, **RETYPE** the lecture, but change up the theme to **PIZZA**. While rebuilding remember to set up your environment:
-  - `git init` to get your `package.json`
+  - `npm init` to get your `package.json`
   - `install/save npm packages` (aka dependencies) you will be using
   - set up your `npm start` (with node or nodemon)
   - set up the appropriate file structure
