@@ -64,7 +64,7 @@ INSERT INTO directors (name) VALUES
 
 ALTER TABLE movies ADD director_id INT;
 
-/*UPDATE movies
+UPDATE movies
 SET director_id=1
 WHERE title='Birdman or (The Unexpected Virtue of Ignorance)';
 UPDATE movies
@@ -122,9 +122,9 @@ UPDATE movies
 SET director_id=18
 WHERE title='Rosemary''s Baby';
 UPDATE movies
-SET director_id=17
+SET director_id=13
 WHERE title='There Will Be Blood';
 UPDATE movies
 SET director_id=19
 WHERE title='American Beauty';
-*/
+
