@@ -9,19 +9,33 @@ Joe's lecture today taught you all about **Reusability and Intro To Design Patte
 
 **Question 1**: What constitutes a design pattern?  Addy Osmani does an excellent job describing this topic.
 
-> *Response 1*:
+> *Response 1*: According to Osmani, a "pattern is a reusable solution that can be applied to commonly occurring problems in software design - in our case - in writing JavaScript web applications. Another way of looking at patterns are as templates for how we solve problems - ones which can be used in quite a few different situations."  Osmani is careful to contrast this with what patterns are *not* - they "are not an exact solution. It’s important that we remember the role of a pattern is merely to provide us with a solution scheme. Patterns don’t solve all design problems nor do they replace good software designers."
 
 **Question 2**: Name at least 3 Creational design patterns and give a brief description for each one, including a use case(s)
 
-> *Response 2*:
+> *Response 2*:  According to Osmani, creational design patterns "focus on handling object creation mechanisms where objects are created in a manner suitable for the situation we're working in. The basic approach to object creation might otherwise lead to added complexity in a project whilst these patterns aim to solve this problem by controlling the creation process."  
+
+Some of the patterns that fall under this category are:
+CONSTRUCTOR patterns are used to create specific types of objects - both preparing the object for use and accepting arguments which a constructor can use to set the values of member properties and methods when the object is first created.
+USE CASE: A common type of creational design pattern, a Constructor is an easy way to assign properties and methods to objects.  This may be a less attractive option if many instances of the Constructor will be needed, as each will require its own methods be carved out of available memory.
+FACTORY patterns make an instance of several derived classes based on interfaced data or events.
+USE CASE: If the object creation process is relatively complex (for example, if the object being created strongly depends on conditional logic as to the properties it will have).
+ABSTRACT patterns create an instance of several families of classes without detailing concrete classes.
+PROTOTYPE patterns are fully initialized instances used for copying or cloning.
+SINGLETON patterns have only a single instance with global access points.
+USE CASE: If you wanted one and only one instance of something (say a random number generator), a Singleton pattern would either instantiate one if it did not already exist, or it would return a reference to the one already instantiated.
+BUILDER patterns separate object construction from representation & always create the same type of object.
 
 **Question 3**: What is the downside to including methods directly in a constructor vs associating them with the objects prototype?
 
-> *Response 3*:
+> *Response 3*:  Because JavaScript is not a true Class-based language, Class-like objects created from constructors will be instantiated with immutable properties; any functions stemming from this cannot be changed later on. 
 
-**Question 4**: What would be the first and most basic approach towards packaging code for reusability? Now think of what would be the next design pattern to layer on additional functionality that could also be returned to the end user.
+Also, from Ayman Farhat's blog (http://thecodeship.com/web-development/methods-within-constructor-vs-prototype-in-javascript), "any method attached via this will get re-declared for every new instance we create, which could affect the memory usage of the application negatively if we wish to create so many instances."
 
-> *Response 4*:
+**Question 4**: What would be the first and most basic approach towards packaging code for reusability? Now think of what would be the next design pattern to layer on additional functionality that could also be returned to the end user. 
+
+> *Response 4*:  I'm not sure I understand the question, but a "first and most basic approach towards packaging code for reusability" to me would be using variables to point to a value that could be reassigned, as opposed to hardcoding those values. As for "the next design pattern to layer on additional functionality that could also be returned to the end user," perhaps the question is referencing a situation discussed by Christian Heilmann in a blog post (https://www.smashingmagazine.com/2010/04/seven-javascript-things-i-wish-i-knew-much-earlier-in-my-career/).  He writes: "One of the most annoying things about JavaScript is that it has no scope for variables. Any variable, function, array or object you define that is not inside another function is global, which means that other scripts on the same page can access—and will usually override— them.
+The workaround is to encapsulate your variables in an anonymous function and call that function immediately after you define it."
 
 **Question 5**: Write a small function called **math** that returns two functions called: **add** and **subtract** which either add or subtract two numbers provided.  Both sub-functions would then be called as follows:
 
@@ -32,7 +46,18 @@ Joe's lecture today taught you all about **Reusability and Intro To Design Patte
 
 **NOTE**: keep in mind that the parent function "math" needs to somehow be executed first in order to return the sub-functions.
 
-> *Response 5*:
+> *Response 5*:  I *think* this would work:
+
+var math = function(){
+  return{
+    add:function(num1, num2){
+      return(num1 + num2);
+    },
+    subtract:function(num1, num2){
+      return(num1 - num2);
+    }
+  };
+}();
 
 ### Step II: Heroku
 
@@ -44,7 +69,8 @@ Second, go THOUGHTFULLY through [this](https://devcenter.heroku.com/articles/get
 
 **NOTE 1** -  in the section `Provision add-ons`, they ask for a credit card information. It's only needed to help with abuse prevention. Add-ons that are used in this tutorial are free, so there is nothing to worry about.If you don't feel comfortable doing so, ignore this step. It will not drastically affect the deployment.
 
-Third, after you are done, add the deployed app link **HERE**:
+Third, after you are done, add the deployed app link **HERE**: 
+https://shrouded-spire-52028.herokuapp.com/cool
 
 ### Step III: PSQL Practice
 

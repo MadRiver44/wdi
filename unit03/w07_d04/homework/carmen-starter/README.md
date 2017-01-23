@@ -84,3 +84,15 @@ Use the clues.sql file to write in the SQL queries that correspond with each clu
 
 - [PostgreSQL tutorial](http://www.tutorialspoint.com/postgresql/)
 - [PostgreSQL official documentation](http://www.postgresql.org/docs/)
+
+# Enter psql
+psql // in terminal, but should also work in Sublime
+
+# Create database
+CREATE DATABASE carmen; 
+
+# Connect to carmen
+\c carmen // connect to database => cursor will say 'carmen-#'
+\i ~/path/to/this/file/on/your/computer/world.SQL   // inserts file into database 
+
+
