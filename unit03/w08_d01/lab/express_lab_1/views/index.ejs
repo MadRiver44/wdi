@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome <%= ga_group %> Students</title>
+  <style>
+    #wrapper {
+      font-size: 16px;
+      margin: 0 auto;
+      width: 800px;
+    }
+
+    .giphy-embed {
+      margin: 0 auto;
+      padding: 0 0 0 118px;
+    }
+
+    #ranNum {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Welcome <%= ga_group %> Students. You made it this far...</h1>
+ <iframe src="//giphy.com/embed/3jjbTjCMsvyzS" width="480" height="342" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/adweek-leonardo-dicaprio-the-great-gatsby-3jjbTjCMsvyzS"></a></p>
+  <h2>
+    <span id="ranNum">
+      <%= Math.floor(Math.random(0) * 99), 1000 %>...
+    </span>
+    Just some random number demonstrating the power of 
+  <a href="http://ejs.co"/> EJS</a>...refresh the page.
+  </h2>
+
+  <h3>
+    Now go do your lab!! 😎
+  </h3>
+  </div>
+</body>
+</html>
