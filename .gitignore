@@ -1,4 +1,8 @@
 node_modules
 .DS_Store
 .env
+<<<<<<< HEAD
 .gitignore
+=======
+npm-debug.log
+>>>>>>> 8df5b157d6578832b04acb3fccefba6753ffc5bc
