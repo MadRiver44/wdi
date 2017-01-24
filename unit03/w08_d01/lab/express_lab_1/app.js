@@ -9,6 +9,7 @@ app.get('/', function(req, res) {
 
 /******************* ADD your routes below ******************/
 
+app.use('/birds', require('./routes/birds'));
 
 app.listen(app.get('port'), function() {
   console.log(`App listening on port ${app.get('port')}`)
