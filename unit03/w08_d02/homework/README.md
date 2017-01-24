@@ -58,7 +58,7 @@ Based on Vince's lecture today, please answer the following questions and place 
 
 ## PSQL Practice
 
-Finding apartments in NYC is quite the drag, right? But with psql, it's a breeze! Follow [this](https://github.com/ga-students/WDI_HAKUNA_MATATA/blob/master/unit03/w08_d02/homework/realty/propmt.md) additional README to practice more psql queries with a realtor theme. 👍
+Finding apartments in NYC is quite the drag, right? But with psql, it's a breeze! Follow [this](https://github.com/ga-students/WDI_HAKUNA_MATATA/blob/master/unit03/w08_d02/homework/realty/prompt.md) additional README to practice more psql queries with a realtor theme. 👍
 
 ## Submission:
 Submit an issue ticket with your:
