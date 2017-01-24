@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+main {
+  padding: 24px;
+}
+
+input {
+  display: block;
+  width: 400px;
+}
+
+.invalid-input {
+  background-color: rgba(255, 0, 0, .08);
+}
+
+.valid-input {
+  background-color: rgba(0, 255, 0, .08);
+}
