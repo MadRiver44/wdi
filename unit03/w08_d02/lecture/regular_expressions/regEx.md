@@ -35,16 +35,16 @@ console.log(testString.replace(myRegEx, 'hello')); // hello hello hello hello
 
 #### Case study: regular expression to match minimum 8 and maximum 16 characters with at least 1 uppercase alphabet, 1 lowercase alphabet, 1 number and 1 special character:
 
-1. `/[A]/` => matches 8-16 A characters
-2. `/[A-Z]/` => 8-16 A-Z characters
-3. `/[A-Za-z]/` => 8-16 A-Z or a-z characters
-4. `/[A-Za-z\d]/` => 8-16 A-Z, a-z, or 0-9 characters
-5. `/[A-Za-z\d$@$!%*?&]/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters
-6. `/^[A-Za-z\d$@$!%*?&]/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters, starting from the beginning of the line
-7. `/^(?=.*[a-z])[A-Za-z\d$@$!%*?&]/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters, starting from the beginning of the line, and requires at least one a-z character preceded by 0-however many characters
-8. `/^(?=.*[a-z])(?=.*[A-Z])[A-Za-z\d$@$!%*?&]/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters, starting from the beginning of the line, and requires at least one a-z character and one A-Z character preceded by 0-however many characters
-8. `/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters, starting from the beginning of the line, and requires at least one a-z character, one A-Z character, and one digit preceded by 0-however many characters
-9. `/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,16}/` => TADA!
+1. `/[A]{8,16}/` => matches 8-16 A characters
+2. `/[A-Z]{8,16}/` => 8-16 A-Z characters
+3. `/[A-Za-z]{8,16}/` => 8-16 A-Z or a-z characters
+4. `/[A-Za-z\d]{8,16}/` => 8-16 A-Z, a-z, or 0-9 characters
+5. `/[A-Za-z\d$@$!%*?&]{8,16}/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters
+6. `/^[A-Za-z\d$@$!%*?&]{8,16}$/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters, starting from the beginning of the line and ending at the end of the line
+7. `/^(?=.*[a-z])[A-Za-z\d$@$!%*?&]{8,16}$/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters, starting from the beginning of the line and ending at the end of the line, and requires at least one a-z character preceded by 0-however many characters
+8. `/^(?=.*[a-z])(?=.*[A-Z])[A-Za-z\d$@$!%*?&]{8,16}$/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters, starting from the beginning of the line and ending at the end of the line, and requires at least one a-z character and one A-Z character preceded by 0-however many characters
+8. `/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d$@$!%*?&]{8,16}$/` => 8-16 A-Z, a-z, 0-9 characters, or any of the listed special characters, starting from the beginning of the line and ending at the end of the line, and requires at least one a-z character, one A-Z character, and one digit preceded by 0-however many characters
+9. `/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,16}$/` => TADA!
 
 ### What is the best way to learn about regular expressions?
 - Simple regular expressions are easy to understand, e.g. `/hello/` matches the word 'hello' and `/hello|goodbye/` matches either the word 'hello' or the word 'goodbye'. More complicated regular expressions begin to look quite tricky. E.g., this regex `/\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/` matches 10 digit phone numbers that use either -s .s or neither.
