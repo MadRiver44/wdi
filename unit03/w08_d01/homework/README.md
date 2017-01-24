@@ -43,7 +43,7 @@ This is also a great opportunity to drop the database and start from scratch to 
 
 ### SQL Zoo
 
-Complete these `JOIN` exercises on [SQL Zoo](http://sqlzoo.net/wiki/More_JOIN_operations). You got this!
+Complete these `JOIN` exercises on [SQL Zoo](http://sqlzoo.net/wiki/More_JOIN_operations) and copy the queries you use into a `sql_zoo_practice.sql` file. You got this!
 
 ## Submission:
 Submit an issue ticket with your:
