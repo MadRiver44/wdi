@@ -34,23 +34,27 @@ Based on Vince's lecture today, please answer the following questions and place 
 
 **Question 1**: Explain in your own words what a regular expression is.
 
-> *Response 1*:
+> *Response 1*: A Regular Expression represents a sequence of characters that is typically used to determine valid input patterns for computer applications.  
 
-**Question 2**: In today's lab, you found a few interesting examples of common regular expressions. Pick two and explain how they work. E.g. if the ^ is there explain that it's matching the beginning of the line, etc.
+**Question 2**: In today's lab, you found a few interesting examples of common regular expressions. Pick two and explain how they work. E.g. if the ^ is there explain that it's matching the beginning of the line, etc.  
 
-> *Response 2*:
+> *Response 2*: One RegEx from today's lab was /hi|bye/, where the pipe symbol represents an OR operator between the 'hi' and 'bye' strings, allowing a match for either case.  A second RegEx from today's lab was (favo)[u]?(rites).  This expected two sequential strings, 'favo' and 'rites', with the '?' character indicating an allowed zero-or-one additional represented within the square brackets. 
 
 **Question 3**: Explain a use case for regular expressions that we didn't cover in today's lecture, if you can't think of anything consult Google.
 
-> *Response 3*:
+> *Response 3*: Besides sanitizing user inputs, RegEx can perform data scraping/web scraping, where automation pulls information from computers and structures it for human use.  
 
-**Question 4**: Write up a regular expression that matches a string that begins with an uppercase character between A and L, that is between 7 and 15 characters long, and that ends with 2 or more lowercase zs.
+**Question 4**: Write up a regular expression that matches a string that begins with an uppercase character between A and L, that is between 7 and 15 characters long, and that ends with 2 or more lowercase zs.  
 
-> *Response 4*:
+> *Response 4*:  /^[A-L]{7,15}z+z$/
 
 **Question 5**: Write a javascript function that will find and replace all occurrences of the string 'color_id' where the word color either does or does not contain a 'u' before the 'r' and replace them with the string 'color_uid'.
 
-> *Response 5*:
+> *Response 5*:  
+      let regExFunction = function(text) {
+      var newText = text.replace(/colou?r_id/gi, 'color_uid');
+      return newText;
+    };
 
 **Question 6**: BONUS: Find a regex online that will match any opening, closing, or self-closing HTML tag and try to explain how it works.
 
