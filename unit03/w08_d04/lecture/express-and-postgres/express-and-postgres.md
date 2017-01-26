@@ -111,18 +111,63 @@ configuration file to point to your development database. Go to your
 sequelize model:create --name User --attributes "email:string firstName:string lastName:string dob:date"
 sequelize db:migrate
 ```
+### GET /users/new
 
-### GET /users
+Now lets add the ability to create users.
 
-In our `routes/users.js` file we already have a route for the users index page.
-We want to change this to fetch all of the users from our database and provide
-them as JS objects for use in our ejs template.
+In your `users/index.ejs` file, add a link to `/users/new` and label it
+something like "Create a user".
+
+Now add a get route for the `/new` path in your users routes file.
+
+Now add a `new.ejs` template in your `views/users` folder. In there you should
+add a form with `email`, `firstName` and `lastName` text inputs. Also be sure
+to include a `dob` date type input. The form method should be `POST` and the
+action should be `/users`.
+
+What happens when you click the submit button?
+
+### POST /users
 
 First we have to require our Sequelize `models` object. On line 3 of the file
 add:
 ```javascript
 var models = require('../server/models/index');
 ```
+This is needed now because we are actually communicating with our Postgres db.
+(The new user page didn't need to).
+
+We need to add another route to handle the POST request to the `/users`
+endpoint.
+
+```javascript
+router.post('/', function(req, res, next) {
+  models.User.create({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    dob: req.body.dob
+  }).then(function() {
+    res.redirect('/users')
+  });
+});
+```
+
+This uses the Sequelize model `create` method to add a user record to the
+database. The object you provide tells it what attributes to set. After the user
+record is committed to the db, the `then` callback redirects us to the users
+index page.
+
+After you submit you form and the POST request is sent to create your user, use
+Postico to confirm that your record has been added (it won't work in psql for
+some reason... 🤷🏽‍♂️)
+
+### GET /users
+
+Now that we have user records in our db we need to display them on our index
+page. In our `routes/users.js` file we already have a route for the users index page.
+We want to change this to fetch all of the users from our database and provide
+them as JS objects for use in our ejs template.
 
 Modify your `/` route to look like this:
 
@@ -145,44 +190,10 @@ Now that we have the `users` array available in our `views/users/index.ejs`
 file, add a `forEach` to iterate through the `users` array and render a div that
 displays the email, first name, last name and dob of each user object.
 
-### GET /users/new
-
-Now lets add the ability to create users.
-
-Above your users list on your users index page, add a link to `/users/new` and
-label it something like "Create a user".
-
-Now add a get route for the `/new` path in your users routes file.
-
-Now add a `new.ejs` template in your `views/users` folder. In there you should
-add a form with `email`, `firstName` and `lastName` text inputs. Also be sure
-to include a `dob` date type input. The form method should be `POST` and the
-action should be `/users`.
-
-What happens when you click the submit button?
-
-### POST /users
-
-We need to add another route to handle the POST request to the `/users`
-endpoint.
-
-```javascript
-router.post('/', function(req, res, next) {
-  models.User.create({
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    dob: req.body.dob
-  }).then(function() {
-    res.redirect('/users')
-  });
-});
 ```
-
-This uses the Sequelize model `create` method to add a user record to the
-database. The object you provide tells it what attributes to set. After the user
-record is committed to the db, the `then` callback redirects us to the users
-index page.
+git add -A
+git commit -m "Add user create functionality and display users index page"
+```
 
 ### DELETE /users/:id
 
@@ -225,4 +236,121 @@ router.delete('/:id', function(req, res, next) {
     res.redirect('/users');
   });
 });
+```
+
+```
+git add -A
+git commit -m "Add ability to delete users"
+```
+
+### GET /users/:id
+
+Edit your `users/index.ejs` template to display a link for each user div. The
+href should be `/users/id` where id is the id of the user object. (Use ejs for
+the string concatenation to make this url for each user object in the forEach
+loop). The link will only display the users first name, so you can remove the
+other details.
+
+Add a get route for `/users/:id`. In this route we will user the Sequelize
+`findById` method to find the user.
+```javascript
+router.get('/:id', function(req, res, next) {
+  models.User.findById(req.params.id).then(function(user) {
+    res.render('users/show', { user: user });
+  });
+});
+```
+
+Create a `show.ejs` template in your `views/users` directory. This is where you
+can display the rest of the user details that you removed from the index view.
+
+```
+git add -A
+git commit -m "Add users show page"
+```
+
+### GET /users/:id/edit
+
+Now we are going to create and edit link on the users show page that will bring
+us to the users edit page. The link should have an href of `/users/id/edit` and
+the edit route should use the sequelize `fineById` method to get the users based
+on the id in the url and render the edit page with that user.
+```javascript
+router.get('/:id/edit', function(req, res, next) {
+  models.User.findById(req.params.id).then(function(user) {
+    res.render('users/edit', { user: user });
+  });
+});
+```
+
+Now create the `edit.ejs` template. This will be a form similar to the new user
+form but the user object is now available for prepopulating the values of the
+form inputs. The form attributes will be similar to the delete forms on the user
+index page (because html forms cant send PUT requests either...)
+
+### PUT /users/:id
+
+Create a put route for `/users/id`. This route will use the sequelize `update`
+command to update the record with the id provided in the url.
+```javascript
+router.put('/:id', function(req, res, next) {
+  models.User.update({
+    email: req.body.email,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    dob: req.body.dob
+  }, { where: { id: req.params.id } }).then(function() {
+    res.redirect('/users/' + req.params.id);
+  });
+});
+```
+
+Notice here that we're redirecting to the users show page after the update. This
+will allow the user to confirm that the updates have been committed to the
+database.
+
+```
+git add -A
+git commit -m "Add ability to update users"
+```
+
+## Deploy
+Create a new app in Heroku. Click on the Deploy tab and follow the instructions
+to deploy an existing app (do not use the heroku create command). Push it up.
+
+Go the the Heroku dashboard for you app and click on the Resources tab.
+
+In the add-ons section type postgres and click Heroku Postgres. Leave the
+default Hobby Dev - Free option selected and click the Provision button.
+
+Modify your server/config.json to look like this:
+```
+{
+  "development": {
+    "username": "YOUR_DB_USERNAME",
+    "password": null,
+    "database": "fazbook_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+}
+```
+
+Replace replace 28-30 in your `bin/www` file with this:
+```
+models.sequelize.sync().then(function () {
+  server.listen(port);
+  server.on('error', onError);
+  server.on('listening', onListening);
+});
+```
+
+Then:
+```
+git add -A
+git commit -m "Add production db configuration"
+git push heroku master
 ```
