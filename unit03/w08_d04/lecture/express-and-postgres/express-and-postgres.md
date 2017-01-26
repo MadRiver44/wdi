@@ -248,8 +248,8 @@ git commit -m "Add ability to delete users"
 Edit your `users/index.ejs` template to display a link for each user div. The
 href should be `/users/id` where id is the id of the user object. (Use ejs for
 the string concatenation to make this url for each user object in the forEach
-loop). The link will only display the users first name, so you can remove the
-other details.
+loop). The link will display the users first name. Remove the other user
+details.
 
 Add a get route for `/users/:id`. In this route we will user the Sequelize
 `findById` method to find the user.
@@ -271,10 +271,10 @@ git commit -m "Add users show page"
 
 ### GET /users/:id/edit
 
-Now we are going to create and edit link on the users show page that will bring
-us to the users edit page. The link should have an href of `/users/id/edit` and
-the edit route should use the sequelize `fineById` method to get the users based
-on the id in the url and render the edit page with that user.
+Now we are going to create an edit link on the user show page that will bring
+us to the user edit page. The link should have an href of `/users/id/edit` and
+the edit route should use the sequelize `fineById` method to get the user based
+on the id in the url. It will render the edit page for that user.
 ```javascript
 router.get('/:id/edit', function(req, res, next) {
   models.User.findById(req.params.id).then(function(user) {
@@ -285,7 +285,7 @@ router.get('/:id/edit', function(req, res, next) {
 
 Now create the `edit.ejs` template. This will be a form similar to the new user
 form but the user object is now available for prepopulating the values of the
-form inputs. The form attributes will be similar to the delete forms on the user
+form inputs. The `<form>` tag attributes will be similar to the delete forms on the user
 index page (because html forms cant send PUT requests either...)
 
 ### PUT /users/:id
@@ -315,8 +315,15 @@ git commit -m "Add ability to update users"
 ```
 
 ## Deploy
+Using Heroku CLI: `heroku create`. If it doesn't push it up for some reason run
+`git push heroku master`
+
+**OR**
+
 Create a new app in Heroku. Click on the Deploy tab and follow the instructions
 to deploy an existing app (do not use the heroku create command). Push it up.
+
+**THEN**
 
 Go the the Heroku dashboard for you app and click on the Resources tab.
 
