@@ -1,0 +1,720 @@
+html, body {
+  margin: 0;
+  padding: 0;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+}
+
+#hunter {
+  background: url("http://www.franklinchristopherbrooks.com/images/hunter.jpg") no-repeat center center;
+}
+
+#thd {
+  background: url("http://www.franklinchristopherbrooks.com/images/thd.jpg") no-repeat center center;
+}
+
+#coding {
+  background: url("http://www.franklinchristopherbrooks.com/images/keyboard.jpg") no-repeat center center;
+}
+
+#contact {
+  background: url("http://www.franklinchristopherbrooks.com/images/phone.jpeg") no-repeat center top;
+}
+
+#city {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+header h1 {
+    display: inline-block;
+    height: 120px;
+    line-height: 110px;
+    float: left;
+    font-size: 30px;
+    color: white;
+    font-weight: 1000;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+header nav {
+    display: inline-block;
+    float: right;
+}
+
+header nav a {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 5px;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 150px;
+  margin-left: 20px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+ }
+
+header nav a:hover, a:active {
+    background-color: red;
+}
+
+h1 a:hover, a:active {
+    background-color: red;
+}
+
+header.smaller {
+    height: 50px;
+}
+
+header.smaller h1 {
+    height: 50px;
+    line-height: 18px;
+    font-size: 24px;
+}
+
+header.smaller nav {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+}
+
+header.smaller nav a {
+    line-height: 50px;
+    font-size: 16px;
+}
+
+.splash {
+      text-align: center;
+      background-size: 100%;
+      background-position: center;
+      height: 660px;
+      margin: 0 auto;
+      display: block;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  text-align: center;
+  background-size: 100%;
+  display: block;
+}
+
+.splash .container {
+        position: relative;
+        top: 200px;
+}
+
+.splash h1 {
+  color: white;
+  font-size: 90px;
+  margin-top: 0px;
+ }
+
+.splash h2 {
+  color: white;
+  font-weight: 500;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+  margin-top: 0px;
+  text-transform: uppercase;
+}
+
+.btn {
+  color: white;
+  background: red;
+  padding: 10px 40px;
+        margin: 10px 40px;
+  text-decoration: none;
+        text-transform: uppercase;
+        border: 2px solid white;
+        border-radius: 10px;
+  transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+    color: black;
+}
+
+#arrow {
+  position: relative;
+  text-decoration: none;
+  top:  -80px;
+  left: 850px;
+  height: 80px;
+  width: 100px;
+  background-color: #1c1c1c;
+  color: white;
+  line-height: 60px;
+  z-index: 9;
+  border-radius: 10px 10px 0px 0px;
+}
+
+#arrow a {
+  text-decoration: none;
+  font-size: 40px;
+  color: white;
+  line-height: 200px;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    from {line-height: 0px;}
+    to {line-height: 130px;}
+}
+
+.jumbotron {
+      text-align: center;
+      background-size: 100%;
+      background-position: center;
+      height: 275px;
+      margin: auto;
+      display: block;
+}
+
+.jumbotron h1 {
+  color: white;
+  font-size: 100px;
+  margin-top: 0px;
+ }
+
+.jumbotron p {
+  color: white;
+  font-weight: 500;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.jumbotron .container {
+        position: relative;
+        top: 75px;
+}
+
+#about {
+  height: 100%;
+  background-color: #1c1c1c;
+  text-align: center;
+  padding: 50px 0 80px;
+}
+
+#about h2 {
+  color: white;
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+#about p {
+  color: white;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+#me {
+  transition: 0.6s ease-in-out;
+}
+
+#me:hover {
+   -webkit-transform: scale(1.2);
+   -ms-transform: scale(1.2);
+   transform: scale(1.2);
+}
+
+#education {
+  background-color: #1c1c1c;
+  text-align: center;
+  padding: 50px 0 80px;
+}
+
+#education h2 {
+  color: white;
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+#education img {
+  transition: all 0.3s ease 0s;
+}
+
+#education img:hover, a:active {
+    transform: scale(1.2);
+}
+
+#education p {
+  color: white;
+}
+
+#hlogo {
+  height: 100px;
+  margin: 10px;
+}
+
+#work {
+  height: 780px;
+  background-color: #1c1c1c;
+  text-align: center;
+  padding: 0px;
+}
+
+#work h2 {
+  color: white;
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+#work p {
+  color: white;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: #808080;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 24px 0px 24px 100px;
+    text-align: left;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    width: 80%;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: black;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+    width: 76%;
+    margin: 0 auto;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.panel.show {
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+    width: 76%;
+    margin: 0 auto;
+}
+
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    margin-right: 100px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#clearAccordion {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#coding {
+   text-align: center;
+   display: block;
+   height: 325px;
+
+   margin: 0;
+   position: relative;
+   margin-bottom: 0px;
+   padding-bottom: 0;
+}
+
+#coding h1 {
+  color: white;
+  font-size: 90px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  top: 75px;
+}
+
+#code {
+  background: url("http://www.franklinchristopherbrooks.com/images/code.png") no-repeat center center;
+}
+
+#lyndadotcom {
+  background: url("http://www.franklinchristopherbrooks.com/images/lynda.png") no-repeat center center;
+}
+
+#flatiron {
+  background: url("http://www.franklinchristopherbrooks.com/images/flatiron.jpg") no-repeat center center;
+}
+
+.col {
+   margin: 0 auto;
+   display: inline;
+   position: relative;
+   float: left;
+   width: 33%;
+   height: 200px;
+   background-size: 100%;
+   color: white;
+   font-size: 24px;
+   width: 200px
+   background-color: red;
+  cursor: crosshair;
+}
+
+.container .col {
+  float: left;
+  width: 33.3%;
+  padding: 0px;
+  cursor: crosshair;
+}
+
+#codecademy {
+   margin: 60px 0px 0px 0px;
+   cursor: crosshair;
+}
+
+#lynda {
+   margin: 10px 0px 0px 0px;
+   cursor: crosshair;
+}
+
+#learn {
+   margin: 50px 0px 0px 0px;
+   cursor: crosshair;
+}
+
+.col img {
+  width: 100%;
+        cursor: crosshair;
+}
+
+.col:after, .col:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.col:after {
+    content:'\A';
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+}
+.col:before {
+    content: attr(data-content);
+    width: 100%;
+    font-size: 16px;
+    color:#fff;
+    z-index:1;
+    padding: 30px 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    background: red;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.col:hover:after, .col:hover:before {
+    opacity:1;
+}
+
+#skills {
+  height: 100%;
+  background-color: #1c1c1c;
+  text-align: center;
+}
+
+#skills h2 {
+  color: white;
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+#skills p {
+  color: white;
+}
+
+table {
+  margin: 0px auto;
+  border: 0px;
+  width: 70%;
+}
+
+td {
+    background-color: #808080;
+    padding: 7px;
+    margin: 0px 0px 0px 0px;
+    width: 50%;
+    transition: 0.4s;
+}
+
+td:hover {
+    background-color: #ddd;
+}
+
+.left {
+    color: white;
+    margin: 0px 10px 0px 10px;
+    float: left;
+    text-align: left;
+    width: 40%;
+}
+
+.right {
+    color: white;
+    font-size: 20px;
+    margin: 0px 10px 0px 10px;
+    float: right;
+    text-align: right;
+    width: 40%;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+
+.right:hover {
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1, 1.0);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1, 1.0);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1, 1.0);
+    transition: all 200ms ease-in;
+    transform: scale(1.1, 1.0);
+}
+
+/*
+#contact {
+  background-color: #1c1c1c;
+  text-align: center;
+  padding: 0;
+}
+
+#contact p {
+  color: white;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+*/
+#form {
+  background-color: #1c1c1c;
+  text-align: center;
+  height: 100%;
+}
+
+#form .btn {
+  display: inline-block;
+}
+
+#form p {
+  color: white;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+#formbox {
+  width: 340px;
+  margin: 0 auto;
+        clear: both;
+  height: 100%;
+  background: #7A1631;
+  background: #7A1631 -webkit-linear-gradient(#FF0000,#8C0000);
+  background: #7A1631 -moz-linear-gradient(#FF0000,#8C0000);
+  background: #7A1631 -o-linear-gradient(#FF0000,#8C0000);
+  background: #7A1631 -ms-linear-gradient(#FF0000,#8C0000);
+  background: #7A1631 linear-gradient(#FF0000,#8C0000);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF0000', endColorstr='#8C0000',GradientType=0 );
+  border: 1px solid #8C0000;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 5px 5px 11px rgba(0,0,0,0.42);
+  -moz-box-shadow: 5px 5px 11px rgba(0,0,0,0.42);
+  box-shadow: 5px 5px 11px rgba(0,0,0,0.42);
+  padding: 10px 10px 10px 10px;
+}
+
+label {
+  color: white;
+}
+
+input, textarea {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid white;
+  font-size: 14px;
+  border-radius: 2px;
+  color: gray;
+  background: -webkit-linear-gradient(#FFF,#DDD);
+  background: -moz-linear-gradient(#FFF,#DDD);
+  background: -o-linear-gradient(#FFF,#DDD);
+  background: linear-gradient(#FFF,#DDD);
+    -pie-background: linear-gradient(#FFF, #DDD);
+
+  -webkit-box-shadow: inset 0px 2px 3px #666,inset 0px -5px 3px #EEE;
+  -moz-box-shadow: inset 0px 2px 3px #666,inset 0px -5px 3px #EEE;
+  box-shadow: inset 0px 2px 3px #666,inset 0px -5px 3px #EEE;
+}
+
+input:focus, textarea:focus {
+  outline: solid red;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+ }
+
+footer p {
+  color: white;
+ }
+
+footer img {
+  max-height: 28px;
+  margin: 10px 40px 10px 40px;
+  transition: all 0.3s ease 0s;
+}
+
+.social-icon {
+  margin: 20px 40px 10px 40px;
+}
+
+footer img:hover, a:active {
+    transform: scale(1.2);
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+/* MODAL POPUP */
+
+#modal {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+}
+.modalcontent {
+    position: absolute;
+    color: gray;
+    font-size: 24px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 75%;
+    padding: 20px;
+    border: 10px solid red;
+    border-radius: 25px;
+    background-color: #ddd;
+}
+.modalcontent h1 {
+    color: black;
+    font-size: 36px;
+}
+.modalcontent button {
+    color: white;
+    background-color: red;
+    font-size: 24px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    margin: 5px 0px 60px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.modalcontent button:hover {
+    transform: scale(1.2);
+}
+
+
+/* Mobile */
+@media all and (max-width: 660px) {
+
+    body {
+    float: none;
+    width: auto;
+    }
+
+}
+

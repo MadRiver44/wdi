@@ -23,6 +23,8 @@ router.get(/^\/?orders\/id-[A-M]-(\d{4,12})$/, function (req, res) {
 router.get(/^\/?hash-[^N-Z]*$/, function (req, res) {
   res.send('/^\/?hash-[^N-Z]*$/ matched')
 });
+
+// the /i flag will make query case insensitive
 // 'lookVINCEimCaseInsensitive' where it doesn't matter what the case is of any of the characters
 // /(L|l)(O|o)(O|o)(K|k)(V|v)(I|i)(N|n)(C|c)(E|e)(I|i)(M|m)(C|c)(A|a)(S|s)(E|e)(I|i)(N|n)(S|s)(E|e)(N|n)(S|s)(I|i)(T|t)(I|i)(V|v)(E|e)/
 router.get(/^\/?(L|l)(O|o)(O|o)(K|k)(V|v)(I|i)(N|n)(C|c)(E|e)(I|i)(M|m)(C|c)(A|a)(S|s)(E|e)(I|i)(N|n)(S|s)(E|e)(N|n)(S|s)(I|i)(T|t)(I|i)(V|v)(E|e)$/, function (req, res) {

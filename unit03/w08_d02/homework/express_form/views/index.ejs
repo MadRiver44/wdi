@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <div class="container">
+      <% include partials/header.ejs %>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1>Express / ejs Test Page</h1>
+      <p>This stripped-down version of my home page is rendered
+      <br>
+      by Express.JS using ejs partials for the header and footer.
+      <br>
+      <br>
+      Routing to the About and Contact pages is handled by
+      <br>
+      the server-side routes defined in Express.
+      </p>
+      <% include partials/footer.ejs %>
+    </div>
+  </body>
+</html>
+

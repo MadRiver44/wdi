@@ -18,17 +18,17 @@ VALUES
 -- values for apartments
 INSERT INTO apartments (apt_nickname, sq_ft, bedrooms, tenant_id)
 VALUES
-('fixer-upper', 400, 1, 1),
-('bachelor pad','yellow','England', 2),
-('pied-a-terre','yellow','England', 3);
+('fixer-upper', 800, 2, 1),
+('bachelor pad',400, 1, 2),
+('pied-a-terre',600, 1, 3);
 
 
 -- values for offices
 INSERT INTO offices (sq_ft, cubicles, bathrooms, company, tenant_id)
 VALUES
 (1000, 4, 1, 'ZDI', 4),
-(1500, 0, 2, 'MTS, Inc.', 5),
-(3000, 100, 3,'CCRB', 6);
+(1500, 60, 60, 'MTS, Inc.', 5),
+(3000, 50, 65,'CCRB', 6);
 
 \i seed.sql
 
