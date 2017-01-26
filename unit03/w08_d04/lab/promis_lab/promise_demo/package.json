@@ -1,0 +1,16 @@
+{
+  "name": "promise_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "axios": "^0.15.3",
+    "bluebird": "^3.4.7"
+  }
+}
