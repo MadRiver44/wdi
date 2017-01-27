@@ -22,7 +22,7 @@ Copy the `fazbook-auth` directory to a location **outside** of your WDI_HAKUNA_M
 
 Once it is copied, `cd` into the copy and run `npm install`. I've already installed the extra packages you need, they include `passport`, `passport-local`, `bcryptjs`, `dotenv`, and `express-session`.
 
-Run `npm start` to make sure that everything is working properly.
+Don't run `npm start`, it won't work!.
 
 Run `git init` to create the git repository and make your first commit.
 
@@ -189,7 +189,7 @@ const app = express();
 require('dotenv').config();
 ```
 
-We're adding the necessary modules and adding in some new routes we'll be creating. We also initialize dotenv. dotenv is a node module that makes it really easy to include environment variables in your app. We're doing this because our cookies require a secret key. Follow the directions in .env-sample to create your secret key. Make sure to .gitignore your new .env file!
+We're adding the necessary modules and adding in some new routes we'll be creating. We also initialize dotenv. dotenv is a node module that makes it really easy to include environment variables in your app. We're doing this because our cookies require a secret key. Follow the directions in .env-sample to create your secret key. Make sure to .gitignore your new .env file! To add a .gitignore add a `.gitignore` file in the root of your project (next to app.js). In that file you can list files and directories for git to ignore. Add both `node_modules` and `.env`. `node_modules` takes up a ton of space so we dont wan't to put that in git and the .env file normally contains sensitive information, so we don't want that in git either.
 
 We now need to tell express to use our express-session and passport middlewares. Directly underneath the second bodyParser middleware copy the following code:
 
@@ -320,7 +320,11 @@ router.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
 });
+
+module.exports = router;
 ```
+
+**NOTE** in the morning lecture we didn't export the auth router. That caused a nasty bug and error messgae. Good listen though, you have to export to make the modules works!
 
 This logs the user out (kills the session), then redirects the user to the homepage.
 
