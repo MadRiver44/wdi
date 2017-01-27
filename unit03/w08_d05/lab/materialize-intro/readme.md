@@ -221,7 +221,7 @@ Once the alloted time is up each group will have 2-4 min to demo their their fin
 - Parallax
 
 
-### Implementing The Nav
+### Implementing The Nav and Header
 The one requirement for any site or mobile app is a navigation.  All front end frameworks provide them and thus Materialize has it's own implementation. Needless to say it's a series of nested div's defined with specific classes providing all the functionality for a responsive nav. 
 ```html
  <nav role="navigation">
