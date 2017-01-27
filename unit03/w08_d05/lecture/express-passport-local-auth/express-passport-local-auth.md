@@ -320,7 +320,11 @@ router.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
 });
+
+module.exports = router;
 ```
+
+**NOTE** in the morning lecture we didn't export the auth router. That caused a nasty bug and error messgae. Good listen though, you have to export to make the modules works!
 
 This logs the user out (kills the session), then redirects the user to the homepage.
 
