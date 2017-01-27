@@ -12,11 +12,13 @@ CREATE TABLE apartments (
 );
 
 CREATE TABLE offices (
-sq_ft INTEGER,
-cubicles INTEGER,
-bathrooms INTEGER,
-company VARCHAR(25),
-tenant_id INTEGER REFERENCES customers(customer_id)
+  sq_ft INTEGER,
+  cubicles INTEGER,
+  bathrooms INTEGER,
+  company VARCHAR(25),
+  tenant_id INTEGER REFERENCES customers(customer_id)
 );
 
 \i schema.sql
+\dt --display table
+\l --list tables

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+</body>
+<script>
+  var promise = new Promise(function(resolve, reject) { // declare new Promise object
+    var request = new XMLHttpRequest();  // vanilla JS; no Axios/jQuery/etc
+    request.open('GET', 'http://api.icndb.com/jokes/random'); // get random Chuck Norris joke
+    request.onload = function() {
+      if (request.status == 200) { // if successful HTTP status code returns from server
+        resolve(request.response); // we got data here, so resolve the Promise & go to .then()
+      } else {
+        reject(Error(request.statusText)); // status is not 200 OK, so reject
+      }
+    };
+    request.onerror = function() { //
+      reject(Error('Error fetching data.')); // error occurred, reject the  Promise
+    };
+    request.send(); //send the request.  This happens before request.onload and request.onerror.
+  });
+  promise.then(function(data) {  // after Promise resolves, this runs
+    document.getElementsByTagName('body')[0].textContent = JSON.parse(data).value.joke; // render joke
+  }, function(error) {
+    console.log(error.message); // or, if joke cannot render, log error
+  });
+</script>
+</html>

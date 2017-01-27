@@ -1,0 +1,76 @@
+const cleanHouse = (cb) => {
+  const counter = 1
+  console.log(counter, 'I need to clean! I am having company!!!');
+  if (typeof cb === 'function') cb(counter);
+}
+
+const cleanBathroom = (val, cb) => {
+  console.log(++val, 'I am cleaning my Bathroom!');
+  if (typeof cb === 'function') cb(val);
+}
+
+const cleanKitchen = (val, cb) => {
+  console.log(++val, 'I am cleaning my Kitchen!');
+  if (typeof cb === 'function') cb(val);
+}
+
+const cleanLivingroom = (val, cb) => {
+  console.log(++val, 'I am cleaning my living room!');
+  if (typeof cb === 'function') cb(val);
+}
+
+/* FLATTEN ME PLEASE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+cleanHouse(function(value1) {
+  cleanBathroom(value1, function(value2) {
+    cleanKitchen(value2, function(value3) {
+      cleanLivingroom(value3, function(value4) {
+        if (value4 === 4) console.log('Phew!, I am done...')
+      });
+    });
+  });
+});
+
+cleanHouse(value1) {
+   var promise = new Promise(function(resolve, reject){
+         console.log('First method completed');
+         resolve();
+   });
+   return promise;
+};
+
+.then(cleanBathroom(value2) {
+   var promise = new Promise(function(resolve, reject){
+         console.log('Second method completed');
+         resolve();
+   });
+   return promise;
+});
+
+.then(cleanKitchen(value3) {
+   var promise = new Promise(function(resolve, reject){
+         console.log('Third method completed');
+         resolve();
+   });
+   return promise;
+}0;
+
+.then(cleanLivingroom(value4) {
+   var promise = new Promise(function(resolve, reject){
+         console.log('Fourth and last method completed');
+         if (value4 === 4) {
+         console.log('Phew!, I am done...')
+         };
+         resolve();
+   });
+   return promise;
+});
+
+
+
+
+
+
+
+
+
+

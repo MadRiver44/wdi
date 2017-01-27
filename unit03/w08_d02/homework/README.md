@@ -46,15 +46,14 @@ Based on Vince's lecture today, please answer the following questions and place 
 
 **Question 4**: Write up a regular expression that matches a string that begins with an uppercase character between A and L, that is between 7 and 15 characters long, and that ends with 2 or more lowercase zs.  
 
-> *Response 4*:  /^[A-L]{7,15}z+z$/
+> *Response 4*:  /^[A-L]{7,15}z+z$/       /^[A-L][a-zA-Z]{7-15}zzz*$/ 
 
 **Question 5**: Write a javascript function that will find and replace all occurrences of the string 'color_id' where the word color either does or does not contain a 'u' before the 'r' and replace them with the string 'color_uid'.
 
 > *Response 5*:  
       let regExFunction = function(text) {
-      var newText = text.replace(/colou?r_id/gi, 'color_uid');
-      return newText;
-    };
+        return text.replace(/colou?r_id/gi, 'color_uid');
+      };
 
 **Question 6**: BONUS: Find a regex online that will match any opening, closing, or self-closing HTML tag and try to explain how it works.
 
