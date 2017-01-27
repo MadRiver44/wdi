@@ -22,7 +22,7 @@ Copy the `fazbook-auth` directory to a location **outside** of your WDI_HAKUNA_M
 
 Once it is copied, `cd` into the copy and run `npm install`. I've already installed the extra packages you need, they include `passport`, `passport-local`, `bcryptjs`, `dotenv`, and `express-session`.
 
-Run `npm start` to make sure that everything is working properly.
+Don't run `npm start`, it won't work!.
 
 Run `git init` to create the git repository and make your first commit.
 
