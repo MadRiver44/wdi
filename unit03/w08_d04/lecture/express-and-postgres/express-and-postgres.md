@@ -38,7 +38,7 @@ git project**.
 
 Once it is copied, `cd` into the copy and run `npm install`
 
-Run `npm start` to make sure that everything is working properly. 
+Run `npm run dev` to make sure that everything is working properly. 
 
 Run `git init` to create the git repository and make your first commit.
 
@@ -360,5 +360,9 @@ Then:
 ```
 git add -A
 git commit -m "Add production db configuration"
+git push origin master
 git push heroku master
 ```
+
+### Solution
+[code](https://github.com/parisyee/fazbook) | [app](https://rocky-fjord-23105.herokuapp.com/)
