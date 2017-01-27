@@ -397,7 +397,7 @@ Modify your db/config.json to look like this:
   "development": {
     "username": "YOUR_DB_USERNAME",
     "password": null,
-    "database": "fazbook_development",
+    "database": "fazbook_auth_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
