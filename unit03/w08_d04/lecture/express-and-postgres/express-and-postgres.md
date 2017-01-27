@@ -348,6 +348,7 @@ Modify your server/config.json to look like this:
 
 Replace replace 28-30 in your `bin/www` file with this:
 ```
+var models = require('../server/models/index');
 models.sequelize.sync().then(function () {
   server.listen(port);
   server.on('error', onError);
