@@ -163,6 +163,8 @@ The bulk of Materialize's customizing power lies in its dozens of components, wh
 
 ### Lab1: Materializer Cheat Sheet
 
+**NOTE**: Walk class through setting up codepen to use Materialize
+
 As a class, we're going to compile a cheat sheet for several Materialize elements which will include documentation, codepen's and some tips and tricks.
 
 Each group should create Codepen demo of their three components and write up answers to the following questions for each:
