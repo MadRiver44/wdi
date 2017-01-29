@@ -417,6 +417,11 @@ models.sequelize.sync().then(function () {
 });
 ```
 
+#### Heroku troubleshooting
+
+1. Nodemon doesn't work in some cases. In your `package.json` file, change the start script from `nodemon ./bin/www` to `node ./bin/www`
+2. The SECRET_KEY is .gitignored, so Heroku can't find it. You can set this environment variable in Heroku itself. Under the settings tab, click `Reveal Config Vars` and add the SECRET_KEY.
+
 Then:
 ```
 git add -A
