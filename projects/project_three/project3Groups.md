@@ -97,7 +97,7 @@ A Problem Statement is an incredible tool to help your team flush out the purpos
 Here are some links to help you explore this concept:
 * [Resource One](https://drive.google.com/file/d/0B8ne6pfIPfixclFCcXo2OU5mWTg/view)
 * [Resource Two](https://medium.com/@MattPLavoie/what-s-your-problem-e45b31bf08dd#.8ttirzxem)
-* [Resource Three](https://github.com/ga-students/HAKUNA_MATATA_INSTRUCTORS/blob/master/projects/project_three/UXD_problem_statement_worksheet.key)
+* [Resource Three](https://github.com/ga-students/WDI_HAKUNA_MATATA/blob/master/projects/project_three/UXD_problem_statement_worksheet.key)
 
 Below is a template to help you format your problem statement:
 
