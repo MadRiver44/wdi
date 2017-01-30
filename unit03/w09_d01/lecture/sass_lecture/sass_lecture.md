@@ -67,7 +67,7 @@ gem query --local
 Installing Sass via it's gem file simply type:
 ```javascript
 // install gem
-ruby gem sass
+gem install sass
 ```
 Installing this ruby gem provides up the ability to have sass compile a `.scss` file into `.css`
 
