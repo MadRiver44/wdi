@@ -188,10 +188,10 @@ The `@extend` directive in Sass is a powerful directive that facilitates the sha
 }
 ```
 ### Exercise: Using Variables & Extends - 20min
-Update the below CodePen to include base styles for the alert class and then `@extend` the alert class for both the success and error.  Include variables that assign white, lightgreen and red. 
+Update the below CodePen to include a base style which will be inherited by the alert,success,error messages using `@extend`.  Include variables that assign white, lightgreen and red. 
 [CODEPEN: Sass - Extends - Starter](http://codepen.io/jkeohan/pen/ygpBod)
 
-**BONUS**: Refactor each of the navs in this [CODEPEN](http://codepen.io/jkeohan/pen/QGYBmx) with the appropirate nesting structure. You could also use a color variable and possibly @extends 
+**BONUS**: Refactor each of the navs in this [CODEPEN](http://codepen.io/jkeohan/pen/QGYBmx) with the appropirate nesting structure and at least one mixin...perhaps for clearfix, one color variable and possibly a base tempalate.  
 
 #### Questions
 
@@ -199,8 +199,6 @@ Update the below CodePen to include base styles for the alert class and then `@e
 * How do we use `@extend` to implement inheritance?
 * What does an `@extend` example look like when compiled to vanilla CSS.
 * What are some common use cases?
-
-
 
 ### Mixins
 Mixins are another powerful tool in your Sass toolbox.  It provide the ability to create reusable `functions` in css and accept paramaters so that it can create custom css based on input.  Mixins are defined using the `@mixin`  directive and then followed by the name of the mixin and an optional parameter. 
