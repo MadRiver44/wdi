@@ -187,7 +187,7 @@ The `@extend` directive in Sass is a powerful directive that facilitates the sha
     border-radius:100%;
 }
 ```
-#### Exercise: Using Variables & Extends - 20min
+### Exercise: Using Variables & Extends - 20min
 Update the below CodePen to include base styles for the alert class and then `@extend` the alert class for both the success and error.  Include variables that assign white, lightgreen and red. 
 [CODEPEN: Sass - Extends - Starter](http://codepen.io/jkeohan/pen/ygpBod)
 
