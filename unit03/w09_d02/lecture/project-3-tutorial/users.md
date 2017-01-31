@@ -151,6 +151,8 @@ git commit -m "add passport config, local strategy, auth helpers"
 
 We have to edit the `app.js` in exactly the same manner as we did during the fazbook_auth tutorial. Refer to the `app.js` section of that tutorial to edit the `app.js` for this project. [Link to fazbook_auth tutorial markdown](https://github.com/ga-students/WDI_HAKUNA_MATATA/blob/master/unit03/w08_d05/lecture/express-passport-local-auth/express-passport-local-auth.md)
 
+*NOTE*: There is a minor change you have to make when you import the routes. See if you can work it out.
+
 ```
 git add -A
 git commit -m "add express-session, passport middleware, auth route imports"
