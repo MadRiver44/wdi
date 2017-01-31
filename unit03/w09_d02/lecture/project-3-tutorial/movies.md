@@ -11,8 +11,6 @@ First, make sure you start a new feature branch. Refer to the [main tutorial mar
 
 The database, movies_app_development should have been created and we should have run `sequelize init` already. If you haven't done this refer to the [main markdown](README.md#Install-Sequelize) of the tutorial.
 
-Seeding a database is a process whereby you insert into the database a bunch of data right from the start so you can begin working on and testing the routes as you go. Take a look at the seeder files in this directory to see what's going on there. Try to explain it to the person working on Users/Auth. :D
-
 Commit changes!
 
 ### Create the Movie model
@@ -24,6 +22,8 @@ sequelize model:create --name Movie --attributes "title:string(255) synopsis:tex
 ```
 
 Refer to Paris's tutorial on Express/Postgres for help with the implementation of this CRUD functionality: [Express/Postgres CRUD tutorial](https://github.com/ga-students/WDI_HAKUNA_MATATA/blob/master/unit03/w08_d04/lecture/express-and-postgres/express-and-postgres.md)
+
+Seeding a database is a process whereby you insert into the database a bunch of data right from the start so you can begin working on and testing the routes as you go. Take a look at the seeder files in this directory to see what's going on there. Try to explain it to the person working on Users/Auth. :D
 
 Check out the section on [seeding your database](seeds/README.md) to learn how
 to add some dummy data to your development environment.
