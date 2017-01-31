@@ -20,6 +20,10 @@ for building the CRUD features for one of these three resources.
 Once the core CRUD functionality for these resources (and user authentication)
 is completed, you will work to add the ability for users to favorite movies.
 
+### Project management for this tutorial
+
+You can choose to use either trello or zenhub. You've seen trello before. Zenhub is a chrome extension that integrates directly into GitHub. It allows you to organize issues for the repo and drag and drop issues between different categories. Check it out in the chrome store. You can choose which to use, but we encourage you to give zenhub a try. You can use both if you want to.
+
 # Initialize the project and create the GitHub repo
 
 **NOTE** You must do the setup phase on one person's computer. Even so, all group members
