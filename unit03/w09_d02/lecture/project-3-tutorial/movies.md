@@ -13,8 +13,6 @@ The database, movies_app_development should have been created and we should have
 
 Seeding a database is a process whereby you insert into the database a bunch of data right from the start so you can begin working on and testing the routes as you go. Take a look at the seeder files in this directory to see what's going on there. Try to explain it to the person working on Users/Auth. :D
 
-Move the seed file to the `db/seeds` directory in your prject and run the seed command: `sequelize db:seed`
-
 Commit changes!
 
 ### Create the Movie model
