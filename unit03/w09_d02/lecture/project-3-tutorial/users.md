@@ -19,7 +19,6 @@ Run the following command:
 
 ```bash
 sequelize model:create --name User --attributes "username:string(32) password:text email:string(128) firstName:string lastName:string dob:date"
-sequelize db:migrate
 ```
 
 The sequelize CLI creates the model for us and the migration. But, we have to manually add some properties to the model file and the migration file before we run the migration. In this case, we want to make sure the username is *unique*. We don't want two or more people to register with the same username!
