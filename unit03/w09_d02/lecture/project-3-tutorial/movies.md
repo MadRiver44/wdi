@@ -18,7 +18,8 @@ Commit changes!
 Run the following command:
 
 ```bash
-sequelize model:create --name Movie --attributes "title:string(255) synopsis:text director_id:number"
+sequelize model:create --name Movie --attributes "title:string(255) synopsis:text director_id:bigint"
+sequelize db:migrate
 ```
 
 Refer to Paris's tutorial on Express/Postgres for help with the implementation of this CRUD functionality: [Express/Postgres CRUD tutorial](https://github.com/ga-students/WDI_HAKUNA_MATATA/blob/master/unit03/w08_d04/lecture/express-and-postgres/express-and-postgres.md)
