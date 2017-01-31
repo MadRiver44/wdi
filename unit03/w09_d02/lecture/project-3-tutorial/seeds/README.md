@@ -13,9 +13,9 @@ sequelize seed:create --name name-of-your-seed-file
 
 The name of your seed file will either be `directors` or `movies`, depending on
 which feature your working on. Once your file is created, you can replace the
-contents with the contents from the corresponding files from this director. Then
+contents with the contents from the corresponding files in this directory. Then
 all you have to do is run:
 ```
 sequelize db:seed:all
 ```
-to run the seed files.
+to execute the seed files.
