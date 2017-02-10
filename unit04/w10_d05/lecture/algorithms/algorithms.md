@@ -92,5 +92,5 @@ For example, if the string you're testing is `{{[()]}}{]{}`
 1. split the array you're testing
 2. loop through it
 3. for every opening bracket, push the bracket type to a new array e.g. `newArray.push('{');`
-4. if the current opening bracket is matched correctly, pop it (the current opening bracket) off the array you're using to keep track of the current opening bracket
+4. if the current opening bracket is matched correctly (i.e. closed), pop it (the current opening bracket) off the array you're using to keep track of the current opening bracket
 5. if you encounter a closing bracket that doesn't match the current opening bracket, the string isn't balanced
