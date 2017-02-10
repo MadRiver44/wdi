@@ -187,6 +187,8 @@ end
 
 ##### Quick Review JS 
 
+* How do you convert a string to an integer? 
+* How do you convert an integer to a string? 
 
 ```bash
 # In the terminal from in the same directory as app.rb
@@ -249,8 +251,9 @@ Ruby uses same arithmetic operators as Javascript
 > Notice the use of `**` to perform exponential operations in Ruby. We don't have this shortcut [in Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow).  
 
 ##### Quick JS Review
-How do you convert a float(12.5) to an double(12)?
-How do you convert a double(12) to add preceding decimals(12.00)? 
+
+* How do you convert a float(12.5) to an double(12)?
+* How do you convert a double(12) to add preceding decimals(12.00)? 
 
 #### Strings
 
@@ -344,7 +347,8 @@ Logical operators are also similar.
 * The only **falsey values in Ruby are `nil` and `false`**.
 
 ##### Quick JS Review
-What are all the 'truthy' and 'falsy' values in javascript?
+
+* What are all the 'truthy' and 'falsy' values in javascript?
 
 
 #### Nil
@@ -442,7 +446,9 @@ b.object_id
 # => 70096095324100
 ```
 ##### Quick Review JS 
-What will `arr1` return and...why?
+
+* What will `arr1` return and...why?
+* 
 ```javascript
 var arr1 = [1,2,3]
 var arr2 = arr1
@@ -601,7 +607,8 @@ numbers * 3
 # => [1, 2, 3, 1, 2, 3, 1, 2, 3]
 ```
 ##### Quick JS Review
-How would you join two arrays? 
+
+* How would you join two arrays? 
 
 #### Array Methods
 
@@ -662,8 +669,9 @@ numbers
 ```
 
 ##### Quick JS Review
-How would you add items to the begining or end of an array in JS?
-How would you remove items from the begining or end of an array in JS?
+
+* How would you add items to the begining or end of an array in JS?
+* How would you remove items from the begining or end of an array in JS?
 
 **There are a ton of array methods available to us in Ruby.** Explore them using the [Ruby documentation](http://ruby-doc.org/core-1.9.3/Array.html).
 
@@ -816,7 +824,8 @@ Use ranges to quickly generate arrays of data types.
 # => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 ```
 ##### Quick Review JS 
-How would you create a range in JS? 
+
+* How would you create a range in JS? 
 
 ## Data Collections Exercises 
 
