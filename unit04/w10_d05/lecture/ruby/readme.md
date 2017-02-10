@@ -400,7 +400,7 @@ String (90.2)
 
 ## Data Types Exercises 
 
-Complete the first set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
+Complete `lab1_working_with_datatypes.md`.
 
 ### Variables and Mutability
 
@@ -553,7 +553,7 @@ end
 Reference: [Ruby Loops](https://www.tutorialspoint.com/ruby/ruby_loops.htm)
 ## Ruby Conditionals Exercise (25 minutes) + 5 min break
 
-Test out what you just learned with this [Ruby variables exercise](https://github.com/ga-wdi-exercises/ruby_vars_exercise)
+Complete `lab2_working_conditionals.md`.
 
 ## Data Collections 
 
@@ -821,9 +821,7 @@ How would you create a range in JS?
 
 ## Data Collections Exercises 
 
-Complete the second set of exercises in [this repo](https://github.com/ga-wdi-exercises/ruby-basics-exercises).
-
-If you finish this section early, feel free to try out one of the [Additional Exercises](https://github.com/ga-wdi-lessons/ruby-intro#additional-practice) located at the bottom of the lesson plan.
+Complete `lab1_working_with_arrays.md`.
 
 ### Exercise Review 
 
@@ -904,9 +902,3 @@ double
 * Screencasts
   - [WDI8, Ruby Preview](https://youtu.be/Be4YGLovGM4)
 
-## Additional Practice
-* [Word Ladder](https://github.com/ga-wdi-exercises/word_ladder)
-* [Who Won The Election?](https://github.com/ga-wdi-exercises/who_won_the_election)
-* [Search For Obi-Wan](https://github.com/ga-wdi-exercises/search_for_obi_wan)
-* [Pig-Latin](https://github.com/ga-wdi-exercises/pig_latin)
-* [Letter Counter](https://github.com/ga-wdi-exercises/letter_counter)
