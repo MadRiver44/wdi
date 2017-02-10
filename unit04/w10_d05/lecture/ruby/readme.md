@@ -186,8 +186,9 @@ end
 ```
 
 ##### Quick Review JS 
-How do you convert a string to an integer? 
-How do you convert an integer to a string? 
+
+* How do you convert a string to an integer? 
+* How do you convert an integer to a string? 
 
 ```bash
 # In the terminal from in the same directory as app.rb
