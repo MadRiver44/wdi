@@ -9,19 +9,19 @@ planeteers = ["Earth", "Wind", "Captain Planet", "Fire", "Water"]
 Access the second value in `planeteers`.
 
 ```rb
-# Your answer here
+# Your answer here planeteers[1]
 ```
 
 Add "Heart" to the end of `planeteers`.
 
 ```rb
-# Your answer here
+# Your answer here planeteers.push("Heart")
 ```
 
 Remove "Captain Planet" from the array.
 
 ```rb
-# Your answer here
+# Your answer here planeteers - ["Captain Planet"]
 ```
 
 Combine `planeteers` with `rangers = ["Red", "Blue", "Pink", "Yellow", "Black"]` and save the result in a variable called `heroes`.

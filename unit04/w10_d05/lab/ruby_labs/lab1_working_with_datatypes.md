@@ -9,28 +9,28 @@
 2 ** 3
 ```
 ```text
-Your answer.
+Your answer. 8
 ```
 
 ```rb
 ((16 / 4) * (2 + 1)) ** 2
 ```
 ```text
-Your answer.
+Your answer. 144
 ```
 
 ```rb
 ("a milli " + "a milli") * 3
 ```
 ```text
-Your answer.
+Your answer. a milli a millia milli a millia milli a milli
 ```
 
 ```rb
 ("a milli " * 4) / 2
 ```
 ```text
-Your answer.
+Your answer. error
 ```
 
 ```rb
@@ -38,7 +38,7 @@ my_favorite_number = 13
 puts "My favorite number is: " + my_favorite_number
 ```
 ```text
-Your answer.
+Your answer. My favorite number is: 13
 ```
 
 ```rb
@@ -46,7 +46,7 @@ my_favorite_number = 13
 puts "My favorite number is: #{my_favorite_number}"
 ```
 ```text
-Your answer.
+Your answer. My favorite number is: 13
 ```
 
 ```rb
@@ -54,7 +54,7 @@ whatAmI = 10.class
 puts "whatAmI is a #{whatAmI}"
 ```
 ```text
-Your answer.
+Your answer. whatAmI is a Fixnum
 ```
 
 ```rb
@@ -62,7 +62,7 @@ whatAmI = 'text'.class
 puts "whatAmI is a #{whatAmI}"
 ```
 ```text
-Your answer.
+Your answer. whatAmI is a String
 ```
 
 ### Truthiness and Falsiness
@@ -70,18 +70,18 @@ Your answer.
 #### Which of these evaluate as `false` in Ruby? Mark all that apply.
 
 ```text
-[ ] false
+[X] false
 [ ] 0
 [ ] ""
 [ ] null
 [ ] [ ] (empty array)
 [ ] undefined
 [ ] NaN
-[ ] nil
+[X] nil
 ```
 #### Write 3 if\else statements that determine the truthyness\falseyness of true, nil and 0
 ```rb
-Your code goes here
+Your code goes here if 
 ```
 
 #### What are the outputs and/or side effects of the following code snippets?
@@ -96,7 +96,7 @@ if name
 end
 ```
 ```text
-Your answer.
+Your answer. My name is: name
 ```
 
 ```rb
@@ -106,7 +106,7 @@ if no_name
 end
 ```
 ```text
-Your answer.
+Your answer. My name is: 
 ```
 
 ```rb
@@ -116,5 +116,5 @@ if no_name
 end
 ```
 ```text
-Your answer.
+Your answer. 
 ```
