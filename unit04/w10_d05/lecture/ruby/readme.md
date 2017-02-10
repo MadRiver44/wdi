@@ -825,6 +825,12 @@ Complete `lab1_working_with_arrays.md`.
 
 ### Exercise Review 
 
+## Questions
+
+* What are Ruby's 5 main data types?
+* Describe the difference between what is truthy/falsey in Ruby vs JavaScript?
+* How would you add a key / value pair to an existing hash?
+
 ## Methods - If Time Permits...
 
 * As stated before, everything in Ruby is an object so there is no distinction in this language between functions and methods. Under the hood, even seemingly stand-alone functions are in fact associated with an object. The convention, however, is to call these methods.
@@ -885,13 +891,7 @@ double
 
 ## Exercise: Temperature Converter 
 
-[Temperature Converter (Ruby)](https://github.com/ga-dc/temperature_converter_ruby)
-
-## Questions
-
-* What are Ruby's 5 main data types?
-* Describe the difference between what is truthy/falsey in Ruby vs JavaScript?
-* How would you add a key / value pair to an existing hash?
+Complete `lab4_temp_converter.md`.
 
 ## Resources
 * [Learn X in Y minutes: Ruby](https://learnxinyminutes.com/docs/ruby/)
@@ -901,4 +901,5 @@ double
 * [Ruby Koans](http://rubykoans.com/)
 * Screencasts
   - [WDI8, Ruby Preview](https://youtu.be/Be4YGLovGM4)
+
 
