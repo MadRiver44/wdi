@@ -10,14 +10,14 @@
   - Fundamental Data Types
   - Data Collections
   - Conditionals
-  - Methods (Functions)
   - Data Immutability
 * Examine Ruby symbols and data immutability.
-* List three useful methods for arrays and hashes.
+* Examine useful methods for arrays and hashes.
+* Methods (Functions) - if time permits...
 
 ## What is Ruby? 
 
-Ruby is an object oriented **server-side** programming language. 
+[Ruby](https://www.ruby-lang.org/en/about/) is an object oriented **server-side** programming language. 
 
 <!-- ![Client-Server Model](http://i.imgur.com/AfiaMQP.png)  --> 
 
