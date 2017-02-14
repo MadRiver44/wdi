@@ -308,13 +308,13 @@ were added when we added the `resources :people` line to our routes file.
    body parser can provide them in a neat ruby hash in your controller. If you
    want an input to map to the username attribute on the person model, the name
    of the input should look like this:
-   ```html
-   <input type="text" name="person[username]" />
-   ```
+ ```html
+ <input type="text" name="person[username]" />
+ ```
 4. You also have to add this hidden input to your form:
-   ```html
-   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-   ```
+```html
+ <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+ ```
 5. What happens when you submit the form?
 
 We need some way to persist the form data for new people. 
