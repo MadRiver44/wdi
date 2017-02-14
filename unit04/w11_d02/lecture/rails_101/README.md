@@ -311,7 +311,11 @@ were added when we added the `resources :people` line to our routes file.
    ```html
    <input type="text" name="person[username]" />
    ```
-4. What happens when you submit the form?
+4. You also have to add this hidden input to your form:
+   ```html
+   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+   ```
+5. What happens when you submit the form?
 
 We need some way to persist the form data for new people. 
 
