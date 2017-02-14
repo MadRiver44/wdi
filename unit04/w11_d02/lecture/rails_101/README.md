@@ -315,10 +315,9 @@ were added when we added the `resources :people` line to our routes file.
 ```html
  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
  ```
-5. What happens when you submit the form?
+What happens when you submit the form? We need some way to persist the form data for new people. 
 
-We need some way to persist the form data for new people. 
-
+### Rails generator
 ```
 rails generate model people
 ```
