@@ -33,3 +33,5 @@ You may chose from but are not limited to following...
 - [Meteor](https://www.meteor.com/)
 - [Ember.js](http://emberjs.com/)
 - [Elm](http://elm-lang.org/)
+- [Redux](http://redux.js.org/)
+- [MobX](https://mobx.js.org/)
