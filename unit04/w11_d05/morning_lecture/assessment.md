@@ -19,7 +19,7 @@ and Rails. What are some of the pros and cons of each?
 #### NodeJS: Node is built on the same Google V8 JavaScript engine as Chrome, so it is great for developers to implement asynchronous, modular back-end deployments.  One drawback, however, is that Express does little for you "out-of-the-box", relying on a vast number of middleware programs to extend its functionality.
 HERE
 
-#### Rails: Rails is available as a gem that installs simply on top of the ruby that is already native to most developers' macbooks.  It has great turnkey functionality, as it uses ActiveRecord to help routing to a database.  Of the few drawbacks, Ruby not native to frontside browsers, apps must still bundle a JavaScript package to help them integrate with the client view.
+#### Rails: Rails is available as a gem that installs simply on top of the ruby that is already native to most developers' macbooks.  It has great turnkey functionality, as it uses ActiveRecord to help routing to a database.  Of the few drawbacks, Ruby not native to frontside browsers, apps must still bundle a JavaScript package to help them integrate with the client view. Also, because Rails comes default with DB implementation, it doesn't scale down well for simple apps.
 AND HERE
 
 
