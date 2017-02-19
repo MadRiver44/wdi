@@ -280,3 +280,5 @@ $(function() {
   });
 
 });
+
+// Make a new feature: implement a list of online users to display on DOM
