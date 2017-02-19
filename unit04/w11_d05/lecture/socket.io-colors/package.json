@@ -1,0 +1,16 @@
+{
+  "name": "socket.io-colors",
+  "version": "1.0.0",
+  "description": "socket.io change bg color example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "socket.io": "^1.7.2"
+  }
+}
