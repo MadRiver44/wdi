@@ -159,7 +159,6 @@ Output:
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
-console.log(buildPyramid(4))
 function buildPyramid (rows) {
   const symbol = '^';
   let symbolCount = 1;
