@@ -35,7 +35,7 @@ The most important goal of whiteboarding is the need to verbally walk the facili
 1.  Reverse A String
 2.  isPalindrome
 3.  Factorial
-4.  Sum Of Integers
+4.  Sum Array Of Integers
 5.  Flatten An Array 
 
 ### Print An Array
@@ -55,7 +55,10 @@ Output:
     ed 
     harry
 ```
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
+
 ```javascript
 function printArr(input){
     var string = "";
@@ -65,6 +68,7 @@ function printArr(input){
     return string;
 }
 ```
+</details>
 
 ### Reverse A String
 Source: [leetcode](https://leetcode.com/problems/reverse-string/)
@@ -75,7 +79,9 @@ Output: 'dcba’
 
 **Hint:** Start by creating an array. Then add the right elements to it (ie. the characters in reverse order). Then join it and return
 
-**Solution 1**
+#### Solution 1
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 var reverseString = function(sjjgj {
     var s2 = '';
@@ -85,7 +91,11 @@ var reverseString = function(sjjgj {
     return s2;
 }
 ```
-**Solution 2**
+</details>
+
+#### Solution 2
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function reverseString(s) {
   const arr = [];
@@ -95,14 +105,16 @@ function reverseString(s) {
   return arr.join('');
 }
 ```
-
+</details>
 ### IsPalindrome
 Write a function that will returns true if a given input (string or number) is a palindrome and false if it's not. 
 
 Input: 'race car'
 Output: true
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function isPalindrome(str) {
   const s = str.toLowerCase().split(' ').join('');
@@ -114,13 +126,14 @@ function isPalindrome(str) {
   return true;
 }
 ```
-
+</details>
 ### Find The Largest Number
 Write a function that will return the largest value from an array. 
 
 Input: [1,2,5,10]
 Output: 10
-
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function largestNumber(num){
     var largest = num[0]
@@ -130,7 +143,7 @@ function largestNumber(num){
     return largest
 }
 ```
-
+</details>
 ### Print A Pyramid
 Given a number, create a pyramid that is that number of rows. 
 
@@ -142,28 +155,36 @@ Output:
           ^^^^^ 
          ^^^^^^^ 
 ```
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
-function pyramid (rows) {
-  const carrot = '^';
-  let carrotcount = 1;
-  let spacecount = rows - 1;
+console.log(buildPyramid(4))
+function buildPyramid (rows) {
+  const symbol = '^';
+  let symbolCount = 1;
+  let spaceCount = rows - 1;
+  let pyramid = '';
   for (let i = 0; i < rows; i += 1) {
     let str = '';
-    for (let j = 0; j < spacecount; j += 1) {
+    for (let j = 0; j < spaceCount; j += 1) {
       str += ' ';
     }
-    spacecount -= 1;
-    for (let k = 0; k < carrotcount; k += 1) {
-      str += carrot;
+    for (let k = 0; k < symbolCount; k += 1) {
+      str += symbol;
     }
-    carrotcount += 2;
-    console.log(str + ' ');
+    spaceCount -= 1;
+    symbolCount += 2;
+    pyramid += `${str}  \n`;
   }
+  return pyramid
 }
-```
 
-Print A Chessboard
+
+```
+</details>
+### Print A Chessboard
+Source: [Eloquent Javascript](http://eloquentjavascript.net/code/#2.3)
 Write a function that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
 
 Input: console.log(chessBoard())
@@ -178,7 +199,8 @@ Output:
  # # # #
 # # # # 
 ```
-
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function chessBoard(){
   const size = 8;
@@ -196,7 +218,7 @@ function chessBoard(){
   return board
 }
 ```
-
+</details>
 ### Odds And Evens
 Source: [HackerRank](https://www.hackerrank.com/challenges/30-review-loop)
 Write a function that Given a string, prints its even-indexed and odd-indexed characters as space-separated strings on a single line. 
@@ -204,7 +226,9 @@ Write a function that Given a string, prints its even-indexed and odd-indexed ch
 Input: Hacker
 Output: Hce akr
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function oddsEvens(input) {
   let left = '';
@@ -219,7 +243,7 @@ function oddsEvens(input) {
   return `${left} ${right}`;
 } 
 ```
-
+</details>
 ### Phone Book
 Source: [HackerRank](https://www.hackerrank.com/challenges/30-dictionaries-and-maps)
 Write a function that given an array of hashes of n number of names and phone numbers, assemble a phone book that maps friends' names to their respective phone numbers. You will then be given an unknown number of names to query your phone book and for each  queried, print the associated entry from your phone book on a new line in the form name=phoneNumber; if an entry for  is not found, print Not found instead.
@@ -232,7 +256,9 @@ sam=99912222
 NOT FOUND
 harry:12299933
 ```
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function phoneBook(input,mapped) {
   const contacts = [];
@@ -255,6 +281,7 @@ function phoneBook(input,mapped) {
   return contacts.join('\n')
 } 
 ```
+</details>
 ### Binary Count
 Source: [HackerRank](https://www.hackerrank.com/challenges/30-binary-numbers)
 Write a function that given a base integer, converts it to binary and then find and print the base integer denoting the maximum number of consecutive '1's in binary. 
@@ -263,7 +290,9 @@ Example:
 Input: 60 which is 111100 in binary
 Output: 4
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function binaryCount(num){
   const b = Number(num).toString(2);
@@ -281,7 +310,7 @@ function binaryCount(num){
   return longest;
 }
 ```
-
+</details>
 ### Two Sum
 Source: [Leetcode](https://leetcode.com/problems/two-sum/)
 Write a function that given an array of integers and a target number, returns two array integers that add up to the target.
@@ -296,7 +325,9 @@ Output: Return [2, 7]
 3. Is there a fast way to check for complements? Is there a data structure you could use?
 4. (The complete answer) Loop thru all elements and store them in a hash. Then loop through again (in the code, I do both loops in one step), for each element, check if it's complement is in the hash.
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function twoSum(arr, target) {
   const hash = {};
@@ -311,7 +342,7 @@ function twoSum(arr, target) {
   return null;
 }
 ```
-
+</details>
 ### Longest Substring With No Duplicates
 Source: [Leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 Write a function that given a string, finds the length of the longest substring without repeating characters.
@@ -326,7 +357,9 @@ Output: 4 ('cbad')
 1. Try using a "sliding window" (use two pointers for the head/tail of your substring. then increment each)
 2. How can you decide when to increment the head and the tail? (Answer: always increment tail by one. Move head whenever you encounter a dup)
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function lengthOfLongestSubstring(s) {
   let head = 0;
@@ -344,14 +377,16 @@ function lengthOfLongestSubstring(s) {
   return longest;
 }
 ```
-
+</details>
 ### Repeatify (using prototypes)
 **Part 1:** Write a function called repeatify that takes a string and a number.  The number specifies how many times the string should be repeated.
 
 repeatify("hello", 3);
 returns: "hellohellohello"
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function repeatify(str, n) {
   let result = '';
@@ -361,13 +396,15 @@ function repeatify(str, n) {
   return result;
 }
 ```
-
+</details>
 **Part 2:** Let’s update the function so it’s a string method.  Change your code from part 1 so we can call repeatify on a string and just pass it a number.
 
 "hello".repeatify(3);
 Returns: "hellohellohello"
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 String.prototype.repeatify = function(n) {
   let result = '';
@@ -377,13 +414,16 @@ String.prototype.repeatify = function(n) {
   return result;
 };
 ```
-
+</details>
 ### Stock Market Profit
 Source: [InterviewCake](https://www.interviewcake.com/question/javascript/stock-price)
 Stock market profit: given an array of values representing a stock's price over time, come up the days you should have bought/sold for the highest yield - bonus points if you can solve it in O(n)
 
 Write an efficient function that takes stock_prices_yesterday and returns the best profit I could have made from 1 purchase and 1 sale of 1 Apple stock yesterday.
 
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
   stock_prices_yesterday = [10, 7, 5, 8, 11, 9]
 
@@ -403,14 +443,15 @@ function getMaxProfit(stockPricesYesterday) {
     return maxProfit;
 }
 ```
-
+</details>
 ### DNA Strings
 Source: [CodeWars](https://www.codewars.com/kata/554e4a2f232cdd87d9000038)
-
 In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". You have a function with one side of the DNA and you need to return the other complementary side. DNA strand is never empty or there is no DNA at all.
 
 
-**Solution 1**
+#### Solution 1
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 var dna = "ATTGC";
 function dnaTransform(dna){
@@ -418,8 +459,10 @@ function dnaTransform(dna){
   return dna.split('').map((d) =>  dnaObj[d] );
 }
 ```
-
-**Solution 2**
+</details>
+#### Solution 2
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 const dna = "ATTGC";
 function dnaTransform(dna){
@@ -437,7 +480,7 @@ function dnaTransform(dna){
   return str;
 }
 ```
-
+</details>
 ### Randomize An Array
 Source: [Fisher-Yates Shuffle](https://bost.ocks.org/mike/shuffle/)
 Write a function that given an array, randomizes the position of the elements. 
@@ -445,7 +488,9 @@ Write a function that given an array, randomizes the position of the elements.
 Input: ['a','b','c','d']
 Possible Output: ['b','d','a','c']
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function shuffle(array) {
   const random = array.splice(0);
@@ -461,11 +506,14 @@ function shuffle(array) {
   return random;
 }
 ```
+</details>
 ### Find The Products
 Source: [InterviewCake](https://www.interviewcake.com/question/javascript/product-of-other-numbers)
 Write a function that takes in an array of n numbersYou have an array of integers, and for each index you want to find the product of every integer except the integer at that index.
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function getProductsinput) {
   const products = [];
@@ -487,21 +535,24 @@ function getProductsinput) {
   }
   return products;
 }
-
 ```
-
+</details>
 ##Recursion Specific
 
 ### Reverse A String 
 Source: [Ten Ways To Reverse A String](http://eddmann.com/posts/ten-ways-to-reverse-a-string-in-javascript/)
-**Solution 1**
+#### Solution 1
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function reverse(s) {
   return (s === '') ? '' : reverse(s.substr(1)) + s.charAt(0);
 }
 ```
-
-**Solution 2**
+</details>
+#### Solution 2
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function reverse(s) {
   function rev(s, len, o) {
@@ -510,26 +561,32 @@ function reverse(s) {
   return rev(s, s.length, '');
 }
 ```
-
+</details>
 ### isPalindrome
 Source: [CodeChewing](http://www.codechewing.com/library/recursive-javascript-function/)
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
+  ```javascript
 function isPalindrome(string) {
   if (string.length <= 1) { return true; }
   if (string.charAt(0) !== string.charAt(string.length - 1)) { return false; }
   return isPalindrome(string.substr(1, string.length - 2));
 }
+```
+</details>
 
 
 ### Factorial
 Source: [HackerRank](https://www.hackerrank.com/challenges/30-recursion/submissions/code/37642498)
-
 Given a number, print it's factoral.
 
 Example:
 Input: 5 
 Output: 120 (5*4*3*2*1)
 
-**Solution**
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function factoralize(input) {
   function factorial(num) {
@@ -538,14 +595,18 @@ function factoralize(input) {
   return factorial(parseInt(input, 10));
 }
 ```
+</details>
+
 ### Sum Array Of Integers
 Source: [W3Resource](http://www.w3resource.com/javascript-exercises/javascript-recursion-functions-exercises.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+w3resource+%28w3resource%29)
-
 Write a function to compute the sum of an array of integers.
 
 Input: [1,2,3]
 Output: 6
 
+#### Solution
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function arrSum(arr) {
   if (arr.length === 1) {
@@ -556,15 +617,19 @@ function arrSum(arr) {
   }
 };
 ``` 
+</details>
 
 ### Flatten An Array
+Source: [CodeTuts](https://codetuts.tech/flatten-deep-nested-array-object/)
 Write a function that takes an array and flattens it.  You can assume the array only contains arrays and primitives (Numbers, Strings, Booleans, etc.).
 
 Example:
 Input: [1,[2,3],[[4], 5]]
 Output: [1, 2, 3, 4, 5]
 
-**Solution 1**
+#### Solution 1
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function fh(arr, result) {
     arr.forEach(function(elm) {
@@ -581,9 +646,10 @@ function flatten(arr) {
     return fh(arr, []);
 }
 ```
-
-**Solution 2**
-Source: [CodeTuts](https://codetuts.tech/flatten-deep-nested-array-object/)
+</details>
+#### Solution 2
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function flatten(arr) {  
   return arr.reduce((a, b) => {
@@ -591,5 +657,5 @@ function flatten(arr) {
   }, []);
 }
 ```
-
+</details>
 
