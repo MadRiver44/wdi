@@ -39,17 +39,18 @@ The most important goal of whiteboarding is the need to verbally walk the facili
 5.  Flatten An Array 
 
 ### Print An Array
-Write a function that will print the items of an array.
+Write a function called `printArr` that will print the items of an array.
 
-Possible questions to ask the interviewer: 
+Here are some possible questions to ask the interviewer: 
 
-* What type of values will the array contain, primitives, hashes, arrays? 
+* What type of values will the array contain: primitives, hashes, arrays? 
 * If it does contain nested arrays, should I loop through and print those values as well? 
 * Should the function return the items to be printed or should it just console.log the items as the are encountered?
 * Is it possible that the array might be empty and should I account for this? 
+* Should the function console.log() the items as they are encountered or should it return a string with newline characters? 
 
-Input: ['sam','ed','harry']
-Output: 
+**Input:** ['sam','ed','harry']
+**Output:** 
 ```javascript
     sam
     ed 
@@ -63,7 +64,7 @@ Output:
 function printArr(input){
     var string = "";
     for(var i = 0; i < input.length; i++){
-        string += input[i] + "\n"
+        string += `${input[i]} \n`
     }
     return string;
 }
@@ -72,18 +73,18 @@ function printArr(input){
 
 ### Reverse A String
 Source: [leetcode](https://leetcode.com/problems/reverse-string/)
-Write a function that will take a string and return the reversed string.
+Write a function called `reverseString` that will take a string and return the reversed string.
 
-Input: 'abcd'
-Output: 'dcba’
+**Input:** 'abcd'
+**Output:** 'dcba’
 
-**Hint:** Start by creating an array. Then add the right elements to it (ie. the characters in reverse order). Then join it and return
+**Hint:** Start by creating an empty string. Then using a for loop in reverse order concat the string. 
 
 #### Solution 1
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
-var reverseString = function(sjjgj {
+var reverseString = function(s) {
     var s2 = '';
     for(var i = (s.length-1); i >= 0; i--) {
         s2 += s[i];
@@ -94,6 +95,8 @@ var reverseString = function(sjjgj {
 </details>
 
 #### Solution 2
+
+**Hint:** Start by creating an array. Then add the right elements to it (ie. the characters in reverse order). Then join it and return it. 
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
@@ -107,10 +110,13 @@ function reverseString(s) {
 ```
 </details>
 ### IsPalindrome
-Write a function that will returns true if a given input (string or number) is a palindrome and false if it's not. 
+Write a function called `isPalindrome` that will return `true` if a given input (string or number) is a palindrome and `false` if it's not. 
 
-Input: 'race car'
-Output: true
+**Input:** 'race car'
+**Output:** true
+
+**Input:** 12321
+**Output:** true
 
 #### Solution
 <details>
@@ -128,27 +134,27 @@ function isPalindrome(str) {
 ```
 </details>
 ### Find The Largest Number
-Write a function that will return the largest value from an array. 
+Write a function called `largestNumber` that will return the largest value from an array. 
 
-Input: [1,2,5,10]
-Output: 10
+**Input:** [1,2,5,10]
+**Output:** 10
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function largestNumber(num){
     var largest = num[0]
     num.forEach((d) => {
-        largest = Math.max(largest,d)
+        if(d > largest) { largest = d }
     })
     return largest
 }
 ```
 </details>
 ### Print A Pyramid
-Given a number, create a pyramid that is that number of rows. 
+Write a function called `buildPyramid` that given a number, creates a pyramid that is that number of rows. 
 
-Input: pyramid(4)
-Output:
+**Input:** pyramid(4)
+**Output:**
 ```javascript
             ^ 
            ^^^ 
@@ -184,10 +190,10 @@ function buildPyramid (rows) {
 </details>
 ### Print A Chessboard
 Source: [Eloquent Javascript](http://eloquentjavascript.net/code/#2.3)
-Write a function that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
+Write a function called `chessBoard` that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
 
-Input: console.log(chessBoard())
-Output: 
+**Input:** console.log(chessBoard())
+**Output:** 
 ```javascript
  # # # #
 # # # # 
@@ -220,10 +226,10 @@ function chessBoard(){
 </details>
 ### Odds And Evens
 Source: [HackerRank](https://www.hackerrank.com/challenges/30-review-loop)
-Write a function that Given a string, prints its even-indexed and odd-indexed characters as space-separated strings on a single line. 
+Write a function called `oddsEvens` that given a string, prints its even-indexed and odd-indexed characters as space-separated strings on a single line. 
 
-Input: Hacker
-Output: Hce akr
+**Input:** Hacker
+**Output:** Hce akr
 
 #### Solution
 <details>
@@ -245,11 +251,11 @@ function oddsEvens(input) {
 </details>
 ### Phone Book
 Source: [HackerRank](https://www.hackerrank.com/challenges/30-dictionaries-and-maps)
-Write a function that given an array of hashes of n number of names and phone numbers, assemble a phone book that maps friends' names to their respective phone numbers. You will then be given an unknown number of names to query your phone book and for each  queried, print the associated entry from your phone book on a new line in the form name=phoneNumber; if an entry for  is not found, print Not found instead.
+Write a function called `phoneBook` that given two parameters, the first being an array of hashes containing n number of names and phone numbers and the second being an array of friends names will then will assemble a phone book that maps the 'friends' array of names to their respective phone numbers if they are found in the first array.  Each found entry will print the associated entry from your phone book on a new line in the form **name=phoneNumber**; if an entry is not found, print **Not found** instead.
 
-Input1: [{sam:99912222},{tom:11122222},{harry:12299933}]
-Input2: ['sam','ed','harry']
-Output: 
+**Input 1:** [{sam:99912222},{tom:11122222},{harry:12299933}]
+**Input 2:** ['sam','ed','harry']
+**Output:** 
 ```javascript
 sam=99912222
 NOT FOUND
@@ -283,11 +289,11 @@ function phoneBook(input,mapped) {
 </details>
 ### Binary Count
 Source: [HackerRank](https://www.hackerrank.com/challenges/30-binary-numbers)
-Write a function that given a base integer, converts it to binary and then find and print the base integer denoting the maximum number of consecutive '1's in binary. 
+Write a function called `binaryCount` that given a base integer, converts it to binary and then finds and prints maximum number of consecutive '1's in binary. 
 
 Example:
-Input: 60 which is 111100 in binary
-Output: 4
+**Input:** 60 which is 111100 in binary
+**Output:** 4
 
 #### Solution
 <details>
@@ -300,7 +306,8 @@ function binaryCount(num){
   for (let i = 0; i < b.length; i += 1) {
     if (Number(b.charAt(i))) {
       count += 1;
-      longest = Math.max(longest, count);
+      if(count > longest) { longest = count; }
+      //longest = Math.max(longest, count);
     } else {
       count = 0;
     }
@@ -312,17 +319,15 @@ function binaryCount(num){
 </details>
 ### Two Sum
 Source: [Leetcode](https://leetcode.com/problems/two-sum/)
-Write a function that given an array of integers and a target number, returns two array integers that add up to the target.
+Write a function called `twoSum` that given an array of integers and a target number, returns two array integers that add up to the target.
 
-Input: "array" is [3, 2, 5, 7, 11, 15], "target" is 9
-Output: Return [2, 7] 
+**Input:** [3, 2, 5, 7, 11, 15], 9
+**Output:** Return [2, 7] 
 //Note that 2 + 7 equals the target 9
 
 **Hints**
-1. First start with the brute force. How long does that take? [The answer is O(n^2)]
-2. Think about a complement: if your target is 9 and you're looking at 2, what is its complement?
-3. Is there a fast way to check for complements? Is there a data structure you could use?
-4. (The complete answer) Loop thru all elements and store them in a hash. Then loop through again (in the code, I do both loops in one step), for each element, check if it's complement is in the hash.
+* Try to think of a data structure that works best for returning the first matched value it finds. 
+* Think about how using a compliment could be used in this scenario: if your target is 9 and you're looking at 2, what is its complement?
 
 #### Solution
 <details>
@@ -344,17 +349,18 @@ function twoSum(arr, target) {
 </details>
 ### Longest Substring With No Duplicates
 Source: [Leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-Write a function that given a string, finds the length of the longest substring without repeating characters.
+Write a function called `lengthOfLongestSubstring` that given a string, finds the length of the longest substring without repeating characters.
 
-Input: 'abca'. 
-Output: 3 ('abc' or 'bca')
+**Input:** 'abca'. 
+**Output:** 3 ('abc' or 'bca')
 
-Input: 'abcbadb'.
-Output: 4 ('cbad')
+**Input:** 'abcbadb'.
+**Output:** 4 ('cbad')
 
 **Hints**
-1. Try using a "sliding window" (use two pointers for the head/tail of your substring. then increment each)
-2. How can you decide when to increment the head and the tail? (Answer: always increment tail by one. Move head whenever you encounter a dup)
+
+* Try using a "sliding window".  This uses two pointers, one for the head and the other for the tail. They are then incremented\decremented until they reach a mid way point in the string. 
+* How can you decide when to increment the head and the tail? (Answer: always increment tail by one and move the head whenever you encounter a dup.
 
 #### Solution
 <details>
@@ -378,10 +384,10 @@ function lengthOfLongestSubstring(s) {
 ```
 </details>
 ### Repeatify (using prototypes)
-**Part 1:** Write a function called repeatify that takes a string and a number.  The number specifies how many times the string should be repeated.
+**Part 1:** Write a function called `repeatify` that takes a string and a number.  The number specifies how many times the string should be repeated.
 
-repeatify("hello", 3);
-returns: "hellohellohello"
+**Input:** repeatify("hello", 3);
+**Output:** "hellohellohello"
 
 #### Solution
 <details>
@@ -398,8 +404,8 @@ function repeatify(str, n) {
 </details>
 **Part 2:** Let’s update the function so it’s a string method.  Change your code from part 1 so we can call repeatify on a string and just pass it a number.
 
-"hello".repeatify(3);
-Returns: "hellohellohello"
+**Input:** "hello".repeatify(3);
+**Output:** "hellohellohello"
 
 #### Solution
 <details>
@@ -416,15 +422,16 @@ String.prototype.repeatify = function(n) {
 </details>
 ### Stock Market Profit
 Source: [InterviewCake](https://www.interviewcake.com/question/javascript/stock-price)
-Stock market profit: given an array of values representing a stock's price over time, come up the days you should have bought/sold for the highest yield - bonus points if you can solve it in O(n)
+Write an function called `getMaxProfit` that takes in an array of stock prices and returns the best profit you could have made from 1 purchase and 1 sale.  The prices in the array are in the sequence in which they were purchased and can only be sold after it was first purchased.
 
-Write an efficient function that takes stock_prices_yesterday and returns the best profit I could have made from 1 purchase and 1 sale of 1 Apple stock yesterday.
+**Input:** getMaxProfit([10, 7, 5, 8, 11, 9])
+**Output:** 6 ..this is the result of 11 - 5
 
 #### Solution
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
-  stock_prices_yesterday = [10, 7, 5, 8, 11, 9]
+stock_prices_yesterday = [10, 7, 5, 8, 11, 9]
 
 function getMaxProfit(stockPricesYesterday) {
     if (stockPricesYesterday.length < 2) {
@@ -445,8 +452,10 @@ function getMaxProfit(stockPricesYesterday) {
 </details>
 ### DNA Strings
 Source: [CodeWars](https://www.codewars.com/kata/554e4a2f232cdd87d9000038)
-In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". You have a function with one side of the DNA and you need to return the other complementary side. DNA strand is never empty or there is no DNA at all.
+In DNA strings, symbols "A" and "T" are complements of each other, as are "C" and "G". Write a function called `dnaTransform` that takes in a DNA string returns a string that represents it's compliment. 
 
+**Input:** dnaTransform("ATTGC")
+**Output:** "TAACG"
 
 #### Solution 1
 <details>
@@ -482,10 +491,10 @@ function dnaTransform(dna){
 </details>
 ### Randomize An Array
 Source: [Fisher-Yates Shuffle](https://bost.ocks.org/mike/shuffle/)
-Write a function that given an array, randomizes the position of the elements. 
+Write a function called `shuffle` that given an array, randomizes the position of the elements and returns the new array. 
 
-Input: ['a','b','c','d']
-Possible Output: ['b','d','a','c']
+**Input:** shuffle(['a','b','c','d'])
+**Possible Output:** ['b','d','a','c']
 
 #### Solution
 <details>
@@ -508,25 +517,22 @@ function shuffle(array) {
 </details>
 ### Find The Products
 Source: [InterviewCake](https://www.interviewcake.com/question/javascript/product-of-other-numbers)
-Write a function that takes in an array of n numbersYou have an array of integers, and for each index you want to find the product of every integer except the integer at that index.
+Write a function called `getProducts` that takes in an array of n numbers and for each index finds the product of every integer except the integer at that index.
+
+**Input:** getProducts([1,2,3,4])
+**Output:** [ 24, 12, 8, 6 ]
 
 #### Solution
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
-function getProductsinput) {
+function getProducts(input) {
   const products = [];
-  // for each integer, we find the product of all the integers
-  // before it, storing the total product so far each time
   let productSoFar = 1;
   for (var i = 0; i < input.length; i += 1) {
     products[i] = productSoFar;
     productSoFar *= input[i];
   }
-  // for each integer, we find the product of all the integers
-  // after it. since each index in products already has the
-  // product of all the integers before it, now we're storing
-  // the total product of all other integers
   productSoFar = 1;
   for (var j = input.length - 1; j >= 0; j -= 1) {
     products[j] *= productSoFar;
@@ -580,7 +586,7 @@ Source: [HackerRank](https://www.hackerrank.com/challenges/30-recursion/submissi
 Given a number, print it's factoral.
 
 Example:
-Input: 5 
+**Input:** 5 
 Output: 120 (5*4*3*2*1)
 
 #### Solution
@@ -600,7 +606,7 @@ function factoralize(input) {
 Source: [W3Resource](http://www.w3resource.com/javascript-exercises/javascript-recursion-functions-exercises.php?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+w3resource+%28w3resource%29)
 Write a function to compute the sum of an array of integers.
 
-Input: [1,2,3]
+**Input:** [1,2,3]
 Output: 6
 
 #### Solution
@@ -623,7 +629,7 @@ Source: [CodeTuts](https://codetuts.tech/flatten-deep-nested-array-object/)
 Write a function that takes an array and flattens it.  You can assume the array only contains arrays and primitives (Numbers, Strings, Booleans, etc.).
 
 Example:
-Input: [1,[2,3],[[4], 5]]
+**Input:** [1,[2,3],[[4], 5]]
 Output: [1, 2, 3, 4, 5]
 
 #### Solution 1
