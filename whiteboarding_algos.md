@@ -306,13 +306,12 @@ function binaryCount(num){
   for (let i = 0; i < b.length; i += 1) {
     if (Number(b.charAt(i))) {
       count += 1;
-      if(count > longest) { longest = count; }
-      //longest = Math.max(longest, count);
     } else {
+      if( count > longest) { longest = count; }
       count = 0;
     }
   }
-  longest = Math.max(longest, count);
+  if( count > longest ) { longest = count; }
   return longest;
 }
 ```
