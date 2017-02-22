@@ -73,12 +73,12 @@ function printArr(input){
 
 ### Reverse A String
 Source: [leetcode](https://leetcode.com/problems/reverse-string/)
-Write a function called `reverseString` that will take a string and return the reversed string.
+Write a function called `reverseString` that will take a string and return the string reversed.
 
 **Input:** 'abcd'
 **Output:** 'dcba’
 
-**Hint:** Start by creating an empty string. Then using a for loop in reverse order concat the string. 
+**Hint:** Start by creating an empty string. Then using a loop in reverse order to concat a new string. 
 
 #### Solution 1
 <details>
@@ -96,7 +96,7 @@ var reverseString = function(s) {
 
 #### Solution 2
 
-**Hint:** Start by creating an array. Then add the right elements to it (ie. the characters in reverse order). Then join it and return it. 
+**Hint:** Start by creating an array. Then add the right most elements to it (ie. the characters in reverse order) one by one. Then join and return it. 
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
