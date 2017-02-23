@@ -531,17 +531,16 @@ Write a function called `shuffle` that given an array, randomizes the position o
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function shuffle(array) {
-  const random = array.splice(0);
-  let m = array.length;
-  let t;
-  let i;
-  while (m) {
-    i = Math.floor(Math.random() * (m -= 1));
-    t = random[m];
-    random[m] = random[i];
-    random[i] = t;
+  let len = array.length;
+  let last;
+  let random;
+  while (len) {
+    random = Math.floor(Math.random() * (len -= 1));
+    last = array[len];
+    array[len] = array[random];
+    array[random] = last;
   }
-  return random;
+  return array;
 }
 ```
 </details>
