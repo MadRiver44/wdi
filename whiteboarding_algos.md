@@ -49,7 +49,9 @@ Here are some possible questions to ask the interviewer:
 * Is it possible that the array might be empty and should I account for this? 
 * Should the function console.log() the items as they are encountered or should it return a string with newline characters? 
 
+
 **Input:** ['sam','ed','harry']
+
 **Output:** 
 ```javascript
     sam
@@ -76,6 +78,7 @@ Source: [leetcode](https://leetcode.com/problems/reverse-string/)
 Write a function called `reverseString` that will take a string and return the string reversed.
 
 **Input:** 'abcd'
+
 **Output:** 'dcba’
 
 **Hint:** Start by creating an empty string. Then using a loop in reverse order to concat a new string. 
@@ -113,12 +116,27 @@ function reverseString(s) {
 Write a function called `isPalindrome` that will return `true` if a given input (string or number) is a palindrome and `false` if it's not. 
 
 **Input:** 'race car'
+
 **Output:** true
 
 **Input:** 12321
+
 **Output:** true
 
-#### Solution
+#### Solution 1
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
+```javascript
+function isPalindrome(s){
+  let input = s.split("") 
+  let reverseInput = [];
+  input.forEach((d) => reverseInput.unshift(d))
+  return reverseInput.join("") == s
+}
+```
+</details>
+
+#### Solution 2
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
@@ -137,6 +155,7 @@ function isPalindrome(str) {
 Write a function called `largestNumber` that will return the largest value from an array. 
 
 **Input:** [1,2,5,10]
+
 **Output:** 10
 <details>
   <summary><strong>Click to reveal...</strong></summary>
@@ -154,6 +173,7 @@ function largestNumber(num){
 Write a function called `buildPyramid` that given a number, creates a pyramid that is that number of rows. 
 
 **Input:** pyramid(4)
+
 **Output:**
 ```javascript
             ^ 
@@ -193,6 +213,7 @@ Source: [Eloquent Javascript](http://eloquentjavascript.net/code/#2.3)
 Write a function called `chessBoard` that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
 
 **Input:** console.log(chessBoard())
+
 **Output:** 
 ```javascript
  # # # #
@@ -229,6 +250,7 @@ Source: [HackerRank](https://www.hackerrank.com/challenges/30-review-loop)
 Write a function called `oddsEvens` that given a string, prints its even-indexed and odd-indexed characters as space-separated strings on a single line. 
 
 **Input:** Hacker
+
 **Output:** Hce akr
 
 #### Solution
@@ -254,7 +276,9 @@ Source: [HackerRank](https://www.hackerrank.com/challenges/30-dictionaries-and-m
 Write a function called `phoneBook` that given two parameters, the first being an array of hashes containing n number of names and phone numbers and the second being an array of friends names will then will assemble a phone book that maps the 'friends' array of names to their respective phone numbers if they are found in the first array.  Each found entry will print the associated entry from your phone book on a new line in the form **name=phoneNumber**; if an entry is not found, print **Not found** instead.
 
 **Input 1:** [{sam:99912222},{tom:11122222},{harry:12299933}]
+
 **Input 2:** ['sam','ed','harry']
+
 **Output:** 
 ```javascript
 sam=99912222
@@ -293,6 +317,7 @@ Write a function called `binaryCount` that given a base integer, converts it to 
 
 Example:
 **Input:** 60 which is 111100 in binary
+
 **Output:** 4
 
 #### Solution
@@ -321,8 +346,8 @@ Source: [Leetcode](https://leetcode.com/problems/two-sum/)
 Write a function called `twoSum` that given an array of integers and a target number, returns two array integers that add up to the target.
 
 **Input:** [3, 2, 5, 7, 11, 15], 9
+
 **Output:** Return [2, 7] 
-//Note that 2 + 7 equals the target 9
 
 **Hints**
 * Try to think of a data structure that works best for returning the first matched value it finds. 
@@ -350,10 +375,12 @@ function twoSum(arr, target) {
 Source: [Leetcode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 Write a function called `lengthOfLongestSubstring` that given a string, finds the length of the longest substring without repeating characters.
 
-**Input:** 'abca'. 
+**Input:** 'abca'
+
 **Output:** 3 ('abc' or 'bca')
 
-**Input:** 'abcbadb'.
+**Input:** 'abcbadb'
+
 **Output:** 4 ('cbad')
 
 **Hints**
@@ -386,6 +413,7 @@ function lengthOfLongestSubstring(s) {
 **Part 1:** Write a function called `repeatify` that takes a string and a number.  The number specifies how many times the string should be repeated.
 
 **Input:** repeatify("hello", 3);
+
 **Output:** "hellohellohello"
 
 #### Solution
@@ -404,6 +432,7 @@ function repeatify(str, n) {
 **Part 2:** Let’s update the function so it’s a string method.  Change your code from part 1 so we can call repeatify on a string and just pass it a number.
 
 **Input:** "hello".repeatify(3);
+
 **Output:** "hellohellohello"
 
 #### Solution
@@ -424,6 +453,7 @@ Source: [InterviewCake](https://www.interviewcake.com/question/javascript/stock-
 Write an function called `getMaxProfit` that takes in an array of stock prices and returns the best profit you could have made from 1 purchase and 1 sale.  The prices in the array are in the sequence in which they were purchased and can only be sold after it was first purchased.
 
 **Input:** getMaxProfit([10, 7, 5, 8, 11, 9])
+
 **Output:** 6 ..this is the result of 11 - 5
 
 #### Solution
@@ -454,6 +484,7 @@ Source: [CodeWars](https://www.codewars.com/kata/554e4a2f232cdd87d9000038)
 In DNA strings, symbols "A" and "T" are complements of each other, as are "C" and "G". Write a function called `dnaTransform` that takes in a DNA string returns a string that represents it's compliment. 
 
 **Input:** dnaTransform("ATTGC")
+
 **Output:** "TAACG"
 
 #### Solution 1
@@ -493,6 +524,7 @@ Source: [Fisher-Yates Shuffle](https://bost.ocks.org/mike/shuffle/)
 Write a function called `shuffle` that given an array, randomizes the position of the elements and returns the new array. 
 
 **Input:** shuffle(['a','b','c','d'])
+
 **Possible Output:** ['b','d','a','c']
 
 #### Solution
@@ -519,6 +551,7 @@ Source: [InterviewCake](https://www.interviewcake.com/question/javascript/produc
 Write a function called `getProducts` that takes in an array of n numbers and for each index finds the product of every integer except the integer at that index.
 
 **Input:** getProducts([1,2,3,4])
+
 **Output:** [ 24, 12, 8, 6 ]
 
 #### Solution
@@ -584,9 +617,9 @@ function isPalindrome(string) {
 Source: [HackerRank](https://www.hackerrank.com/challenges/30-recursion/submissions/code/37642498)
 Given a number, print it's factoral.
 
-Example:
 **Input:** 5 
-Output: 120 (5*4*3*2*1)
+
+**Output:** 120 (5*4*3*2*1)
 
 #### Solution
 <details>
@@ -606,7 +639,8 @@ Source: [W3Resource](http://www.w3resource.com/javascript-exercises/javascript-r
 Write a function to compute the sum of an array of integers.
 
 **Input:** [1,2,3]
-Output: 6
+
+**Output:** 6
 
 #### Solution
 <details>
@@ -627,9 +661,9 @@ function arrSum(arr) {
 Source: [CodeTuts](https://codetuts.tech/flatten-deep-nested-array-object/)
 Write a function that takes an array and flattens it.  You can assume the array only contains arrays and primitives (Numbers, Strings, Booleans, etc.).
 
-Example:
 **Input:** [1,[2,3],[[4], 5]]
-Output: [1, 2, 3, 4, 5]
+
+**Output:** [1, 2, 3, 4, 5]
 
 #### Solution 1
 <details>
