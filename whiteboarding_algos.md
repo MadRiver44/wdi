@@ -115,11 +115,7 @@ function reverseString(s) {
 ### IsPalindrome
 Write a function called `isPalindrome` that will return `true` if a given input (string(s) or number) is a palindrome and `false` if it's not. 
 
-**Input:** 'race car'
-
-**Output:** true
-
-**Input:** 12321
+**Input:** 'race car' or 'Race car' or 12321
 
 **Output:** true
 
@@ -128,10 +124,11 @@ Write a function called `isPalindrome` that will return `true` if a given input 
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function isPalindrome(s){
-  let input = s.toString().split(" ").join("").split(""); 
+var s = s.toString().toLowerCase();
+  let arr = s.split(' ').join('').split(''); 
   let reverseInput = [];
-  input.forEach((d) => reverseInput.unshift(d));
-  return reverseInput.join("") == input.join("");
+  arr.forEach((d) => reverseInput.unshift(d));
+  return reverseInput.join("") == arr.join("");
 }
 
 ```
@@ -142,9 +139,10 @@ function isPalindrome(s){
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function isPalindrome(s) {
-  let input = s.toString().toLowerCase().split(" ").join("").split(""); 
-  for (let i = 0; i < input.length / 2; i += 1) {
-    if (input[i] !== input[input.length - (i + 1)]) {
+  var s = s.toString().toLowerCase();
+  let arr = s.split(' ').join('').split(''); 
+  for (let i = 0; i < arr.length / 2; i += 1) {
+    if (arr[i] !== arr[arr.length - (i + 1)]) {
       return false;
     }
   }
@@ -162,7 +160,7 @@ Write a function called `largestNumber` that will return the largest value from 
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function largestNumber(num){
-    var largest = num[0]
+    let largest = num[0]
     num.forEach((d) => {
         if(d > largest) { largest = d }
     })
@@ -549,13 +547,13 @@ function shuffle(array) {
 </details>
 ### Find The Products
 Source: [InterviewCake](https://www.interviewcake.com/question/javascript/product-of-other-numbers)
-Write a function called `getProducts` that takes in an array of n numbers and for each index finds the product of every integer except the integer at that index.
+Write a function called `getProducts` that takes in an array of n numbers and for each index finds the product of every integer **except** the integer at that index.
 
 **Input:** getProducts([1,2,3,4])
 
 **Output:** [ 24, 12, 8, 6 ]
 
-#### Solution
+#### Solution 1
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
@@ -572,6 +570,22 @@ function getProducts(input) {
     productSoFar *= input[j];
   }
   return products;
+}
+```
+</details>
+
+#### Solution 2
+<details>
+  <summary><strong>Click to reveal...</strong></summary>
+```javascript
+function getProducts(arr) {
+  const newArr = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    let testArr = arr.map(d => d);
+    testArr.splice(i, 1);
+    newArr.push(testArr.reduce((a, b) => a * b));
+  }
+  return newArr;
 }
 ```
 </details>
