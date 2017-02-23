@@ -50,8 +50,9 @@ Here are some possible questions to ask the interviewer:
 * Should the function console.log() the items as they are encountered or should it return a string with newline characters? 
 
 
-Input: **['sam','ed','harry']**
-Output:
+**Input:** ['sam','ed','harry']
+
+**Output:** 
 ```javascript
     sam
     ed 
@@ -140,10 +141,10 @@ function isPalindrome(s){
 <details>
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
-function isPalindrome(str) {
-  const s = str.toLowerCase().split(' ').join('');
-  for (let i = 0; i < s.length / 2; i += 1) {
-    if (s[i] !== s[s.length - (i + 1)]) {
+function isPalindrome(s) {
+  let input = s.toString().toLowerCase().split(" ").join("").split(""); 
+  for (let i = 0; i < input.length / 2; i += 1) {
+    if (input[i] !== input[input.length - (i + 1)]) {
       return false;
     }
   }
