@@ -50,9 +50,8 @@ Here are some possible questions to ask the interviewer:
 * Should the function console.log() the items as they are encountered or should it return a string with newline characters? 
 
 
-**Input:** ['sam','ed','harry']
-
-**Output:** 
+Input: **['sam','ed','harry']**
+Output:
 ```javascript
     sam
     ed 
@@ -88,11 +87,11 @@ Write a function called `reverseString` that will take a string and return the s
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 var reverseString = function(s) {
-    var s2 = '';
+    var reverse = '';
     for(var i = (s.length-1); i >= 0; i--) {
-        s2 += s[i];
+        reverse += s[i];
     }
-    return s2;
+    return reverse;
 }
 ```
 </details>
@@ -104,16 +103,16 @@ var reverseString = function(s) {
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function reverseString(s) {
-  const arr = [];
+  const reverse = [];
   for (let i = (s.length - 1); i >= 0; i -= 1) {
-    arr.push(s[i]);
+    reverse.push(s[i]);
   }
-  return arr.join('');
+  return reverse.join('');
 }
 ```
 </details>
 ### IsPalindrome
-Write a function called `isPalindrome` that will return `true` if a given input (string or number) is a palindrome and `false` if it's not. 
+Write a function called `isPalindrome` that will return `true` if a given input (string(s) or number) is a palindrome and `false` if it's not. 
 
 **Input:** 'race car'
 
@@ -128,11 +127,12 @@ Write a function called `isPalindrome` that will return `true` if a given input 
   <summary><strong>Click to reveal...</strong></summary>
 ```javascript
 function isPalindrome(s){
-  let input = s.split("") 
+  let input = s.toString().split(" ").join("").split(""); 
   let reverseInput = [];
-  input.forEach((d) => reverseInput.unshift(d))
-  return reverseInput.join("") == s
+  input.forEach((d) => reverseInput.unshift(d));
+  return reverseInput.join("") == input.join("");
 }
+
 ```
 </details>
 
