@@ -2,6 +2,7 @@
 
 ## Learning Objectives
 
+- Intro To D3 and How it can Visualize Data
 - Importing D3 and Working with Latest Version
 - Comparing jQuery to D3
 - Manipulate the DOM using D3
