@@ -10,13 +10,11 @@
 - Scales: Linear & Ordinal
 - Use D3 helper methods like `min`, `max`, `extent`
 
-### What Is D3?
+### What Is D3?...(and what it's not)
 
 D3 stands for Data-Driven Documents. The word "document" in D3 refers to the DOM. Javascript can manipulate the DOM, creating and deleting pieces of it. Building data visualizations, however, with tools that are suited for GUI programming is difficult and verbose. Enter D3.
 
 The [D3 Web Site](https://d3js.org/)
-
-### What It's Not
 
 D3 doesn't come with any prebuilt visualizations. D3 aims to be low-level and flexible. There are many excellent charting libraries out there, several of them built with D3. If your goal is to render a few standard charts as quickly as possible, you may want to consider using a library instead of writing D3 code by hand. Check out [highchartJS](http://www.highcharts.com/), [chartJS](http://www.chartjs.org/) or [dygraphs](http://dygraphs.com/). 
 
