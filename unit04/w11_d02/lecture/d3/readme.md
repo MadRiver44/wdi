@@ -2,6 +2,8 @@
 
 ## Learning Objectives
 
+- Importing D3 and Working with Latest Version
+- Comparing jQuery to D3
 - Manipulate the DOM using D3
 - Bind data to DOM elements
 - Scales: Linear & Ordinal
@@ -11,7 +13,7 @@
 
 D3 stands for Data-Driven Documents. The word "document" in D3 refers to the DOM. Javascript can manipulate the DOM, creating and deleting pieces of it. Building data visualizations, however, with tools that are suited for GUI programming is difficult and verbose. Enter D3.
 
-The [D3 Web Site](http://zeroviscosity.com/)
+The [D3 Web Site](https://d3js.org/)
 
 ### What It's Not
 
