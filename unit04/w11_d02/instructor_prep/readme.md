@@ -2,19 +2,16 @@
 
 ## Learning Objectives
 
-- Intro To D3 and How it can Visualize Data
-- Importing D3 and Working with Latest Version
-- Comparing jQuery to D3
 - Manipulate the DOM using D3
 - Bind data to DOM elements
 - Scales: Linear & Ordinal
-- Use D3 helper methods like `min`, `max`, `extent`
+- Use D3 helper methods like `min` and `max`
 
-### What Is D3?...(and what it's not)
+### What Is D3?
 
 D3 stands for Data-Driven Documents. The word "document" in D3 refers to the DOM. Javascript can manipulate the DOM, creating and deleting pieces of it. Building data visualizations, however, with tools that are suited for GUI programming is difficult and verbose. Enter D3.
 
-The [D3 Web Site](https://d3js.org/)
+### What It's Not
 
 D3 doesn't come with any prebuilt visualizations. D3 aims to be low-level and flexible. There are many excellent charting libraries out there, several of them built with D3. If your goal is to render a few standard charts as quickly as possible, you may want to consider using a library instead of writing D3 code by hand. Check out [highchartJS](http://www.highcharts.com/), [chartJS](http://www.chartjs.org/) or [dygraphs](http://dygraphs.com/). 
 
@@ -26,10 +23,9 @@ D3 doesn't come with any prebuilt visualizations. D3 aims to be low-level and fl
 * http://tributary.io/s/6094415?user=enjalot
 
 ### Best Learning Resources
-
-* [D3 Noob](https://leanpub.com/D3-Tips-and-Tricks)
-* [Dashing D3](https://www.dashingd3js.com/)
-* [ZeroViscocity](http://zeroviscosity.com/)
+[D3 Noob](https://leanpub.com/D3-Tips-and-Tricks)
+[Dashing D3](https://www.dashingd3js.com/)
+[ZeroViscocity](http://zeroviscosity.com/)
 
 ## Installation
 
@@ -336,7 +332,7 @@ Update the chart from the earlier exercise so that...
 Try adding the following: 
 
 * Try adding the values as text and place them inside and at the begining of the rect
-* Tooltip to your graph. When the user hovers over a bar, a small window should open next to the cursor that displays the class name and number of students. See how it's done in this [CodePen](http://codepen.io/jkeohan/pen/ygGdRV?editors=0010) or here [Horizonal Bar Chart With ToolTip](https://bl.ocks.org/alandunning/7008d0332cc28a826b37b3cf6e7bd998)
+* Tooltip to your graph. When the user hovers over a bar, a small window should open next to the cursor that displays the class name and number of students. See how it's done in this [codepen](http://codepen.io/jkeohan/pen/ygGdRV?editors=0010)
 
 #### Exercise Review
 Lets review the full solution together.
@@ -357,4 +353,3 @@ Demo responsiveness in D3
 ## Additional Resources
 
 * [D3 Documentation](https://github.com/d3/d3/blob/master/API.md)
-* [Horizonal Bar Chart With ToolTip](https://bl.ocks.org/alandunning/7008d0332cc28a826b37b3cf6e7bd998)
